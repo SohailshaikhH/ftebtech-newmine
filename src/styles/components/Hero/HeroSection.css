@@ -58,16 +58,6 @@ main {
   position: relative;
 }
 
-.content .headingglogo::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-silver), rgba(232, 238, 247, 0.6));
-  border-radius: 2px;
-}
 
 .subtitle {
   display: inline-block;
