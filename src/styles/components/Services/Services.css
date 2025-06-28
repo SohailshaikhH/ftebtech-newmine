@@ -108,20 +108,20 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 50px;
 }
 
 .service-card-modern {
-  background: transparent;
+  background: white;
   border-radius: 20px;
   padding: 40px 30px;
   box-shadow: 0 15px 40px rgba(0, 99, 218, 0.1);
   cursor: pointer;
   position: relative;
   overflow: hidden;
- 
+  border: 2px solid rgba(10, 50, 134, 0.1);
   color: #333;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -363,7 +363,8 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 }
 
@@ -385,7 +386,7 @@
   }
 
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
 
