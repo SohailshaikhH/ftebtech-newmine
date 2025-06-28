@@ -8,10 +8,6 @@ import mouse from "../../assets/images/mouse.png";
 import watch from "../../assets/images/watch.png";
 import keyboard from "../../assets/images/keyboard.png";
 
-// import azure from "../../assets/images/azure.png"
-// import googleCloud from "../../assets/images/google-cloud.png"
-// import aws from "../../"
-
 function App() {
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
@@ -26,12 +22,20 @@ function App() {
     <div className="landing-page">
       <main>
         <div className="content">
-          <h1 className="headingglogo">FTEB </h1>
+          <h1 className="heading-logo">FTEB</h1>
           <span className="subtitle">TECHNOLOGY AND SOFTWARE</span>
-          <h2>
+          <h2 className="hero-title">
             Your All-in-One IT Partner for Software, Cloud, Hardware, and
             Beyond.
           </h2>
+          <p className="hero-description">
+            We are leading technology solutions providing company all over the world doing over 10+ years. 
+            We help businesses elevate their value through cloud solution, DevOps, custom software development, 
+            product design, QA and consultancy services.
+          </p>
+          <button className="browse-btn">
+            Get Started Today
+          </button>
         </div>
 
         <div className="images-container">
@@ -66,21 +70,6 @@ function App() {
           >
             <img src={keyboard} alt="Keyboard" className="accessory-image" />
           </div>
-          {/* 
-          <div className={`image-wrapper azure ${imagesLoaded ? "loaded" : ""}`}>
-            <img src={azure} alt="Azure" className="cloud-image" />
-            <div className="image-label">Azure</div>
-          </div>
-
-          <div className={`image-wrapper aws ${imagesLoaded ? "loaded" : ""}`}>
-            <img src={aws} alt="Amazon Web Services" className="cloud-image" />
-            <div className="image-label">Amazon</div>
-          </div>
-
-          <div className={`image-wrapper google-cloud ${imagesLoaded ? "loaded" : ""}`}>
-            <img src={googleCloud} alt="Google Cloud" className="cloud-image" />
-            <div className="image-label">Google Cloud</div>
-          </div> */}
         </div>
       </main>
     </div>

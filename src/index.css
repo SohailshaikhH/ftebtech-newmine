@@ -1,8 +1,5 @@
 @import url("./assets/fonts/fonts.css");
 
-/* Removed Google Fonts import as fonts are now local */
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"); */
-
 * {
   margin: 0;
   padding: 0;
@@ -10,26 +7,29 @@
 }
 
 :root {
-  --primary-color: #fcfcfc;
-  --secondary-color: #002fa6;
-  --dark-color: #333333;
-  --text-color: #696969;
-  --light-color: #ffffff;
+  --primary-color: #0a3286;
+  --secondary-color: #0063da;
+  --dark-color: #111827;
+  --text-color: #374151;
+  --light-color: #f8faff;
   --white-color: #ffffff;
   --transition: all 0.3s ease;
-  --box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+  --box-shadow: 0 0 40px rgba(10, 50, 134, 0.1);
 }
 
 body {
-  font-family: "Poppins", sans-serif !important;
-  line-height: 1.6;
-  color: var(--text-color);
+  font-family: var(--font-primary) !important;
+  line-height: var(--line-height-normal);
+  color: var(--text-body);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: var(--transition);
 }
 
 ul {
@@ -38,13 +38,14 @@ ul {
 
 img {
   height: auto;
+  max-width: 100%;
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 .section {
@@ -57,34 +58,43 @@ img {
 }
 
 .section-title h6 {
-  color: var(--primary-color);
-  font-weight: 600;
+  color: var(--secondary-color);
+  font-weight: var(--font-weight-semibold);
   text-transform: uppercase;
   margin-bottom: 15px;
-  letter-spacing: 1px;
+  letter-spacing: var(--letter-spacing-widest);
+  font-size: var(--font-size-sm);
 }
 
 .section-title h2 {
-  font-size: 40px;
-  font-weight: 700;
-  color: var(--dark-color);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
   margin-bottom: 20px;
+  line-height: var(--line-height-tight);
 }
 
 .section-title p {
   max-width: 700px;
   margin: 0 auto;
+  font-size: var(--font-size-lg);
+  color: var(--text-body);
+  line-height: var(--line-height-relaxed);
 }
 
 .btn {
   display: inline-block;
   padding: 15px 30px;
-  border-radius: 5px;
-  font-weight: 600;
+  border-radius: 8px;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
   cursor: pointer;
   transition: var(--transition);
   border: none;
   outline: none;
+  text-decoration: none;
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .btn-primary {
@@ -94,6 +104,7 @@ img {
 
 .btn-primary:hover {
   background-color: var(--secondary-color);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -125,13 +136,65 @@ img {
   background-color: var(--light-color);
 }
 
+/* Professional Typography Utilities */
+.heading-primary {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.heading-secondary {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  line-height: var(--line-height-tight);
+}
+
+.heading-tertiary {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  line-height: var(--line-height-snug);
+}
+
+.text-lead {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-body);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-body {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-body);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-caption {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-muted);
+  line-height: var(--line-height-normal);
+}
+
 @media (max-width: 992px) {
   .section {
     padding: 80px 0;
   }
 
   .section-title h2 {
-    font-size: 32px;
+    font-size: var(--font-size-3xl);
+  }
+
+  .heading-primary {
+    font-size: var(--font-size-4xl);
+  }
+
+  .heading-secondary {
+    font-size: var(--font-size-3xl);
   }
 }
 
@@ -141,10 +204,37 @@ img {
   }
 
   .section-title h2 {
-    font-size: 28px;
+    font-size: var(--font-size-2xl);
   }
 
   .btn {
     padding: 12px 25px;
+    font-size: var(--font-size-sm);
+  }
+
+  .heading-primary {
+    font-size: var(--font-size-3xl);
+  }
+
+  .heading-secondary {
+    font-size: var(--font-size-2xl);
+  }
+
+  .heading-tertiary {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-primary {
+    font-size: var(--font-size-2xl);
+  }
+
+  .heading-secondary {
+    font-size: var(--font-size-xl);
+  }
+
+  .heading-tertiary {
+    font-size: var(--font-size-lg);
   }
 }

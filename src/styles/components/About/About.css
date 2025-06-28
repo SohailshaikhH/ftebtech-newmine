@@ -41,7 +41,6 @@
   z-index: 3;
 }
 
-
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -51,9 +50,9 @@
   }
 }
 
-.experience-badge h2 {
-  font-size: 48px;
-  font-weight: 800;
+.experience-number {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-black);
   margin: 0;
   background: linear-gradient(to right, #ffffff, #e8eef7);
   -webkit-background-clip: text;
@@ -61,25 +60,27 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
   text-shadow: none;
+  line-height: var(--line-height-tight);
 }
 
-.experience-badge p {
-  font-size: 14px;
+.experience-text {
+  font-size: var(--font-size-sm);
   margin: 8px 0 0;
   opacity: 0.95;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: var(--letter-spacing-wider);
   text-align: center;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  color: #ffffff;
 }
 
-.about-content h6 {
+.about-subtitle {
   color: #0063da;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
   margin-bottom: 25px;
-  letter-spacing: 2px;
+  letter-spacing: var(--letter-spacing-widest);
   display: inline-block;
   position: relative;
   background: rgba(0, 99, 218, 0.1);
@@ -88,37 +89,38 @@
   border: 2px solid rgba(0, 99, 218, 0.2);
 }
 
-.about-content h2 {
-  font-size: clamp(2.2rem, 4vw, 2.8rem);
-  font-weight: 700;
+.about-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
   color: #0a3286;
   margin-bottom: 30px;
-  line-height: 1.3;
+  line-height: var(--line-height-tight);
   position: relative;
+  letter-spacing: var(--letter-spacing-tight);
 }
 
-.about-content h2::after {
+.about-title::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 0;
   width: 80px;
   height: 4px;
-      background: linear-gradient(90deg, #0a3286, rgb(10 50 134));
+  background: linear-gradient(90deg, #0a3286, rgb(10 50 134));
   border-radius: 2px;
 }
 
-.about-content .lead {
-  font-size: 18px;
+.about-lead {
+  font-size: var(--font-size-lg);
   color: #333;
-  line-height: 1.8;
+  line-height: var(--line-height-relaxed);
   margin-bottom: 25px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   position: relative;
   padding-left: 20px;
 }
 
-.about-content .lead::before {
+.about-lead::before {
   content: '';
   position: absolute;
   left: 0;
@@ -129,11 +131,12 @@
   border-radius: 2px;
 }
 
-.about-content .description {
-  color: #666;
+.about-description {
+  color: var(--text-muted);
   margin-bottom: 30px;
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
 }
 
 .features-list {
@@ -170,7 +173,7 @@
 }
 
 .feature-item i {
-  font-size: 24px;
+  font-size: var(--font-size-2xl);
   color: #0063da;
   transition: all 0.3s ease;
   width: 40px;
@@ -183,9 +186,9 @@
 }
 
 .feature-item span {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: #0a3286;
-  font-size: 15px;
+  font-size: var(--font-size-base);
 }
 
 .btn-primary {
@@ -196,14 +199,15 @@
   background: linear-gradient(135deg, #0a3286, #0063da);
   color: white;
   border-radius: 50px;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(10, 50, 134, 0.3);
   border: 2px solid transparent;
   position: relative;
   overflow: hidden;
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .btn-primary::before {
@@ -261,19 +265,19 @@
     right: 0;
   }
 
-  .experience-badge h2 {
-    font-size: 42px;
+  .experience-number {
+    font-size: var(--font-size-4xl);
   }
 
-  .about-content h6 {
-    padding-left: 0;
+  .about-title {
+    font-size: var(--font-size-3xl);
   }
 
-  .about-content .lead::before {
+  .about-lead::before {
     display: none;
   }
 
-  .about-content .lead {
+  .about-lead {
     padding-left: 0;
   }
 }
@@ -283,12 +287,12 @@
     grid-template-columns: 1fr;
   }
 
-  .about-content h2 {
-    font-size: clamp(1.8rem, 4vw, 2.2rem);
+  .about-title {
+    font-size: var(--font-size-2xl);
   }
 
-  .about-content .lead {
-    font-size: 16px;
+  .about-lead {
+    font-size: var(--font-size-base);
   }
 
   .experience-badge {
@@ -298,19 +302,19 @@
     bottom: 20px;
   }
 
-  .experience-badge h2 {
-    font-size: 36px;
+  .experience-number {
+    font-size: var(--font-size-3xl);
   }
 
   .btn-primary {
     padding: 15px 30px;
-    font-size: 15px;
+    font-size: var(--font-size-sm);
   }
 }
 
 @media (max-width: 576px) {
-  .about-content h2 {
-    font-size: 1.8rem;
+  .about-title {
+    font-size: var(--font-size-xl);
   }
 
   .feature-item {
@@ -320,7 +324,7 @@
   .feature-item i {
     width: 35px;
     height: 35px;
-    font-size: 20px;
+    font-size: var(--font-size-xl);
   }
 
   .experience-badge {
@@ -328,11 +332,11 @@
     height: 120px;
   }
 
-  .experience-badge h2 {
-    font-size: 30px;
+  .experience-number {
+    font-size: var(--font-size-2xl);
   }
 
-  .experience-badge p {
-    font-size: 12px;
+  .experience-text {
+    font-size: var(--font-size-xs);
   }
 }
