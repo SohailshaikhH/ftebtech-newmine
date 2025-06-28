@@ -121,8 +121,8 @@ const ServiceDescription = () => {
               </div>
               
               <div className="service-card-footer">
-                <button className="service-btn-modern">
-                  Learn More →
+                <button className="service-btn">
+                  Learn More
                 </button>
               </div>
             </div>
@@ -136,13 +136,13 @@ const ServiceDescription = () => {
           <p>Let's discuss how our IT services can help you achieve your goals and drive growth.</p>
           <div className="cta-buttons">
             <button 
-              className="cta-btn primary"
+              className="service-btn primary-btn"
               onClick={() => window.location.href = 'mailto:Connect@ftebtech.com'}
             >
               Get Started Today
             </button>
             <button 
-              className="cta-btn secondary"
+              className="service-btn secondary-btn"
               onClick={() => window.location.href = 'tel:+971588481295'}
             >
               Schedule a Call

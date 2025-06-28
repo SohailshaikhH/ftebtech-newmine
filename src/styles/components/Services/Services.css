@@ -212,24 +212,56 @@
   text-align: center;
 }
 
-.service-btn-modern {
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+/* Project Button Styles - Consistent with your existing buttons */
+.service-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 28px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
   color: #ffffff;
-  padding: 14px 30px;
-  border-radius: 50px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
-  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  text-decoration: none;
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
 }
 
-.service-btn-modern:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
+.service-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff, #f0f7ff);
+  opacity: 0;
+  transform: translateX(-100%) rotate(10deg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.service-btn:hover {
+  color: #0063da;
+  border-color: #ffffff;
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.service-btn:hover::before {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
+}
+
+.service-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
 /* CTA Section */
@@ -281,44 +313,47 @@
   flex-wrap: wrap;
 }
 
-.cta-btn {
-  padding: 16px 32px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
-  min-width: 200px;
-  justify-content: center;
-}
-
-.cta-btn.primary {
+/* Primary CTA Button */
+.service-btn.primary-btn {
   background: #ffffff;
   color: #0063da;
+  border: 2px solid #ffffff;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  padding: 16px 32px;
+  font-size: 1rem;
 }
 
-.cta-btn.primary:hover {
+.service-btn.primary-btn::before {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.service-btn.primary-btn:hover {
   background: #f8f9fa;
+  color: #0052cc;
   transform: translateY(-2px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-.cta-btn.secondary {
+/* Secondary CTA Button */
+.service-btn.secondary-btn {
   background: transparent;
   color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
+  min-width: 200px;
+  padding: 16px 32px;
+  font-size: 1rem;
 }
 
-.cta-btn.secondary:hover {
+.service-btn.secondary-btn::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.service-btn.secondary-btn:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: #ffffff;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -380,7 +415,8 @@
     align-items: center;
   }
 
-  .cta-btn {
+  .service-btn.primary-btn,
+  .service-btn.secondary-btn {
     width: 100%;
     max-width: 300px;
     justify-content: center;
