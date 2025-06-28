@@ -12,7 +12,7 @@ import {
   faUsers,
   faZap,
   faLock,
-  faBarChart3,
+  faChartBar,
   faNetwork,
   faMessageCircle
 } from '@fortawesome/free-solid-svg-icons';
@@ -118,7 +118,7 @@ const ServicePageTemplate = ({ data }) => {
                     </div>
                   </div>
                   <div className="benefit-item">
-                    <FontAwesomeIcon icon={faBarChart3} className="benefit-icon" />
+                    <FontAwesomeIcon icon={faChartBar} className="benefit-icon" />
                     <div>
                       <h4>Cost Optimization</h4>
                       <p>Pay-as-you-use model with intelligent cost management</p>
