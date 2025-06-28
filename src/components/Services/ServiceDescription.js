@@ -9,8 +9,18 @@ import {
   faArrowRight,
   faCogs,
   faServer,
-  faUsers
+  faUsers,
+  faDesktop,
+  faNetworkWired,
+  faLock
 } from '@fortawesome/free-solid-svg-icons';
+
+// Import existing logos from your project
+import azureLogo from '../../assets/images/ProductLogos/azure.jpg';
+import m365Logo from '../../assets/images/ProductLogos/m365.png';
+import dynamicsLogo from '../../assets/images/ProductLogos/Dynamics-365.png';
+import developmentLogo from '../../assets/images/ProductLogos/Development.png';
+import microsoftLogo from '../../assets/images/ProductLogos/Microsoft-Logo.png';
 
 const ServiceDescription = () => {
   const navigate = useNavigate();
@@ -19,54 +29,54 @@ const ServiceDescription = () => {
     {
       id: 'azure',
       title: 'Microsoft Azure Services',
-      description: 'Complete cloud infrastructure solutions with Azure. From migration to optimization, we handle your entire cloud journey.',
+      description: 'Complete cloud infrastructure solutions with Azure. From migration to optimization, we handle your entire cloud journey with enterprise-grade security.',
       icon: faCloud,
-      color: '#0078d4',
+      logo: azureLogo,
       features: ['Cloud Migration', 'Infrastructure Setup', 'DevOps Integration', 'Cost Optimization'],
       path: '/services/azure'
     },
     {
       id: 'microsoft365',
       title: 'Microsoft 365 Solutions',
-      description: 'Empower your workforce with comprehensive M365 implementation, security, and ongoing support.',
+      description: 'Empower your workforce with comprehensive M365 implementation, security configuration, and ongoing support for maximum productivity.',
       icon: faUsers,
-      color: '#ff6900',
+      logo: m365Logo,
       features: ['Email Migration', 'Teams Setup', 'Security Configuration', 'User Training'],
       path: '/services/microsoft365'
     },
     {
       id: 'dynamics365',
       title: 'Dynamics 365 Implementation',
-      description: 'Transform your business operations with intelligent ERP and CRM solutions tailored to your needs.',
+      description: 'Transform your business operations with intelligent ERP and CRM solutions tailored to your specific industry needs.',
       icon: faCogs,
-      color: '#742774',
+      logo: dynamicsLogo,
       features: ['Business Central', 'Sales & Marketing', 'Field Service', 'Custom Development'],
       path: '/services/dynamics365'
     },
     {
       id: 'development',
       title: 'Custom Development',
-      description: 'Build powerful web applications and business tools with modern technologies and best practices.',
+      description: 'Build powerful web applications and business tools with modern technologies, ensuring scalability and performance.',
       icon: faCode,
-      color: '#61dafb',
+      logo: developmentLogo,
       features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
       path: '/services/development'
     },
     {
       id: 'infrastructure',
-      title: 'IT Infrastructure',
-      description: 'End-to-end infrastructure planning, implementation, and management for optimal performance.',
+      title: 'IT Infrastructure Services',
+      description: 'End-to-end infrastructure planning, implementation, and management for optimal performance and reliability.',
       icon: faServer,
-      color: '#28a745',
+      logo: microsoftLogo,
       features: ['Network Setup', 'Server Management', 'Hardware Procurement', 'Monitoring'],
       path: '/services/infrastructure'
     },
     {
       id: 'security',
       title: 'Cybersecurity Solutions',
-      description: 'Protect your business with comprehensive security strategies and advanced threat protection.',
+      description: 'Protect your business with comprehensive security strategies, advanced threat protection, and compliance management.',
       icon: faShieldAlt,
-      color: '#dc3545',
+      logo: microsoftLogo,
       features: ['Security Assessment', 'Threat Protection', 'Compliance', '24/7 Monitoring'],
       path: '/services/security'
     }
@@ -112,12 +122,14 @@ const ServiceDescription = () => {
             <div 
               key={service.id} 
               className="service-card-modern"
-              style={{ '--service-color': service.color }}
               onClick={() => handleServiceClick(service.path)}
             >
               <div className="service-card-header">
                 <div className="service-icon-wrapper">
                   <FontAwesomeIcon icon={service.icon} className="service-icon-modern" />
+                </div>
+                <div className="service-logo-wrapper">
+                  <img src={service.logo} alt={`${service.title} Logo`} className="service-logo" />
                 </div>
                 <h3 className="service-title-modern">{service.title}</h3>
               </div>
