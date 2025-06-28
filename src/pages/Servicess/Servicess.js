@@ -17,6 +17,8 @@ import ServiceDescription from "../../components/Services/ServiceDescription";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import awsLogo from "../../assets/images/ProductLogos/aws.jpg";
 import azureLogo from "../../assets/images/ProductLogos/azure.jpg";
@@ -137,7 +139,7 @@ const ITServices = () => {
           ))}
         </Swiper>
         
-        {/* Updated Service Description Component */}
+        {/* Service Description Component */}
         <ServiceDescription />
       </section>
 
@@ -239,7 +241,6 @@ const ITServices = () => {
             </div>
           </div>
         </div>
-        <div className="pattern-background"></div>
       </div>
     </div>
   );
