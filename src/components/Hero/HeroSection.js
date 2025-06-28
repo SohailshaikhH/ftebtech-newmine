@@ -22,20 +22,12 @@ function App() {
     <div className="landing-page">
       <main>
         <div className="content">
-          <h1 className="heading-logo">FTEB</h1>
+          <h1 className="headingglogo">FTEB </h1>
           <span className="subtitle">TECHNOLOGY AND SOFTWARE</span>
-          <h2 className="hero-title">
+          <h2>
             Your All-in-One IT Partner for Software, Cloud, Hardware, and
             Beyond.
           </h2>
-          <p className="hero-description">
-            We are leading technology solutions providing company all over the world doing over 10+ years. 
-            We help businesses elevate their value through cloud solution, DevOps, custom software development, 
-            product design, QA and consultancy services.
-          </p>
-          <button className="browse-btn">
-            Get Started Today
-          </button>
         </div>
 
         <div className="images-container">
