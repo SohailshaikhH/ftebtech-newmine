@@ -45,7 +45,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
- linear-gradient(90deg, #edeff1, #e8eef7);
+  background: linear-gradient(90deg, #edeff1, #e8eef7);
   border-radius: 2px;
 }
 
