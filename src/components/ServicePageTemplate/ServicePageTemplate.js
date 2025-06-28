@@ -9,7 +9,12 @@ import {
   faCog,
   faShieldAlt,
   faChartLine,
-  faUsers
+  faUsers,
+  faZap,
+  faLock,
+  faBarChart3,
+  faNetwork,
+  faMessageCircle
 } from '@fortawesome/free-solid-svg-icons';
 import './ServicePageTemplate.css';
 
@@ -68,6 +73,127 @@ const ServicePageTemplate = ({ data }) => {
                 <span className="stat-label">{stat.label}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content Section */}
+      <section className="main-content">
+        <div className="container">
+          <div className="content-grid">
+            <div className="content-left">
+              <div className="descriptions">
+                <h2>Why Choose {data.title.split(' ')[1] || data.title} for Your Business?</h2>
+                <p>
+                  {data.title} provides a comprehensive platform that enables businesses to build,
+                  deploy, and manage applications through cutting-edge technology. With extensive
+                  services and solutions, we offer unmatched flexibility and scalability.
+                </p>
+                <p>
+                  Our expertise spans across infrastructure migration, application modernization, data analytics,
+                  AI/ML implementation, and security optimization. We've successfully delivered 500+ projects with
+                  an average cost reduction of 40% for our clients.
+                </p>
+                <p>
+                  From startups to Fortune 500 companies, we provide end-to-end solutions that drive digital
+                  transformation and business growth.
+                </p>
+              </div>
+
+              <div className="service-benefits">
+                <h3>Key Advantages</h3>
+                <div className="benefits-grid">
+                  <div className="benefit-item">
+                    <FontAwesomeIcon icon={faZap} className="benefit-icon" />
+                    <div>
+                      <h4>High Performance</h4>
+                      <p>Lightning-fast processing with global CDN and edge computing</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <FontAwesomeIcon icon={faLock} className="benefit-icon" />
+                    <div>
+                      <h4>Enterprise Security</h4>
+                      <p>Multi-layered security with compliance certifications</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <FontAwesomeIcon icon={faBarChart3} className="benefit-icon" />
+                    <div>
+                      <h4>Cost Optimization</h4>
+                      <p>Pay-as-you-use model with intelligent cost management</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <FontAwesomeIcon icon={faNetwork} className="benefit-icon" />
+                    <div>
+                      <h4>Global Reach</h4>
+                      <p>60+ regions worldwide for optimal performance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="content-right">
+              <div className="sidebar">
+                <div className="sidebar-section">
+                  <h3>Service Categories</h3>
+                  <ul className="service-list">
+                    <li>
+                      <a href="#compute">Compute Services</a>
+                    </li>
+                    <li>
+                      <a href="#storage">Storage Solutions</a>
+                    </li>
+                    <li>
+                      <a href="#networking">Networking</a>
+                    </li>
+                    <li>
+                      <a href="#databases">Databases</a>
+                    </li>
+                    <li>
+                      <a href="#ai-ml">AI & Machine Learning</a>
+                    </li>
+                    <li>
+                      <a href="#security">Security & Identity</a>
+                    </li>
+                    <li>
+                      <a href="#devops">DevOps Tools</a>
+                    </li>
+                    <li>
+                      <a href="#analytics">Analytics & BI</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="sidebar-section">
+                  <div className="certification-card">
+                    <h4>Certified Team</h4>
+                    <p>
+                      Our team holds multiple certifications including Solutions Architect, DevOps Engineer, and
+                      Security Engineer.
+                    </p>
+                    <div className="certification-badges">
+                      <div className="badge">Expert</div>
+                      <div className="badge">Solutions Architect</div>
+                      <div className="badge">DevOps Engineer</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="sidebar-section">
+                  <div className="contact-card">
+                    <h4>Free Assessment</h4>
+                    <p>Get a comprehensive analysis of your current infrastructure and migration roadmap.</p>
+                    <button className="btn-contact" onClick={handleContactClick}>
+                      <FontAwesomeIcon icon={faMessageCircle} />
+                      Schedule Assessment
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
