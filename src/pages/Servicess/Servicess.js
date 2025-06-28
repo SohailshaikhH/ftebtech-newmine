@@ -35,163 +35,16 @@ import turbo360Logo from "../../assets/images/ProductLogos/Turbo360.png";
 import adevops from "../../assets/images/ProductLogos/a-devops.png";
 import useServicessScroll from "../../hooks/useServicessScroll";
 
-const points = {
-  left: [
-    {
-      title: "Microsoft Azure Services",
-      subline: "From Greenfield to Enterprise-Grade—We Own the Cloud Journey.",
-    },
-    {
-      title: "IaaS (Infrastructure as a Service)",
-      subline:
-        "Provision and manage secure, scalable VMs, virtual networks, firewalls, storage, and governance frameworks—built for performance and resilience",
-    },
-    {
-      title: "PaaS (Platform as a Service)",
-      subline:
-        "Deploy apps and services faster with Azure App Services, Azure Functions, AKS (Kubernetes), and fully managed databases. We modernize legacy code into cloud-native stacks",
-    },
-    {
-      title: "DevOps on Azure",
-      subline:
-        "CI/CD pipelines, GitHub Actions, Azure DevOps, infrastructure as code (Terraform/ARM/Bicep), automated testing—we bring speed and control to software delivery.",
-    },
-  ],
-  right: [
-    {
-      title: "Lift-and-Shift Migrations",
-      subline:
-        "We move legacy workloads to Azure with zero data loss and minimal disruption. Proven migration blueprints for VMs, apps, databases, and even SAP.",
-    },
-    {
-      title: "Hybrid Cloud Deployments",
-      subline:
-        "Extend your datacenter to Azure using Azure Arc, ExpressRoute, and site-to-site VPNs. Keep critical workloads on-prem while unlocking cloud elasticity.",
-    },
-    {
-      title: "Backup & Disaster Recovery (DR)",
-      subline:
-        "Protect what matters with Azure Site Recovery, Geo-redundant storage, and automated failover strategies—fully tested and cost-optimized.",
-    },
-    {
-      title: "Greenfield Cloud Projects",
-      subline:
-        "Starting from scratch? We build clean-slate cloud environments with zero technical debt, secured from day one, with CI/CD, monitoring, and automation baked in.",
-    },
-  ],
-};
-const microsoft365 = {
-  left: [
-    {
-      title: "M365 Migration & Deployment",
-      subline:
-        "Seamless, zero-downtime migration from on-prem or other platforms (Google Workspace, legacy Exchange, etc.) with best-in-class setup and configuration.",
-    },
-    {
-      title: "Identity & Access Management (IAM)",
-      subline:
-        "Secure user provisioning, Azure AD integration, SSO setup, MFA enforcement—your data stays in the right hands.",
-    },
-    {
-      title: "Exchange Online & Outlook Configuration",
-      subline:
-        "Fast, reliable email systems with retention policies, hybrid setups, and smart mail flow rules for business continuity. We modernize legacy code into cloud-native stacks",
-    },
-    {
-      title: "SharePoint Online & OneDrive for Business",
-      subline:
-        "Smart intranet and document management solutions that streamline collaboration, access control, and file governance.",
-    },
-  ],
-  right: [
-    {
-      title: "Microsoft Teams Implementation",
-      subline:
-        "Collaboration reimagined. We configure Teams for departments, projects, external guests, and secure chat/video/file sharing.",
-    },
-    {
-      title: "Security & Compliance Hardening",
-      subline:
-        "Implementation of Microsoft Purview, DLP, Intune MDM, Defender for M365, and compliance center policies to ensure zero risk operations.",
-    },
-    {
-      title: "Power Platform Integration",
-      subline:
-        "Automate workflows and boost productivity with Power Automate, Power BI, and Power Apps—no-code to enterprise-grade.",
-    },
-    {
-      title: "Licensing Optimization & Support",
-      subline:
-        "We help you choose the right plans, cut redundant costs, and ensure every license adds value.",
-    },
-  ],
-};
-const Dynamics365 = {
-  left: [
-    {
-      title: "Dynamics 365 Business Central",
-      subline:
-        "Cloud-based ERP for small to mid-sized businesses, covering financials, inventory, procurement, project accounting, and seamless integration with Microsoft 365.",
-    },
-    {
-      title: "Dynamics 365 Finance & Operations",
-      subline:
-        "Enterprise-grade ERP for global operations—features include financial management, supply chain, HR/payroll, and advanced analytics with AI-powered forecasting.",
-    },
-    {
-      title: "Sales, Customer Service & Marketing Modules",
-      subline:
-        "Manage leads, automate campaigns, track opportunities, support omnichannel service, and engage customers through intelligent insights.",
-    },
-    {
-      title: "Field Service & Project Operations",
-      subline:
-        "Optimize scheduling, dispatch, and resource planning with mobile access and IoT integration—ideal for service-based and project-focused companies.",
-    },
-    {
-      title: "User Training & Change Management",
-      subline:
-        "End-user training programs, adoption strategies, and support to ensure smooth transitions and long-term success.",
-    },
-  ],
-  right: [
-    {
-      title: "Human Resources Management",
-      subline:
-        "Centralize employee lifecycle, benefits, compliance, and leave management with payroll system integration.",
-    },
-    {
-      title: "Industry-Specific Solutions",
-      subline:
-        "Tailored deployments for manufacturing, retail, healthcare, public sector, and professional services—each aligned with regulatory and operational needs.",
-    },
-    {
-      title: "System Architecture & Custom Development",
-      subline:
-        "We design scalable systems and build custom workflows using Power Platform, including Power Apps and Power Automate.",
-    },
-    {
-      title: "Data Migration & Integration",
-      subline:
-        "Seamless integration with Microsoft 365, Azure services, and third-party or legacy systems for a unified data experience.",
-    },
-    {
-      title: "24/7 Support & Managed Services",
-      subline:
-        "SLA-based support, governance setup, licensing guidance, and role-based security tailored to your organization’s needs.",
-    },
-  ],
-};
 const services = [
   {
     icon: faServer,
     title: "End-to-End Implementation Excellence",
-    desc: `From  planning to deployment and optimization—we own every phase.`,
+    desc: `From planning to deployment and optimization—we own every phase.`,
   },
   {
     icon: faShieldAlt,
     title: "Proven Cloud Strategy",
-    desc: "We don’t just move workloads to Azure—we align them with your business goals, cost models, and security posture.",
+    desc: "We don't just move workloads to Azure—we align them with your business goals, cost models, and security posture.",
   },
   {
     icon: faChartLine,
@@ -243,8 +96,6 @@ const ITServices = () => {
       <div className="itservices-hero-bg">
         <div className="itservices-hero-content">
           <h1 className="itservices-title">Our Services</h1>
-            
-         
         </div>
         <div className="itservices-hero-pattern"></div>
       </div>
@@ -285,21 +136,9 @@ const ITServices = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <ServiceDescription
-          title="Cloud Services – Azure, AWS, GCP"
-          subtitle="Build. Migrate. Secure. Scale. Repeat.At FTEB Tech LLC, we architect and execute cloud-first strategies that are secure, agile, and future-ready. From Azure to AWS to Google Cloud, we offer unmatched expertise across IaaS, PaaS, DevOps, Hybrid, and everything in between—delivering 100% project success across every deployment."
-          points={points}
-        />
-        <ServiceDescription
-          title="Microsoft 365 Services"
-          subtitle="Empowering Productivity, Securing Collaboration — End-to-End.At FTEB Tech LLC, we specialize in end-to-end implementation and optimization of Microsoft 365 solutions, tailored to power modern workplaces. Whether you’re starting from scratch, migrating from legacy systems, or looking to enhance security and collaboration—we deliver 100% project success, every time."
-          points={microsoft365}
-        />
-        <ServiceDescription
-          title="Dynamics 365 Services"
-          subtitle="Intelligent Business Applications. Seamlessly Connected. Fully Managed.At FTEB Tech LLC, we empower businesses to streamline operations, enhance productivity, and gain real-time insights using Microsoft Dynamics 365. Whether you're starting new or migrating from a legacy system, we provide end-to-end implementation, customization, and ongoing support."
-          points={Dynamics365}
-        />
+        
+        {/* Updated Service Description Component */}
+        <ServiceDescription />
       </section>
 
       <div className="itservices-section">
