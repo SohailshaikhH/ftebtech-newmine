@@ -13,7 +13,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="tech-pattern" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M15,5 L15,25 M5,15 L25,15 M10,10 L20,10 M10,20 L20,20" stroke="rgba(10, 50, 134, 0.05)" stroke-width="0.5" fill="none"/><circle cx="15" cy="15" r="2" fill="rgba(245, 181, 22, 0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23tech-pattern)"/></svg>');
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="tech-pattern" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M15,5 L15,25 M5,15 L25,15 M10,10 L20,10 M10,20 L20,20" stroke="rgba(10, 50, 134, 0.05)" stroke-width="0.5" fill="none"/><circle cx="15" cy="15" r="2" fill="rgba(232, 238, 247, 0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23tech-pattern)"/></svg>');
   opacity: 0.6;
 }
 
@@ -38,12 +38,12 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #f5b816, #f5d16c);
+  background: linear-gradient(90deg, #e8eef7, #f1f5fb);
   border-radius: 2px;
 }
 
 .services-section h2 span {
-  background: linear-gradient(135deg, #0063da, #f5b816);
+  background: linear-gradient(135deg, #0063da, #e8eef7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -71,7 +71,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #0063da, #f5b816);
+  background: linear-gradient(90deg, #0063da, #e8eef7);
   transform: scaleX(0);
   transition: transform 0.4s ease;
 }
@@ -83,32 +83,12 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(10, 50, 134, 0.05) 0%, rgba(245, 181, 22, 0.03) 30%, transparent 70%);
+  background: radial-gradient(circle, rgba(10, 50, 134, 0.05) 0%, rgba(232, 238, 247, 0.03) 30%, transparent 70%);
   opacity: 0;
   transform: scale(0.5);
   transition: transform 0.6s ease-out, opacity 0.4s ease-out;
   z-index: -1;
   pointer-events: none;
-}
-
-.services-section .service-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 25px 60px rgba(10, 50, 134, 0.2);
-  border-color: rgba(10, 50, 134, 0.15);
-}
-
-.services-section .service-card:hover::before {
-  transform: scaleX(1);
-}
-
-.services-section .service-card:hover::after {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.services-section .service-card:hover h3,
-.services-section .service-card:hover p {
-  color: #333;
 }
 
 .services-section .service-card h3 {
@@ -117,10 +97,6 @@
   margin: 20px 0;
   transition: color 0.3s ease;
   font-weight: 600;
-}
-
-.services-section .service-card:hover h3 {
-  color: #0063da;
 }
 
 .services-section .service-card p {
@@ -132,7 +108,7 @@
 }
 
 .icon-wrapper {
-  background: linear-gradient(135deg, rgba(0, 99, 218, 0.1), rgba(245, 181, 22, 0.1));
+  background: linear-gradient(135deg, rgba(0, 99, 218, 0.1), rgba(232, 238, 247, 0.1));
   border-radius: 25px;
   width: 90px;
   height: 90px;
@@ -153,7 +129,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #0063da, #f5b816);
+  background: linear-gradient(135deg, #0063da, #e8eef7);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -165,21 +141,6 @@
   transition: all 0.4s ease;
   position: relative;
   z-index: 2;
-}
-
-.service-card:hover .icon-wrapper {
-  transform: scale(1.1) rotate(5deg);
-  border-color: #f5b816;
-  box-shadow: 0 15px 35px rgba(245, 181, 22, 0.3);
-}
-
-.service-card:hover .icon-wrapper::before {
-  opacity: 1;
-}
-
-.service-card:hover .icon-wrapper svg {
-  color: #ffffff;
-  transform: scale(1.1) rotate(-5deg);
 }
 
 .services-grid {
@@ -222,23 +183,6 @@
   transform: translateX(-100%) rotate(10deg);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: -1;
-}
-
-.service-btn:hover {
-  color: #ffffff;
-  border-color: #0a3286;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(10, 50, 134, 0.3);
-}
-
-.service-btn:hover::before {
-  opacity: 1;
-  transform: translateX(0) rotate(0deg);
-}
-
-.service-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 15px rgba(10, 50, 134, 0.3);
 }
 
 @keyframes fadeInDown {
@@ -292,15 +236,10 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #0063da, #f5b816);
+  background: linear-gradient(90deg, #0063da, #e8eef7);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s ease;
-}
-
-.service-card:hover .title-highlight::after {
-  transform: scaleX(1);
-  transform-origin: left;
 }
 
 /* Professional accent elements */
@@ -311,7 +250,7 @@
   right: 5%;
   width: 120px;
   height: 120px;
-  background: radial-gradient(circle, rgba(245, 181, 22, 0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(232, 238, 247, 0.1), transparent 70%);
   border-radius: 50%;
   animation: pulse 4s ease-in-out infinite;
 }

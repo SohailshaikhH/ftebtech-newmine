@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circuit" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M15,5 L15,25 M5,15 L25,15 M10,10 L20,10 M10,20 L20,20" stroke="rgba(10, 50, 134, 0.05)" stroke-width="0.5" fill="none"/><circle cx="15" cy="15" r="2" fill="rgba(245, 181, 22, 0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23circuit)"/></svg>');
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circuit" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M15,5 L15,25 M5,15 L25,15 M10,10 L20,10 M10,20 L20,20" stroke="rgba(10, 50, 134, 0.05)" stroke-width="0.5" fill="none"/><circle cx="15" cy="15" r="2" fill="rgba(232, 238, 247, 0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23circuit)"/></svg>');
   opacity: 0.6;
 }
 
@@ -61,7 +61,7 @@
   left: 0;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #f5b816, #f5d16c);
+  background: linear-gradient(90deg, #e8eef7, #f1f5fb);
   border-radius: 2px;
 }
 
@@ -93,19 +93,9 @@
   left: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(135deg, #0063da, #f5b816);
+  background: linear-gradient(135deg, #0063da, #e8eef7);
   transform: scaleY(0);
   transition: transform 0.4s ease;
-}
-
-.feature-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(10, 50, 134, 0.15);
-  border-color: rgba(10, 50, 134, 0.2);
-}
-
-.feature-box:hover::before {
-  transform: scaleY(1);
 }
 
 .feature-icon {
@@ -130,28 +120,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #f5b816, #f5d16c);
+  background: linear-gradient(135deg, #e8eef7, #f1f5fb);
   opacity: 0;
   transition: opacity 0.4s ease;
-}
-
-.feature-box:hover .feature-icon {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 10px 25px rgba(245, 181, 22, 0.4);
-}
-
-.feature-box:hover .feature-icon::before {
-  opacity: 1;
 }
 
 .feature-icon svg {
   position: relative;
   z-index: 2;
   transition: transform 0.4s ease;
-}
-
-.feature-box:hover .feature-icon svg {
-  transform: scale(1.1);
 }
 
 .feature-text h4 {
@@ -162,20 +139,12 @@
   transition: color 0.3s ease;
 }
 
-.feature-box:hover .feature-text h4 {
-  color: #0063da;
-}
-
 .feature-text p {
   color: #666;
   line-height: 1.7;
   font-size: 16px;
   margin: 0;
   transition: color 0.3s ease;
-}
-
-.feature-box:hover .feature-text p {
-  color: #555;
 }
 
 .learn-more-btn {
@@ -203,18 +172,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #f5b816, #f5d16c);
+  background: linear-gradient(135deg, #e8eef7, #f1f5fb);
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-.learn-more-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(10, 50, 134, 0.4);
-}
-
-.learn-more-btn:hover::before {
-  opacity: 1;
 }
 
 .learn-more-btn span {
@@ -226,10 +186,6 @@
   transition: transform 0.3s ease;
   position: relative;
   z-index: 2;
-}
-
-.learn-more-btn:hover .btn-icon {
-  transform: translateX(5px);
 }
 
 .features-image {
@@ -251,10 +207,6 @@
   transition: transform 0.5s ease;
 }
 
-.features-image:hover img {
-  transform: scale(1.05);
-}
-
 .floating-card {
   position: absolute;
   background: #ffffff;
@@ -265,7 +217,7 @@
   align-items: center;
   gap: 20px;
   animation: float 4s ease-in-out infinite;
-  border: 2px solid rgba(245, 181, 22, 0.3);
+  border: 2px solid rgba(232, 238, 247, 0.3);
 }
 
 .floating-card.top {
@@ -287,7 +239,7 @@
 .card-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #0063da, #f5b816);
+  background: linear-gradient(135deg, #0063da, #e8eef7);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -326,7 +278,7 @@
   font-weight: 700;
   color: #0063da;
   line-height: 1;
-  background: linear-gradient(135deg, #0063da, #f5b816);
+  background: linear-gradient(135deg, #0063da, #e8eef7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -359,7 +311,7 @@
   right: 5%;
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle, rgba(245, 181, 22, 0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(232, 238, 247, 0.1), transparent 70%);
   border-radius: 50%;
   animation: pulse 4s ease-in-out infinite;
 }
