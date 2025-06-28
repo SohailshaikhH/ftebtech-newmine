@@ -1,18 +1,6 @@
 .section {
-  background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+  background: #ffffff;
   position: relative;
-  overflow: hidden;
-}
-
-.section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hexagon" width="20" height="20" patternUnits="userSpaceOnUse"><polygon points="10,2 18,7 18,13 10,18 2,13 2,7" fill="none" stroke="rgba(10, 50, 134, 0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23hexagon)"/></svg>');
-  opacity: 0.4;
 }
 
 .container {
@@ -25,18 +13,6 @@
   max-width: 800px;
   margin: 0 auto 60px;
   position: relative;
-}
-
-.section-titles::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #e8eef7, #f1f5fb);
-  border-radius: 2px;
 }
 
 .section-titles h6 {
@@ -170,18 +146,6 @@
   line-height: 1.8;
   margin: 0;
   transition: color 0.3s ease;
-}
-
-/* Professional accent elements */
-.section::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(232, 238, 247, 0.05), transparent 70%);
-  border-radius: 50%;
 }
 
 @media (max-width: 1200px) {

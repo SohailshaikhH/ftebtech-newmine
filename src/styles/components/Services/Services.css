@@ -1,8 +1,7 @@
 .service-description-wrapper {
   width: 100%;
-  background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+  background: #ffffff;
   position: relative;
-  overflow: hidden;
 }
 
 /* Hero Section */
