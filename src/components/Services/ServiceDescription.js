@@ -1,19 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/components/Services/Services.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faCloud, 
-  faShieldAlt, 
-  faCode, 
-  faArrowRight,
-  faCogs,
-  faServer,
-  faUsers,
-  faDesktop,
-  faNetworkWired,
-  faLock
-} from '@fortawesome/free-solid-svg-icons';
 
 // Import existing logos from your project
 import azureLogo from '../../assets/images/ProductLogos/azure.jpg';
@@ -29,8 +16,7 @@ const ServiceDescription = () => {
     {
       id: 'azure',
       title: 'Microsoft Azure Services',
-      description: 'Complete cloud infrastructure solutions with Azure. From migration to optimization, we handle your entire cloud journey with enterprise-grade security.',
-      icon: faCloud,
+      description: 'Complete cloud infrastructure solutions with Azure. From migration to optimization, we handle your entire cloud journey with enterprise-grade security and scalability.',
       logo: azureLogo,
       features: ['Cloud Migration', 'Infrastructure Setup', 'DevOps Integration', 'Cost Optimization'],
       path: '/services/azure'
@@ -39,7 +25,6 @@ const ServiceDescription = () => {
       id: 'microsoft365',
       title: 'Microsoft 365 Solutions',
       description: 'Empower your workforce with comprehensive M365 implementation, security configuration, and ongoing support for maximum productivity.',
-      icon: faUsers,
       logo: m365Logo,
       features: ['Email Migration', 'Teams Setup', 'Security Configuration', 'User Training'],
       path: '/services/microsoft365'
@@ -47,8 +32,7 @@ const ServiceDescription = () => {
     {
       id: 'dynamics365',
       title: 'Dynamics 365 Implementation',
-      description: 'Transform your business operations with intelligent ERP and CRM solutions tailored to your specific industry needs.',
-      icon: faCogs,
+      description: 'Transform your business operations with intelligent ERP and CRM solutions tailored to your specific industry needs and requirements.',
       logo: dynamicsLogo,
       features: ['Business Central', 'Sales & Marketing', 'Field Service', 'Custom Development'],
       path: '/services/dynamics365'
@@ -56,8 +40,7 @@ const ServiceDescription = () => {
     {
       id: 'development',
       title: 'Custom Development',
-      description: 'Build powerful web applications and business tools with modern technologies, ensuring scalability and performance.',
-      icon: faCode,
+      description: 'Build powerful web applications and business tools with modern technologies, ensuring scalability, performance, and user experience.',
       logo: developmentLogo,
       features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
       path: '/services/development'
@@ -65,8 +48,7 @@ const ServiceDescription = () => {
     {
       id: 'infrastructure',
       title: 'IT Infrastructure Services',
-      description: 'End-to-end infrastructure planning, implementation, and management for optimal performance and reliability.',
-      icon: faServer,
+      description: 'End-to-end infrastructure planning, implementation, and management for optimal performance, reliability, and business continuity.',
       logo: microsoftLogo,
       features: ['Network Setup', 'Server Management', 'Hardware Procurement', 'Monitoring'],
       path: '/services/infrastructure'
@@ -74,8 +56,7 @@ const ServiceDescription = () => {
     {
       id: 'security',
       title: 'Cybersecurity Solutions',
-      description: 'Protect your business with comprehensive security strategies, advanced threat protection, and compliance management.',
-      icon: faShieldAlt,
+      description: 'Protect your business with comprehensive security strategies, advanced threat protection, and compliance management solutions.',
       logo: microsoftLogo,
       features: ['Security Assessment', 'Threat Protection', 'Compliance', '24/7 Monitoring'],
       path: '/services/security'
@@ -125,9 +106,6 @@ const ServiceDescription = () => {
               onClick={() => handleServiceClick(service.path)}
             >
               <div className="service-card-header">
-                <div className="service-icon-wrapper">
-                  <FontAwesomeIcon icon={service.icon} className="service-icon-modern" />
-                </div>
                 <div className="service-logo-wrapper">
                   <img src={service.logo} alt={`${service.title} Logo`} className="service-logo" />
                 </div>
@@ -144,8 +122,7 @@ const ServiceDescription = () => {
               
               <div className="service-card-footer">
                 <button className="service-btn-modern">
-                  Learn More
-                  <FontAwesomeIcon icon={faArrowRight} className="btn-arrow" />
+                  Learn More →
                 </button>
               </div>
             </div>
