@@ -13,7 +13,7 @@ import {
   faZap,
   faLock,
   faChartBar,
-  faMessageCircle
+  faComment
 } from '@fortawesome/free-solid-svg-icons';
 import './ServicePageTemplate.css';
 
@@ -186,7 +186,7 @@ const ServicePageTemplate = ({ data }) => {
                     <h4>Free Assessment</h4>
                     <p>Get a comprehensive analysis of your current infrastructure and migration roadmap.</p>
                     <button className="btn-contact" onClick={handleContactClick}>
-                      <FontAwesomeIcon icon={faMessageCircle} />
+                      <FontAwesomeIcon icon={faComment} />
                       Schedule Assessment
                     </button>
                   </div>
