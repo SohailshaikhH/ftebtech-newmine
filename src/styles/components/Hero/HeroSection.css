@@ -70,7 +70,6 @@ main {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 30px;
-  box-shadow: 0 8px 25px rgba(232, 238, 247, 0.3);
   backdrop-filter: blur(10px);
 }
 
