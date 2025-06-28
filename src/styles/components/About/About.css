@@ -104,7 +104,7 @@
   left: 0;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #e8eef7, rgba(232, 238, 247, 0.6));
+      background: linear-gradient(90deg, #0a3286, rgb(10 50 134));
   border-radius: 2px;
 }
 
