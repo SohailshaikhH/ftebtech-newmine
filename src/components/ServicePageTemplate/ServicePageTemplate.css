@@ -1,16 +1,4 @@
-:root {
-  /* Font Families */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Roboto', sans-serif;
 
-  /* Color Palette */
-  --color-primary: #0056D2;      /* Main blue */
-  --color-secondary: #66A1E7;    /* Light blue (for subheadings) */
-  --color-accent: #FFA500;       /* Orange (for highlights/CTAs) */
-  --color-text: #333333;         /* Main body text */
-  --color-muted: #666666;        /* Less important text */
-  --color-bg-light: #F2F6FC;     /* Light section background */
-}
 
 .service-page {
   min-height: 100vh;
