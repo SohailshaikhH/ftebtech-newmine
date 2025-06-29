@@ -10,20 +10,35 @@
 }
 
 :root {
-  --primary-color: #0a3286;
-  --secondary-color: #0063da;
-  --dark-color: #111827;
-  --text-color: #374151;
-  --light-color: #f8faff;
-  --white-color: #ffffff;
+  /* Font Families */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  /* Color Palette */
+  --color-primary: #0056D2;      /* Main blue */
+  --color-secondary: #66A1E7;    /* Light blue (for subheadings) */
+  --color-accent: #FFA500;       /* Orange (for highlights/CTAs) */
+  --color-text: #333333;         /* Main body text */
+  --color-muted: #666666;        /* Less important text */
+  --color-bg-light: #F2F6FC;     /* Light section background */
+  --color-white: #ffffff;
+  --color-dark: #111827;
+  
+  /* Legacy color variables for compatibility */
+  --primary-color: var(--color-primary);
+  --secondary-color: var(--color-secondary);
+  --dark-color: var(--color-dark);
+  --text-color: var(--color-text);
+  --light-color: var(--color-bg-light);
+  --white-color: var(--color-white);
   --transition: all 0.3s ease;
-  --box-shadow: 0 0 40px rgba(10, 50, 134, 0.1);
+  --box-shadow: 0 0 40px rgba(0, 86, 210, 0.1);
 }
 
 body {
-  font-family: var(--font-primary) !important;
+  font-family: var(--font-body) !important;
   line-height: var(--line-height-normal);
-  color: var(--text-body);
+  color: var(--color-text);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -75,31 +90,35 @@ ul {
 }
 
 .section-title h6 {
-  color: var(--secondary-color);
+  font-family: var(--font-body);
+  color: var(--color-secondary);
   font-weight: var(--font-weight-semibold);
   text-transform: uppercase;
   margin-bottom: 15px;
   letter-spacing: var(--letter-spacing-widest);
-  font-size: var(--text-sm);
+  font-size: var(--font-size-sm);
 }
 
 .section-title h2 {
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 2.25rem);
   font-weight: var(--font-weight-bold);
-  color: var(--primary-color);
+  color: var(--color-primary);
   margin-bottom: 20px;
   line-height: var(--line-height-tight);
 }
 
 .section-title p {
+  font-family: var(--font-body);
   max-width: 700px;
   margin: 0 auto;
   font-size: clamp(1rem, 2.5vw, 1.125rem);
-  color: var(--text-body);
+  color: var(--color-text);
   line-height: var(--line-height-relaxed);
 }
 
 .btn {
+  font-family: var(--font-body);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -119,35 +138,35 @@ ul {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn-primary:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--color-secondary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(10, 50, 134, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 86, 210, 0.3);
 }
 
 .btn-outline {
   background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .btn-outline:hover {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn-white {
-  background-color: var(--white-color);
-  color: var(--primary-color);
+  background-color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .btn-white:hover {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .text-center {
@@ -155,50 +174,56 @@ ul {
 }
 
 .bg-light {
-  background-color: var(--light-color);
+  background-color: var(--color-bg-light);
 }
 
 /* Professional Typography Utilities */
 .heading-primary {
+  font-family: var(--font-heading);
   font-size: clamp(2.5rem, 6vw, 3rem);
   font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
+  color: var(--color-primary);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-tight);
 }
 
 .heading-secondary {
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 2.25rem);
   font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
+  color: var(--color-primary);
   line-height: var(--line-height-tight);
 }
 
 .heading-tertiary {
+  font-family: var(--font-heading);
   font-size: clamp(1.5rem, 4vw, 1.875rem);
   font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
+  color: var(--color-primary);
   line-height: var(--line-height-snug);
 }
 
 .text-lead {
+  font-family: var(--font-body);
   font-size: clamp(1rem, 2.5vw, 1.125rem);
   font-weight: var(--font-weight-normal);
-  color: var(--text-body);
+  color: var(--color-text);
   line-height: var(--line-height-relaxed);
 }
 
 .text-body {
+  font-family: var(--font-body);
   font-size: clamp(0.875rem, 2vw, 1rem);
   font-weight: var(--font-weight-normal);
-  color: var(--text-body);
+  color: var(--color-text);
   line-height: var(--line-height-relaxed);
 }
 
 .text-caption {
+  font-family: var(--font-body);
   font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: var(--font-weight-normal);
-  color: var(--text-muted);
+  color: var(--color-muted);
   line-height: var(--line-height-normal);
 }
 
@@ -307,7 +332,7 @@ ul {
 .btn:focus,
 a:focus,
 button:focus {
-  outline: 2px solid var(--secondary-color);
+  outline: 2px solid var(--color-secondary);
   outline-offset: 2px;
 }
 

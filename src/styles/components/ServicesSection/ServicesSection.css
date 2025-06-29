@@ -3,18 +3,19 @@
   padding: 100px 0;
   position: relative;
   overflow: hidden;
-  background: #ffffff;
+  background: var(--color-white);
 }
 
 .services-section h2 {
+  font-family: var(--font-heading);
   text-align: center;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   font-size: clamp(2.2rem, 4vw, 2.8rem);
   margin-bottom: 60px;
   letter-spacing: -0.5px;
   animation: fadeInDown 1s ease;
   opacity: 1;
-  color: #0a3286;
+  color: var(--color-primary);
   position: relative;
   z-index: 2;
 }
@@ -27,12 +28,12 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #e8eef7, #f1f5fb);
+  background: linear-gradient(90deg, var(--color-bg-light), #f1f5fb);
   border-radius: 2px;
 }
 
 .services-section h2 span {
-  background: linear-gradient(135deg, #0063da, #e8eef7);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-bg-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -43,14 +44,14 @@
   padding: 35px 30px;
   border: none;
   border-radius: 25px;
-  background-color: #ffffff;
-  box-shadow: 0 15px 40px rgba(10, 50, 134, 0.1);
+  background-color: var(--color-white);
+  box-shadow: 0 15px 40px rgba(0, 86, 210, 0.1);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
   isolation: isolate;
   overflow: hidden;
   z-index: 1;
-  border: 2px solid rgba(10, 50, 134, 0.05);
+  border: 2px solid rgba(0, 86, 210, 0.05);
 }
 
 .services-section .service-card::before {
@@ -60,7 +61,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #0063da, #e8eef7);
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-bg-light));
   transform: scaleX(0);
   transition: transform 0.4s ease;
 }
@@ -72,7 +73,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(10, 50, 134, 0.05) 0%, rgba(232, 238, 247, 0.03) 30%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 86, 210, 0.05) 0%, rgba(242, 246, 252, 0.03) 30%, transparent 70%);
   opacity: 0;
   transform: scale(0.5);
   transition: transform 0.6s ease-out, opacity 0.4s ease-out;
@@ -81,23 +82,25 @@
 }
 
 .services-section .service-card h3 {
+  font-family: var(--font-heading);
   font-size: 1.6rem;
-  color: #0a3286;
+  color: var(--color-primary);
   margin: 20px 0;
   transition: color 0.3s ease;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .services-section .service-card p {
+  font-family: var(--font-body);
   font-size: 1rem;
-  color: #666;
+  color: var(--color-text);
   line-height: 1.7;
   transition: color 0.3s ease;
   margin-bottom: 25px;
 }
 
 .icon-wrapper {
-  background: linear-gradient(135deg, rgba(0, 99, 218, 0.1), rgba(232, 238, 247, 0.1));
+  background: linear-gradient(135deg, rgba(102, 161, 231, 0.1), rgba(242, 246, 252, 0.1));
   border-radius: 25px;
   width: 90px;
   height: 90px;
@@ -106,7 +109,7 @@
   justify-content: center;
   margin-bottom: 25px;
   transition: all 0.4s ease;
-  border: 2px solid rgba(0, 99, 218, 0.2);
+  border: 2px solid rgba(102, 161, 231, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -118,13 +121,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #0063da, #e8eef7);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-bg-light));
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
 .icon-wrapper svg {
-  color: #0063da;
+  color: var(--color-secondary);
   width: 40px;
   height: 40px;
   transition: all 0.4s ease;
@@ -144,13 +147,14 @@
 }
 
 .service-btn {
+  font-family: var(--font-body);
   position: relative;
   padding: 12px 28px;
   background: transparent;
-  border: 2px solid #0a3286;
+  border: 2px solid var(--color-primary);
   border-radius: 50px;
-  color: #0a3286;
-  font-weight: 600;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
   font-size: 0.95rem;
   cursor: pointer;
   overflow: hidden;
@@ -167,7 +171,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #0a3286, #0063da);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   opacity: 0;
   transform: translateX(-100%) rotate(10deg);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -225,7 +229,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #0063da, #e8eef7);
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-bg-light));
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s ease;
