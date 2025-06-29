@@ -9,32 +9,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  /* Font Families */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Roboto', sans-serif;
-
-  /* Color Palette */
-  --color-primary: #0056D2;      /* Main blue */
-  --color-secondary: #66A1E7;    /* Light blue (for subheadings) */
-  --color-accent: #FFA500;       /* Orange (for highlights/CTAs) */
-  --color-text: #333333;         /* Main body text */
-  --color-muted: #666666;        /* Less important text */
-  --color-bg-light: #F2F6FC;     /* Light section background */
-  --color-white: #ffffff;
-  --color-dark: #111827;
-  
-  /* Legacy color variables for compatibility */
-  --primary-color: var(--color-primary);
-  --secondary-color: var(--color-secondary);
-  --dark-color: var(--color-dark);
-  --text-color: var(--color-text);
-  --light-color: var(--color-bg-light);
-  --white-color: var(--color-white);
-  --transition: all 0.3s ease;
-  --box-shadow: 0 0 40px rgba(0, 86, 210, 0.1);
-}
-
 body {
   font-family: var(--font-body) !important;
   line-height: var(--line-height-normal);

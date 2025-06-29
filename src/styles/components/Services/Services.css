@@ -1,22 +1,8 @@
-/* Responsive Services Component */
-
-:root {
-  /* Font Families */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Roboto', sans-serif;
-
-  /* Color Palette */
-  --color-primary: #0056D2;      /* Main blue */
-  --color-secondary: #66A1E7;    /* Light blue (for subheadings) */
-  --color-accent: #FFA500;       /* Orange (for highlights/CTAs) */
-  --color-text: #333333;         /* Main body text */
-  --color-muted: #666666;        /* Less important text */
-  --color-bg-light: #F2F6FC;     /* Light section background */
-}
+/* Responsive Services Component - Using Central Font System */
 
 .service-description-wrapper {
   width: 100%;
-  background: #ffffff;
+  background: var(--color-white);
   position: relative;
 }
 
@@ -49,28 +35,26 @@
 }
 
 .services-subtitle {
-  font-family: var(--font-body);
   display: inline-block;
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   padding: clamp(6px, 1.5vw, 8px) clamp(16px, 3vw, 20px);
   border-radius: 25px;
   font-size: clamp(0.75rem, 2vw, 0.875rem);
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-widest);
   text-transform: uppercase;
   margin-bottom: clamp(20px, 4vw, 30px);
   backdrop-filter: blur(10px);
 }
 
 .services-main-title {
-  font-family: var(--font-heading);
   font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   margin-bottom: clamp(20px, 4vw, 30px);
   color: #ffffff;
-  letter-spacing: -0.5px;
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 .highlight-text {
@@ -82,13 +66,12 @@
 }
 
 .services-hero-description {
-  font-family: var(--font-body);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
-  line-height: 1.6;
+  line-height: var(--line-height-relaxed);
   max-width: 800px;
   margin: 0 auto clamp(30px, 6vw, 50px);
   color: rgba(255, 255, 255, 0.9);
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
 }
 
 .services-stats {
@@ -106,22 +89,20 @@
 }
 
 .stat-number {
-  font-family: var(--font-heading);
   display: block;
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   color: #ffffff;
-  line-height: 1.2;
+  line-height: var(--line-height-tight);
   margin-bottom: 8px;
 }
 
 .stat-label {
-  font-family: var(--font-body);
   font-size: clamp(0.75rem, 2vw, 0.9rem);
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
+  letter-spacing: var(--letter-spacing-wide);
+  font-weight: var(--font-weight-medium);
 }
 
 /* Services Grid Section */
@@ -184,23 +165,21 @@
 }
 
 .service-title-modern {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
   color: var(--color-primary);
   margin: 0;
-  line-height: 1.3;
-  letter-spacing: normal;
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-normal);
 }
 
 .service-description-modern {
-  font-family: var(--font-body);
   color: var(--color-text);
-  line-height: 1.6;
+  line-height: var(--line-height-relaxed);
   margin-bottom: 20px;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   text-align: center;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   flex-grow: 1;
 }
 
@@ -217,9 +196,8 @@
   color: var(--color-primary);
   padding: 8px 14px;
   border-radius: 20px;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   border: 1px solid rgba(0, 86, 210, 0.2);
 }
 
@@ -230,7 +208,6 @@
 
 /* Service Button */
 .service-btn {
-  font-family: var(--font-body);
   position: relative;
   display: inline-block;
   padding: 12px 28px;
@@ -238,8 +215,8 @@
   border: 2px solid var(--color-primary);
   border-radius: 30px;
   color: var(--color-primary);
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -251,7 +228,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 0.5px;
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .service-btn::before {
@@ -314,21 +291,19 @@
 }
 
 .services-cta-section h2 {
-  font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 2.5rem);
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   margin-bottom: clamp(16px, 3vw, 20px);
   color: #ffffff;
-  line-height: 1.2;
+  line-height: var(--line-height-tight);
 }
 
 .services-cta-section p {
-  font-family: var(--font-body);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: clamp(30px, 6vw, 40px);
-  line-height: 1.6;
-  font-weight: 400;
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
 }
 
 .cta-buttons {
@@ -463,11 +438,11 @@
   }
 
   .service-title-modern {
-    font-size: 1.3rem;
+    font-size: var(--font-size-lg);
   }
 
   .service-description-modern {
-    font-size: 0.95rem;
+    font-size: var(--font-size-sm);
   }
 }
 
@@ -496,11 +471,11 @@
   }
 
   .service-title-modern {
-    font-size: 1.2rem;
+    font-size: var(--font-size-base);
   }
 
   .service-description-modern {
-    font-size: 0.9rem;
+    font-size: var(--font-size-xs);
   }
 }
 
