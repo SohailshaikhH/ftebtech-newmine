@@ -1,4 +1,4 @@
-/* Hero Section with New Color Palette */
+/* Hero Section with Centralized Font System */
 
 :root {
   --primary-blue: var(--color-primary);
@@ -257,8 +257,6 @@ main {
   height: auto;
   border-radius: 15px;
 }
-
-/* Professional accent elements */
 
 @keyframes pulse {
   0%, 100% {
