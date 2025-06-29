@@ -6,8 +6,8 @@
 /* Root Typography and Color Variables */
 :root {
   /* Font Families */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'poppins', sans-serif;
+  --font-body: 'poppins', sans-serif;
 
   /* Color Palette */
   --color-primary: #0056D2;      /* Main blue */
