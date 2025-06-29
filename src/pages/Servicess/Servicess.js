@@ -73,19 +73,22 @@ const services = [
 const ITServices = () => {
   const isVisible = useServicessScroll();
 
-  const technologyPartners = [
-    { src: microsoftLogo, alt: 'Microsoft', name: 'Microsoft' },
-    { src: azureLogo, alt: 'Microsoft Azure', name: 'Azure' },
-    { src: m365Logo, alt: 'Microsoft 365', name: 'Microsoft 365' },
-    { src: dynamicsLogo, alt: 'Dynamics 365', name: 'Dynamics 365' },
-    { src: awsLogo, alt: 'Amazon Web Services', name: 'AWS' },
-    { src: googlecloudLogo, alt: 'Google Cloud', name: 'Google Cloud' },
-    { src: reactLogo, alt: 'React', name: 'React' },
-    { src: pythonLogo, alt: 'Python', name: 'Python' },
-    { src: linuxLogo, alt: 'Linux', name: 'Linux' },
-    { src: terraformLogo, alt: 'Terraform', name: 'Terraform' },
-    { src: adevops, alt: 'Azure DevOps', name: 'DevOps' },
-    { src: developmentLogo, alt: 'Development', name: 'Development' }
+  const productLogos = [
+    { src: awsLogo, class: 'logo-aws', alt: 'AWS Logo' },
+    { src: azureLogo, class: 'logo-azure', alt: 'Azure Logo' },
+    { src: developmentLogo, class: 'logo-development', alt: 'Development Logo' },
+    { src: dynamicsLogo, class: 'logo-dynamics', alt: 'Dynamics 365 Logo' },
+    { src: erosourceLogo, class: 'logo-erosource', alt: 'Erosource Logo' },
+    { src: googlecloudLogo, class: 'logo-googlecloud', alt: 'Google Cloud Logo' },
+    { src: linuxLogo, class: 'logo-linux', alt: 'Linux Logo' },
+    { src: m365Logo, class: 'logo-m365', alt: 'Microsoft 365 Logo' },
+    { src: mlLogo, class: 'logo-ml', alt: 'Machine Learning Logo' },
+    { src: microsoftLogo, class: 'logo-microsoft', alt: 'Microsoft Logo' },
+    { src: pythonLogo, class: 'logo-python', alt: 'Python Logo' },
+    { src: reactLogo, class: 'logo-react', alt: 'React Logo' },
+    { src: terraformLogo, class: 'logo-terraform', alt: 'Terraform Logo' },
+    { src: turbo360Logo, class: 'logo-turbo360', alt: 'Turbo360 Logo' },
+    { src: adevops, class: 'logo-adevops', alt: 'adevops' },
   ];
 
   return (
@@ -100,28 +103,41 @@ const ITServices = () => {
       </div>
 
       <section className="descriptions bg-light">
-        {/* Professional Technology Partners Section */}
-        <div className="technology-partners-section">
-          <div className="technology-partners-content">
-            <h2 className="partners-title">Technology Partners & Expertise</h2>
-            <p className="partners-subtitle">
-              We work with industry-leading technologies and platforms to deliver exceptional results for our clients
-            </p>
-            
-            <div className="technology-logos-grid">
-              {technologyPartners.map((partner, index) => (
-                <div key={index} className="logo-item">
-                  <img
-                    src={partner.src}
-                    alt={partner.alt}
-                    title={partner.name}
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        {/* Logo Marquee Slider */}
+        <Swiper
+          modules={[Autoplay]}
+          loop={true}
+          speed={1500}
+          spaceBetween={30}
+          slidesPerGroup={1}
+          allowTouchMove={true}
+          watchSlidesProgress={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          className="product-logos-swiper"
+          breakpoints={{
+            320: { slidesPerView: 2, spaceBetween: 15 },
+            480: { slidesPerView: 3, spaceBetween: 20 },
+            640: { slidesPerView: 3, spaceBetween: 25 },
+            768: { slidesPerView: 4, spaceBetween: 30 },
+            1024: { slidesPerView: 5, spaceBetween: 35 },
+            1200: { slidesPerView: 6, spaceBetween: 40 },
+          }}
+        >
+          {[...productLogos, ...productLogos, ...productLogos].map((logo, idx) => (
+            <SwiperSlide key={idx} className="logo-slide">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className={`logo-img ${logo.class}`}
+                loading="lazy"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
         
         {/* Service Description Component */}
         <ServiceDescription />
@@ -135,7 +151,7 @@ const ITServices = () => {
             Advanced IT Solutions
           </h2>
         </div>
-        {/* Services Slider */}
+        {/* Second Slider - Services */}
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           loop={true}
