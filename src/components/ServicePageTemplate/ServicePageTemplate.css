@@ -1,3 +1,17 @@
+:root {
+  /* Font Families */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  /* Color Palette */
+  --color-primary: #0056D2;      /* Main blue */
+  --color-secondary: #66A1E7;    /* Light blue (for subheadings) */
+  --color-accent: #FFA500;       /* Orange (for highlights/CTAs) */
+  --color-text: #333333;         /* Main body text */
+  --color-muted: #666666;        /* Less important text */
+  --color-bg-light: #F2F6FC;     /* Light section background */
+}
+
 .service-page {
   min-height: 100vh;
   background: #f8f9fa;
@@ -24,6 +38,7 @@
   padding: 12px 24px;
   border-radius: 8px;
   cursor: pointer;
+  font-family: var(--font-body);
   font-size: 14px;
   margin-bottom: 40px;
   transition: all 0.3s ease;
@@ -49,24 +64,30 @@
 }
 
 .service-hero-title {
+  font-family: var(--font-heading);
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 16px;
   line-height: 1.2;
+  color: white;
 }
 
 .service-hero-subtitle {
+  font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 24px;
   opacity: 0.9;
+  color: white;
 }
 
 .service-hero-description {
+  font-family: var(--font-body);
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 40px;
   opacity: 0.8;
+  color: white;
 }
 
 .hero-actions {
@@ -76,6 +97,7 @@
 }
 
 .cta-button {
+  font-family: var(--font-body);
   padding: 16px 32px;
   border-radius: 8px;
   font-size: 16px;
@@ -91,13 +113,13 @@
 
 .cta-button.primary {
   background: white;
-  color: #007bff;
+  color: var(--color-primary);
 }
 
 .cta-button.primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  color: #007bff;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -109,13 +131,8 @@
 
 .cta-button.secondary:hover {
   background: white;
-  color: #007bff;
+  color: var(--color-primary);
   text-decoration: none;
-}
-
-.cta-button.large {
-  padding: 20px 40px;
-  font-size: 18px;
 }
 
 .hero-logo {
@@ -141,15 +158,19 @@
 }
 
 .stat-number {
+  font-family: var(--font-heading);
   display: block;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 8px;
+  color: white;
 }
 
 .stat-label {
+  font-family: var(--font-body);
   font-size: 1rem;
   opacity: 0.8;
+  color: white;
 }
 
 /* Main Content Section */
@@ -170,17 +191,19 @@
 }
 
 .descriptions h2 {
+  font-family: var(--font-heading);
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #0a3286;
+  font-weight: 600;
+  color: var(--color-primary);
   margin-bottom: 30px;
   line-height: 1.3;
 }
 
 .descriptions p {
+  font-family: var(--font-body);
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #666;
+  color: var(--color-text);
   margin-bottom: 25px;
 }
 
@@ -189,9 +212,10 @@
 }
 
 .service-benefits h3 {
+  font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 600;
-  color: #0a3286;
+  color: var(--color-primary);
   margin-bottom: 30px;
 }
 
@@ -206,33 +230,29 @@
   align-items: flex-start;
   gap: 20px;
   padding: 25px;
-  background: #f8f9fa;
+  background: var(--color-bg-light);
   border-radius: 12px;
-  border-left: 4px solid #0063da;
-  transition: all 0.3s ease;
-}
-
-.benefit-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 99, 218, 0.15);
+  border-left: 4px solid var(--color-secondary);
 }
 
 .benefit-icon {
   font-size: 1.8rem;
-  color: #0063da;
+  color: var(--color-secondary);
   margin-top: 5px;
   flex-shrink: 0;
 }
 
 .benefit-item h4 {
+  font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 600;
-  color: #0a3286;
+  color: var(--color-primary);
   margin-bottom: 8px;
 }
 
 .benefit-item p {
-  color: #666;
+  font-family: var(--font-body);
+  color: var(--color-text);
   line-height: 1.5;
   margin: 0;
 }
@@ -257,9 +277,10 @@
 }
 
 .sidebar-section h3 {
+  font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 600;
-  color: #0a3286;
+  color: var(--color-primary);
   margin-bottom: 20px;
 }
 
@@ -274,9 +295,10 @@
 }
 
 .service-list a {
+  font-family: var(--font-body);
   display: block;
   padding: 12px 16px;
-  color: #666;
+  color: var(--color-text);
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -284,9 +306,9 @@
 }
 
 .service-list a:hover {
-  background: rgba(0, 99, 218, 0.1);
-  color: #0063da;
-  border-left-color: #0063da;
+  background: var(--color-bg-light);
+  color: var(--color-secondary);
+  border-left-color: var(--color-secondary);
   transform: translateX(5px);
 }
 
@@ -297,15 +319,17 @@
 
 .certification-card h4,
 .contact-card h4 {
+  font-family: var(--font-heading);
   font-size: 1.3rem;
   font-weight: 600;
-  color: #0a3286;
+  color: var(--color-primary);
   margin-bottom: 15px;
 }
 
 .certification-card p,
 .contact-card p {
-  color: #666;
+  font-family: var(--font-body);
+  color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -318,20 +342,22 @@
 }
 
 .badge {
-  background: linear-gradient(135deg, #0063da, #0a3286);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   color: white;
   padding: 6px 12px;
   border-radius: 20px;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 500;
 }
 
 .btn-contact {
-  background: linear-gradient(135deg, #0063da, #0a3286);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   color: white;
   border: none;
   padding: 14px 24px;
   border-radius: 8px;
+  font-family: var(--font-body);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -343,7 +369,7 @@
 
 .btn-contact:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 99, 218, 0.3);
+  box-shadow: 0 8px 25px rgba(102, 161, 231, 0.3);
 }
 
 /* Container */
@@ -360,15 +386,17 @@
 }
 
 .section-header h2 {
+  font-family: var(--font-heading);
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #0a3286;
+  font-weight: 600;
+  color: var(--color-primary);
   margin-bottom: 16px;
 }
 
 .section-header p {
+  font-family: var(--font-body);
   font-size: 1.1rem;
-  color: #666;
+  color: var(--color-text);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -376,59 +404,42 @@
 /* Services Grid Section */
 .services-grid-section {
   padding: 80px 0;
-  background: white;
+  background: var(--color-bg-light);
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .service-card {
   background: white;
   border-radius: 16px;
-  padding: 40px 30px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border: 2px solid #f0f0f0;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
   position: relative;
   overflow: hidden;
-}
-
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #0063da, #0a3286);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgba(0, 99, 218, 0.15);
-  border-color: rgba(0, 99, 218, 0.2);
-}
-
-.service-card:hover::before {
-  transform: scaleX(1);
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
 }
 
 .service-card-header {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .service-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #0063da, #0a3286);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -439,33 +450,38 @@
 }
 
 .service-card h3 {
-  font-size: 1.4rem;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
   font-weight: 600;
-  color: #0a3286;
+  color: var(--color-primary);
   margin: 0;
   line-height: 1.3;
+  flex: 1;
 }
 
 .service-description {
-  color: #666;
+  font-family: var(--font-body);
+  color: var(--color-text);
   line-height: 1.6;
-  margin-bottom: 24px;
-  font-size: 1rem;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  flex-grow: 1;
 }
 
 .service-features {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 .service-features li {
+  font-family: var(--font-body);
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 0;
-  color: #495057;
-  font-size: 0.95rem;
+  padding: 6px 0;
+  color: var(--color-text);
+  font-size: 0.9rem;
 }
 
 .service-features li svg {
@@ -477,32 +493,31 @@
 /* Benefits Section */
 .benefits-section {
   padding: 80px 0;
-  background: #f8f9fa;
+  background: #ffffff;
 }
 
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .benefit-card {
   background: white;
   border-radius: 12px;
-  padding: 40px 30px;
+  padding: 30px 25px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.benefit-card:hover {
-  transform: translateY(-5px);
+  border: 1px solid #e5e7eb;
 }
 
 .benefit-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #0063da, #0a3286);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -513,26 +528,29 @@
 }
 
 .benefit-card h3 {
+  font-family: var(--font-heading);
   font-size: 1.3rem;
   font-weight: 600;
-  color: #0a3286;
+  color: var(--color-primary);
   margin-bottom: 16px;
 }
 
 .benefit-card p {
-  color: #666;
+  font-family: var(--font-body);
+  color: var(--color-text);
   line-height: 1.6;
 }
 
 /* Process Section */
 .process-section {
   padding: 80px 0;
-  background: white;
+  background: var(--color-bg-light);
 }
 
 .process-timeline {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .process-step {
@@ -545,39 +563,45 @@
 .step-number {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #0063da, #0a3286);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-heading);
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 600;
   flex-shrink: 0;
 }
 
 .step-content h3 {
+  font-family: var(--font-heading);
   font-size: 1.3rem;
   font-weight: 600;
-  color: #0a3286;
+  color: var(--color-primary);
   margin-bottom: 12px;
 }
 
 .step-content p {
-  color: #666;
+  font-family: var(--font-body);
+  color: var(--color-text);
   line-height: 1.6;
 }
 
 /* Technologies Section */
 .technologies-section {
   padding: 80px 0;
-  background: #f8f9fa;
+  background: #ffffff;
 }
 
 .technologies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .tech-item {
@@ -585,35 +609,35 @@
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+  font-family: var(--font-body);
   font-weight: 600;
-  color: #495057;
+  color: var(--color-text);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.tech-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
 }
 
 /* CTA Section */
 .service-cta-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #0063da, #0a3286);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   color: white;
   text-align: center;
 }
 
 .cta-content h2 {
+  font-family: var(--font-heading);
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 16px;
+  color: white;
 }
 
 .cta-content p {
+  font-family: var(--font-body);
   font-size: 1.1rem;
   margin-bottom: 40px;
   opacity: 0.9;
+  color: white;
 }
 
 .cta-actions {
@@ -632,10 +656,12 @@
 }
 
 .contact-item {
+  font-family: var(--font-body);
   display: flex;
   align-items: center;
   gap: 12px;
   font-size: 1rem;
+  color: white;
 }
 
 /* Responsive Design */
@@ -755,6 +781,19 @@
   .benefits-grid {
     grid-template-columns: 1fr;
   }
+  
+  .service-card {
+    min-height: auto;
+    padding: 25px 20px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .service-description {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -778,5 +817,17 @@
     flex-direction: column;
     text-align: center;
     gap: 15px;
+  }
+  
+  .service-card {
+    padding: 20px 15px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .service-description {
+    font-size: 0.85rem;
   }
 }
