@@ -1,17 +1,4 @@
-:root {
-  /* Font Families */
-  --font-heading: var(--font-heading);
-  --font-body: var(--font-body);
-
-  /* Color Palette */
-  --color-primary: #0056D2;      /* Main blue */
-  --color-secondary: #66A1E7;    /* Light blue (for subheadings) */
-  --color-accent: #FFA500;       /* Orange (for highlights/CTAs) */
-  --color-text: #333333;         /* Main body text */
-  --color-muted: #666666;        /* Less important text */
-  --color-bg-light: #F2F6FC;     /* Light section background */
-}
-
+/* Service Page Template Styles */
 .service-page {
   min-height: 100vh;
   background: #f8f9fa;
@@ -38,7 +25,6 @@
   padding: 12px 24px;
   border-radius: 8px;
   cursor: pointer;
-  font-family: var(--font-body);
   font-size: 14px;
   margin-bottom: 40px;
   transition: all 0.3s ease;
@@ -64,7 +50,6 @@
 }
 
 .service-hero-title {
-  font-family: var(--font-heading);
   font-size: 3.5rem;
   font-weight: 600;
   margin-bottom: 16px;
@@ -73,7 +58,6 @@
 }
 
 .service-hero-subtitle {
-  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 24px;
@@ -82,7 +66,6 @@
 }
 
 .service-hero-description {
-  font-family: var(--font-body);
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 40px;
@@ -97,7 +80,6 @@
 }
 
 .cta-button {
-  font-family: var(--font-body);
   padding: 16px 32px;
   border-radius: 8px;
   font-size: 16px;
@@ -159,7 +141,6 @@
 }
 
 .stat-number {
-  font-family: var(--font-heading);
   display: block;
   font-size: 2.5rem;
   font-weight: 600;
@@ -168,7 +149,6 @@
 }
 
 .stat-label {
-  font-family: var(--font-body);
   font-size: 1rem;
   opacity: 0.8;
   color: white;
@@ -192,7 +172,6 @@
 }
 
 .descriptions h2 {
-  font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -201,7 +180,6 @@
 }
 
 .descriptions p {
-  font-family: var(--font-body);
   font-size: 1.1rem;
   line-height: 1.7;
   color: var(--color-text);
@@ -213,7 +191,6 @@
 }
 
 .service-benefits h3 {
-  font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -244,7 +221,6 @@
 }
 
 .benefit-item h4 {
-  font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -252,7 +228,6 @@
 }
 
 .benefit-item p {
-  font-family: var(--font-body);
   color: var(--color-text);
   line-height: 1.5;
   margin: 0;
@@ -278,7 +253,6 @@
 }
 
 .sidebar-section h3 {
-  font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -296,7 +270,6 @@
 }
 
 .service-list a {
-  font-family: var(--font-body);
   display: block;
   padding: 12px 16px;
   color: var(--color-text);
@@ -320,7 +293,6 @@
 
 .certification-card h4,
 .contact-card h4 {
-  font-family: var(--font-heading);
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -329,7 +301,6 @@
 
 .certification-card p,
 .contact-card p {
-  font-family: var(--font-body);
   color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 20px;
@@ -347,7 +318,6 @@
   color: white;
   padding: 6px 12px;
   border-radius: 20px;
-  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 500;
 }
@@ -358,7 +328,6 @@
   border: none;
   padding: 14px 24px;
   border-radius: 8px;
-  font-family: var(--font-body);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -387,7 +356,6 @@
 }
 
 .section-header h2 {
-  font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -395,7 +363,6 @@
 }
 
 .section-header p {
-  font-family: var(--font-body);
   font-size: 1.1rem;
   color: var(--color-text);
   max-width: 600px;
@@ -451,7 +418,6 @@
 }
 
 .service-card h3 {
-  font-family: var(--font-heading);
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -461,7 +427,6 @@
 }
 
 .service-description {
-  font-family: var(--font-body);
   color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 20px;
@@ -476,7 +441,6 @@
 }
 
 .service-features li {
-  font-family: var(--font-body);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -529,7 +493,6 @@
 }
 
 .benefit-card h3 {
-  font-family: var(--font-heading);
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -537,7 +500,6 @@
 }
 
 .benefit-card p {
-  font-family: var(--font-body);
   color: var(--color-text);
   line-height: 1.6;
 }
@@ -570,14 +532,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 600;
   flex-shrink: 0;
 }
 
 .step-content h3 {
-  font-family: var(--font-heading);
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -585,7 +545,6 @@
 }
 
 .step-content p {
-  font-family: var(--font-body);
   color: var(--color-text);
   line-height: 1.6;
 }
@@ -610,7 +569,6 @@
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  font-family: var(--font-body);
   font-weight: 600;
   color: var(--color-text);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -626,7 +584,6 @@
 }
 
 .cta-content h2 {
-  font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 16px;
@@ -634,7 +591,6 @@
 }
 
 .cta-content p {
-  font-family: var(--font-body);
   font-size: 1.1rem;
   margin-bottom: 40px;
   opacity: 0.9;
@@ -657,7 +613,6 @@
 }
 
 .contact-item {
-  font-family: var(--font-body);
   display: flex;
   align-items: center;
   gap: 12px;

@@ -3,43 +3,11 @@
 @import url("./styles/responsive/mobile-first.css");
 @import url("./styles/responsive/browser-fixes.css");
 
-/* Force Poppins font override Bootstrap */
+/* Global Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-primary) !important;
-}
-
-/* Override Bootstrap's font-family with higher specificity */
-html,
-body,
-div,
-span,
-h1, h2, h3, h4, h5, h6,
-p, a, em, strong, small,
-ul, ol, li,
-form, label, input, textarea, select, button,
-table, th, td,
-.container, .container-fluid,
-.row, .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
-.col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
-.col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
-.col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
-.col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
-.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
-.col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
-.col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
-.col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6,
-.col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12,
-.btn, .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark,
-.form-control, .form-select, .form-check-label,
-.nav, .navbar, .navbar-brand, .nav-link,
-.card, .card-header, .card-body, .card-footer, .card-title, .card-text,
-.modal, .modal-header, .modal-body, .modal-footer, .modal-title,
-.alert, .badge, .breadcrumb, .dropdown, .pagination,
-.list-group, .list-group-item,
-.table, .table th, .table td {
   font-family: var(--font-primary) !important;
 }
 
@@ -53,24 +21,14 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Responsive Images */
-img {
+/* Media Elements */
+img, video, iframe {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Responsive Videos */
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Responsive Iframes */
-iframe {
-  max-width: 100%;
-}
-
+/* Links */
 a {
   text-decoration: none;
   color: inherit;
@@ -81,6 +39,7 @@ ul {
   list-style: none;
 }
 
+/* Layout Components */
 .container {
   width: 100%;
   max-width: var(--container-xl);
@@ -92,6 +51,7 @@ ul {
   padding: clamp(60px, 12vh, 100px) 0;
 }
 
+/* Section Titles */
 .section-title {
   text-align: center;
   margin-bottom: clamp(40px, 8vh, 60px);
@@ -125,6 +85,7 @@ ul {
   line-height: var(--line-height-relaxed);
 }
 
+/* Button Styles */
 .btn {
   font-family: var(--font-body) !important;
   display: inline-flex;
@@ -177,6 +138,7 @@ ul {
   color: var(--color-white);
 }
 
+/* Utility Classes */
 .text-center {
   text-align: center;
 }
@@ -185,7 +147,7 @@ ul {
   background-color: var(--color-bg-light);
 }
 
-/* Professional Typography Utilities */
+/* Typography Utilities */
 .heading-primary {
   font-family: var(--font-heading) !important;
   font-size: clamp(2.5rem, 6vw, 3rem);
@@ -235,7 +197,7 @@ ul {
   line-height: var(--line-height-normal);
 }
 
-/* Responsive Grid System */
+/* Grid System */
 .grid-responsive {
   display: grid;
   gap: clamp(16px, 3vw, 30px);
@@ -302,7 +264,7 @@ ul {
   }
 }
 
-/* Reduced Motion */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -312,7 +274,6 @@ ul {
   }
 }
 
-/* High Contrast Mode */
 @media (prefers-contrast: high) {
   .btn {
     border: 2px solid currentColor;
@@ -336,7 +297,7 @@ ul {
   }
 }
 
-/* Focus Styles for Accessibility */
+/* Focus Styles */
 .btn:focus,
 a:focus,
 button:focus {
@@ -344,36 +305,29 @@ button:focus {
   outline-offset: 2px;
 }
 
-/* Loading States */
+/* State Classes */
 .loading {
   opacity: 0.6;
   pointer-events: none;
 }
 
-/* Error States */
 .error {
   color: #dc2626;
   border-color: #dc2626;
 }
 
-/* Success States */
 .success {
   color: #059669;
   border-color: #059669;
 }
 
-/* Additional Bootstrap Override Rules */
-.bootstrap-override {
-  font-family: var(--font-primary) !important;
-}
-
-/* Override Bootstrap's default font stack completely */
+/* Bootstrap Override - Comprehensive Font Enforcement */
 :root {
   --bs-font-sans-serif: 'Poppins', -apple-system, sans-serif !important;
   --bs-body-font-family: 'Poppins', -apple-system, sans-serif !important;
 }
 
-/* Force override for all Bootstrap components */
+/* Bootstrap Component Overrides */
 .container,
 .container-fluid,
 .container-sm,
@@ -382,11 +336,7 @@ button:focus {
 .container-xl,
 .container-xxl,
 .row,
-[class*="col-"] {
-  font-family: var(--font-primary) !important;
-}
-
-/* Override Bootstrap button fonts */
+[class*="col-"],
 .btn,
 .btn-primary,
 .btn-secondary,
@@ -403,88 +353,44 @@ button:focus {
 .btn-outline-warning,
 .btn-outline-info,
 .btn-outline-light,
-.btn-outline-dark {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap form fonts */
+.btn-outline-dark,
 .form-control,
 .form-select,
 .form-check-input,
 .form-check-label,
 .form-label,
-.input-group-text {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap navigation fonts */
+.input-group-text,
 .navbar,
 .navbar-brand,
 .nav,
 .nav-link,
-.navbar-nav .nav-link {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap card fonts */
+.navbar-nav .nav-link,
 .card,
 .card-header,
 .card-body,
 .card-footer,
 .card-title,
 .card-subtitle,
-.card-text {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap modal fonts */
+.card-text,
 .modal,
 .modal-header,
 .modal-body,
 .modal-footer,
-.modal-title {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap table fonts */
+.modal-title,
 .table,
 .table th,
 .table td,
-.table-responsive {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap list fonts */
+.table-responsive,
 .list-group,
-.list-group-item {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap alert fonts */
-.alert {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap badge fonts */
-.badge {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap breadcrumb fonts */
+.list-group-item,
+.alert,
+.badge,
 .breadcrumb,
-.breadcrumb-item {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap dropdown fonts */
+.breadcrumb-item,
 .dropdown,
 .dropdown-menu,
-.dropdown-item {
-  font-family: var(--font-body) !important;
-}
-
-/* Override Bootstrap pagination fonts */
+.dropdown-item,
 .pagination,
 .page-link {
-  font-family: var(--font-body) !important;
+  font-family: var(--font-primary) !important;
 }

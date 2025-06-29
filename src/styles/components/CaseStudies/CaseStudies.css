@@ -1,3 +1,4 @@
+/* Case Studies Section */
 .container {
   position: relative;
   z-index: 2;
@@ -11,7 +12,6 @@
 }
 
 .section-titles .headingser {
-  font-family: var(--font-body);
   color: #ffffff;
   font-size: 14px;
   font-weight: var(--font-weight-bold);
@@ -26,7 +26,6 @@
 }
 
 .section-titles .headstwo {
-  font-family: var(--font-heading);
   color: #ffffff;
   font-weight: var(--font-weight-bold);
   font-size: clamp(2.2rem, 4vw, 2.8rem);
@@ -48,7 +47,6 @@
 }
 
 .headsthree {
-  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.9);
   font-size: 18px;
   line-height: 1.7;
@@ -129,7 +127,6 @@
 }
 
 .service-content h3 {
-  font-family: var(--font-heading);
   color: var(--color-primary);
   font-size: 22px;
   font-weight: var(--font-weight-semibold);
@@ -139,7 +136,6 @@
 }
 
 .service-content p {
-  font-family: var(--font-body);
   color: var(--color-text);
   font-size: 15px;
   line-height: 1.8;
@@ -147,6 +143,7 @@
   transition: color 0.3s ease;
 }
 
+/* Responsive Design */
 @media (max-width: 1200px) {
   .servicess-grid {
     grid-template-columns: minmax(350px, 1fr);
