@@ -1,18 +1,29 @@
-/* Basic styles for ServicesSection */
+/* Services Section Styles */
 .services-section {
-  padding: 100px 0;
+  padding: clamp(80px, 15vh, 120px) 0;
   position: relative;
   overflow: hidden;
   background: var(--color-white);
 }
 
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(242, 246, 252, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  z-index: 1;
+}
+
 .services-section h2 {
-  font-family: var(--font-heading);
+  font-family: var(--font-heading) !important;
   text-align: center;
   font-weight: var(--font-weight-bold);
-  font-size: clamp(2.2rem, 4vw, 2.8rem);
-  margin-bottom: 60px;
-  letter-spacing: -0.5px;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: clamp(50px, 8vh, 60px);
+  letter-spacing: var(--letter-spacing-tight);
   animation: fadeInDown 1s ease;
   opacity: 1;
   color: var(--color-primary);
@@ -28,20 +39,20 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, var(--color-bg-light), #f1f5fb);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
   border-radius: 2px;
 }
 
 .services-section h2 span {
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-bg-light));
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .services-section .service-card {
-  margin: 20px;
-  padding: 35px 30px;
+  margin: clamp(15px, 3vw, 20px);
+  padding: clamp(30px, 5vw, 35px) clamp(25px, 4vw, 30px);
   border: none;
   border-radius: 25px;
   background-color: var(--color-white);
@@ -52,6 +63,9 @@
   overflow: hidden;
   z-index: 1;
   border: 2px solid rgba(0, 86, 210, 0.05);
+  min-height: clamp(350px, 40vh, 400px);
+  display: flex;
+  flex-direction: column;
 }
 
 .services-section .service-card::before {
@@ -61,9 +75,13 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--color-secondary), var(--color-bg-light));
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
   transform: scaleX(0);
   transition: transform 0.4s ease;
+}
+
+.services-section .service-card:hover::before {
+  transform: scaleX(1);
 }
 
 .services-section .service-card::after {
@@ -81,37 +99,56 @@
   pointer-events: none;
 }
 
+.services-section .service-card:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.services-section .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 86, 210, 0.2);
+  border-color: rgba(0, 86, 210, 0.1);
+}
+
 .services-section .service-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   color: var(--color-primary);
-  margin: 20px 0;
+  margin: clamp(15px, 3vw, 20px) 0;
   transition: color 0.3s ease;
   font-weight: var(--font-weight-semibold);
+  line-height: 1.3;
+}
+
+.services-section .service-card:hover h3 {
+  color: var(--color-secondary);
 }
 
 .services-section .service-card p {
-  font-family: var(--font-body);
-  font-size: 1rem;
+  font-family: var(--font-body) !important;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   color: var(--color-text);
   line-height: 1.7;
   transition: color 0.3s ease;
-  margin-bottom: 25px;
+  margin-bottom: clamp(20px, 4vw, 25px);
+  flex-grow: 1;
+  font-weight: var(--font-weight-normal);
 }
 
 .icon-wrapper {
   background: linear-gradient(135deg, rgba(102, 161, 231, 0.1), rgba(242, 246, 252, 0.1));
   border-radius: 25px;
-  width: 90px;
-  height: 90px;
+  width: clamp(80px, 10vw, 90px);
+  height: clamp(80px, 10vw, 90px);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: clamp(20px, 4vw, 25px);
   transition: all 0.4s ease;
   border: 2px solid rgba(102, 161, 231, 0.2);
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .icon-wrapper::before {
@@ -121,47 +158,71 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-bg-light));
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
+.services-section .service-card:hover .icon-wrapper::before {
+  opacity: 1;
+}
+
 .icon-wrapper svg {
   color: var(--color-secondary);
-  width: 40px;
-  height: 40px;
+  width: clamp(35px, 5vw, 40px);
+  height: clamp(35px, 5vw, 40px);
   transition: all 0.4s ease;
   position: relative;
   z-index: 2;
 }
 
+.services-section .service-card:hover .icon-wrapper svg {
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.floating-icon {
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 30vw, 320px), 1fr));
+  gap: clamp(25px, 5vw, 35px);
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(16px, 4vw, 20px);
   position: relative;
   z-index: 2;
 }
 
 .service-btn {
-  font-family: var(--font-body);
+  font-family: var(--font-body) !important;
   position: relative;
-  padding: 12px 28px;
+  padding: clamp(10px, 2vw, 12px) clamp(24px, 5vw, 28px);
   background: transparent;
   border: 2px solid var(--color-primary);
   border-radius: 50px;
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
   width: 100%;
   text-align: center;
+  margin-top: auto;
+  min-height: var(--touch-target-min);
 }
 
 .service-btn::before {
@@ -176,6 +237,111 @@
   transform: translateX(-100%) rotate(10deg);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: -1;
+}
+
+.service-btn:hover {
+  color: #ffffff;
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 86, 210, 0.3);
+}
+
+.service-btn:hover::before {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
+}
+
+.title-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.title-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.services-section .service-card:hover .title-highlight::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.services-swiper {
+  padding: clamp(20px, 4vw, 30px) 0px clamp(40px, 8vw, 50px) !important;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.services-swiper .swiper-wrapper {
+  transition-timing-function: ease-out;
+}
+
+/* Navigation Arrows */
+.services-swiper .swiper-button-prev,
+.services-swiper .swiper-button-next {
+  width: clamp(45px, 6vw, 50px);
+  height: clamp(45px, 6vw, 50px);
+  background: var(--color-white);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: var(--color-secondary);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(0, 86, 210, 0.1);
+}
+
+.services-swiper .swiper-button-prev {
+  left: clamp(5px, 2vw, 10px);
+}
+
+.services-swiper .swiper-button-next {
+  right: clamp(5px, 2vw, 10px);
+}
+
+.services-swiper .swiper-button-prev:hover,
+.services-swiper .swiper-button-next:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 86, 210, 0.2);
+}
+
+.services-swiper .swiper-button-prev::after,
+.services-swiper .swiper-button-next::after {
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: bold;
+}
+
+/* Pagination Bullets */
+.services-swiper .swiper-pagination {
+  bottom: 0 !important;
+  position: relative;
+  margin-top: clamp(30px, 6vw, 40px);
+}
+
+.services-swiper .swiper-pagination-bullet {
+  width: clamp(8px, 1.5vw, 10px);
+  height: clamp(8px, 1.5vw, 10px);
+  background: rgba(102, 161, 231, 0.3);
+  opacity: 1;
+  transition: all 0.3s ease;
+  margin: 0 clamp(4px, 1vw, 6px) !important;
+}
+
+.services-swiper .swiper-pagination-bullet-active {
+  width: clamp(25px, 5vw, 30px);
+  border-radius: 5px;
+  background: var(--color-secondary);
 }
 
 @keyframes fadeInDown {
@@ -205,132 +371,106 @@
   animation-fill-mode: both;
 }
 
-.services-swiper {
-  padding: 20px 0px 50px !important;
-  position: relative;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.services-swiper .swiper-wrapper {
-  transition-timing-function: ease-out;
-}
-
-.title-highlight {
-  position: relative;
-  display: inline-block;
-}
-
-.title-highlight::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-secondary), var(--color-bg-light));
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s ease;
-}
-
+/* Responsive Design */
 @media (max-width: 992px) {
   .services-section {
-    padding: 80px 0;
+    padding: clamp(60px, 12vh, 80px) 0;
   }
 
   .services-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 50px;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    margin-bottom: clamp(40px, 6vh, 50px);
   }
 
   .services-grid {
-    gap: 30px;
+    gap: clamp(20px, 4vw, 30px);
   }
 
   .services-section .service-card {
-    padding: 30px 25px;
-    margin: 15px;
+    padding: clamp(25px, 4vw, 30px) clamp(20px, 3vw, 25px);
+    margin: clamp(10px, 2vw, 15px);
+    min-height: clamp(320px, 35vh, 350px);
   }
 
   .icon-wrapper {
-    width: 80px;
-    height: 80px;
+    width: clamp(70px, 9vw, 80px);
+    height: clamp(70px, 9vw, 80px);
   }
 
   .icon-wrapper svg {
-    width: 35px;
-    height: 35px;
+    width: clamp(30px, 4vw, 35px);
+    height: clamp(30px, 4vw, 35px);
   }
 }
 
 @media (max-width: 768px) {
   .services-section {
-    padding: 60px 0;
+    padding: clamp(50px, 10vh, 60px) 0;
   }
 
   .services-section h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
+    font-size: clamp(1.6rem, 4vw, 2rem);
+    margin-bottom: clamp(30px, 5vh, 40px);
   }
 
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: clamp(16px, 3vw, 25px);
   }
 
   .services-section .service-card {
-    padding: 25px 20px;
-    margin: 10px;
+    padding: clamp(20px, 4vw, 25px) clamp(16px, 3vw, 20px);
+    margin: clamp(8px, 2vw, 10px);
+    min-height: clamp(280px, 30vh, 320px);
   }
 
   .icon-wrapper {
-    width: 70px;
-    height: 70px;
+    width: clamp(60px, 8vw, 70px);
+    height: clamp(60px, 8vw, 70px);
   }
 
   .icon-wrapper svg {
-    width: 30px;
-    height: 30px;
+    width: clamp(25px, 4vw, 30px);
+    height: clamp(25px, 4vw, 30px);
   }
 
   .services-section .service-card h3 {
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   }
 }
 
 @media (max-width: 576px) {
   .services-section {
-    padding: 50px 0;
+    padding: clamp(40px, 8vh, 50px) 0;
   }
 
   .services-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 35px;
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    margin-bottom: clamp(25px, 4vh, 35px);
   }
 
   .services-section .service-card {
-    padding: 20px 15px;
+    padding: clamp(16px, 3vw, 20px) clamp(12px, 2vw, 15px);
+    min-height: clamp(250px, 28vh, 280px);
   }
 
   .icon-wrapper {
-    width: 60px;
-    height: 60px;
+    width: clamp(50px, 8vw, 60px);
+    height: clamp(50px, 8vw, 60px);
   }
 
   .icon-wrapper svg {
-    width: 25px;
-    height: 25px;
+    width: clamp(20px, 4vw, 25px);
+    height: clamp(20px, 4vw, 25px);
   }
 
   .services-section .service-card h3 {
-    font-size: 1.2rem;
-    margin: 15px 0;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin: clamp(12px, 2vw, 15px) 0;
   }
 
   .service-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: clamp(8px, 2vw, 10px) clamp(20px, 4vw, 24px);
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
   }
 }

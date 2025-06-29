@@ -17,6 +17,18 @@
   overflow: hidden;
 }
 
+.landing-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+  z-index: 1;
+}
+
 /* Main Content */
 main {
   display: flex;
@@ -32,33 +44,73 @@ main {
   max-width: 660px;
   z-index: 3;
   position: relative;
+  animation: fadeInLeft 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .content .headingglogo {
-  font-size: 4.5rem;
+  font-family: var(--font-heading) !important;
+  font-size: clamp(3rem, 8vw, 4.5rem);
   font-weight: var(--font-weight-black);
   color: var(--white);
   margin-bottom: 20px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   position: relative;
+  letter-spacing: 2px;
+}
+
+.content .headingglogo::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0.5));
+  border-radius: 2px;
 }
 
 .subtitle {
+  font-family: var(--font-body) !important;
   display: inline-block;
-  background: rgba(242, 246, 252, 0.9);
+  background: rgba(242, 246, 252, 0.95);
   color: var(--primary-blue);
   padding: 12px 28px;
   border-radius: 30px;
-  font-size: 13px;
+  font-size: clamp(11px, 2vw, 13px);
   font-weight: var(--font-weight-bold);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 30px;
   backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(242, 246, 252, 0.7);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(242, 246, 252, 0);
+  }
 }
 
 .content h2 {
-  font-size: 2.8rem;
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
   line-height: 1.3;
   margin-bottom: 40px;
   color: var(--white);
@@ -67,6 +119,7 @@ main {
 }
 
 .browse-btn {
+  font-family: var(--font-body) !important;
   background: linear-gradient(135deg, var(--color-bg-light), #f1f5fb);
   color: var(--primary-blue);
   border: none;
@@ -79,6 +132,7 @@ main {
   box-shadow: 0 10px 30px rgba(242, 246, 252, 0.4);
   position: relative;
   overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .browse-btn::before {
@@ -96,6 +150,7 @@ main {
 .browse-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(242, 246, 252, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .browse-btn:hover::before {
@@ -160,6 +215,7 @@ main {
   width: 280px;
   height: auto;
   border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .laptop {
@@ -179,6 +235,7 @@ main {
   height: auto;
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .mouse {
@@ -196,6 +253,7 @@ main {
   width: 120px;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .watch {
@@ -213,6 +271,7 @@ main {
   width: 220px;
   height: auto;
   border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .keyboard {
@@ -230,6 +289,7 @@ main {
   width: 380px;
   height: auto;
   border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
@@ -251,11 +311,11 @@ main {
   }
 
   .content .headingglogo {
-    font-size: 3.8rem;
+    font-size: clamp(2.8rem, 7vw, 3.8rem);
   }
 
   .content h2 {
-    font-size: 2.4rem;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
   }
 }
 
@@ -265,7 +325,7 @@ main {
   }
 
   .content h2 {
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
   }
 
   .laptop {
@@ -297,7 +357,7 @@ main {
   }
 
   .content .headingglogo {
-    font-size: 3.2rem;
+    font-size: clamp(2.5rem, 6vw, 3.2rem);
   }
 }
 
@@ -318,11 +378,11 @@ main {
   }
 
   .content .headingglogo {
-    font-size: 2.8rem;
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
   }
 
   .content h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
   }
 
   .images-container {
@@ -371,7 +431,7 @@ main {
   }
 
   .subtitle {
-    font-size: 12px;
+    font-size: clamp(10px, 2vw, 12px);
     padding: 10px 20px;
   }
 
@@ -391,11 +451,11 @@ main {
   }
 
   .content .headingglogo {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
   }
 
   .content h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
   }
 
   .browse-btn {
@@ -412,7 +472,7 @@ main {
   }
 
   .subtitle {
-    font-size: 11px;
+    font-size: clamp(9px, 2vw, 11px);
     padding: 8px 16px;
   }
 }
