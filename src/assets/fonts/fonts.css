@@ -6,9 +6,9 @@
 /* Root Typography and Color Variables */
 :root {
   /* Font Families - Using Poppins for Everything */
-  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Poppins', -apple-system,  sans-serif;
+  --font-body: 'Poppins', -apple-system, sans-serif;
+  --font-primary: 'Poppins', -apple-system,  sans-serif;
 
   /* Color Palette */
   --color-primary: #0056D2;      /* Main blue */
