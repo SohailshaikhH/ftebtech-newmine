@@ -81,21 +81,24 @@
     .title-contact{
          
       h6{
-            color: #0063da;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px; 
-    text-align: center;
+        font-family: var(--font-body);
+        color: var(--color-secondary);
+        font-size: 14px;
+        font-weight: var(--font-weight-semibold);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px; 
+        text-align: center;
        }
        h2{
-            color: #000;
-            text-align: center;
+        font-family: var(--font-heading);
+        color: var(--color-primary);
+        text-align: center;
        }
        .para{
+        font-family: var(--font-body);
         text-align: center;
-        color: #000;
+        color: var(--color-text);
         padding-bottom: 20px;
        }
 
@@ -104,15 +107,16 @@
     
 
   &-infos {
-    background-color: var(--white-color);
+    background-color: var(--color-white);
     padding: 40px;
     border-radius: 5px;
     box-shadow: var(--box-shadow);
 
     h3 {
+      font-family: var(--font-heading);
       font-size: 24px;
       margin-bottom: 30px;
-      color: var(--dark-color);
+      color: var(--color-primary);
       text-align: center;
     }
 
@@ -130,7 +134,7 @@
           min-width: 50px;
           width: 50px;
           height: 50px;
-          background: rgba(0, 123, 255, 0.1);
+          background: rgba(102, 161, 231, 0.1);
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -140,7 +144,7 @@
           flex-shrink: 0;
 
           svg {
-            color: #007bff;
+            color: var(--color-primary);
             font-size: 1.4rem;
             width: 1.4rem !important;
             height: 1.4rem !important;
@@ -150,10 +154,10 @@
 
         &:hover {
           .info-icon {
-            background: #007bff;
+            background: var(--color-primary);
 
             svg {
-              color: #ffffff;
+              color: var(--color-white);
             }
           }
         }
@@ -162,22 +166,24 @@
           flex: 1;
 
           h4 {
+            font-family: var(--font-heading);
             margin: 0 0 0.5rem;
-            color: #333;
+            color: var(--color-text);
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: var(--font-weight-semibold);
           }
 
           p {
-            color: black;
+            font-family: var(--font-body);
+            color: var(--color-text);
 
             a.email-link {
-              color: #007bff;
+              color: var(--color-primary);
               text-decoration: none;
               transition: all 0.3s ease;
 
               &:hover {
-                color: #0056b3;
+                color: var(--color-secondary);
                 text-decoration: underline;
               }
             }
@@ -188,9 +194,10 @@
 
     .social-links {
       h4 {
+        font-family: var(--font-heading);
         font-size: 18px;
         margin-bottom: 15px;
-        color: var(--dark-color);
+        color: var(--color-primary);
       }
 
       .social-iconss {
@@ -200,7 +207,7 @@
         a {
           width: 40px;
           height: 40px;
-          background: rgba(0, 123, 255, 0.1);
+          background: rgba(102, 161, 231, 0.1);
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -209,16 +216,16 @@
           transition: all 0.3s ease;
 
           &:hover {
-            background: #007bff;
+            background: var(--color-primary);
             transform: translateY(-3px);
 
             svg {
-              color: #ffffff;
+              color: var(--color-white);
             }
           }
 
           svg {
-            color: #007bff;
+            color: var(--color-primary);
             font-size: 1.2rem;
             transition: all 0.3s ease;
           }
