@@ -1,28 +1,28 @@
 import "../../styles/components/Features/Features.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
-  faDesktop, 
-  faGears, 
-  faShieldHalved
+  faCloud, 
+  faCogs, 
+  faShieldAlt
 } from '@fortawesome/free-solid-svg-icons'
 import featureImage from "../../assets/images/computer-scientists-data-center-managing-maintaining-databases (1).jpg"
 
 const Features = () => {
   const features = [
     {
-      icon: faDesktop,
+      icon: faCloud,
       title: "Cloud Infrastructure Design",
       description: "We architect cost-optimized, scalable, and highly available Azure environments tailored to your workloads reducing TCO while maximizing efficiency.",
       color: "#007bff"
     },
     {
-      icon: faGears,
+      icon: faCogs,
       title: "Cloud Operations & Management",
       description: "From deployment to continuous optimization, we manage your cloud services with best practices in automation, governance, and performance monitoring.",
       color: "#007bff"
     },
     {
-      icon: faShieldHalved,
+      icon: faShieldAlt,
       title: "Cloud Security & Compliance",
       description: "Our team ensures your infrastructure is protected with enterprise-grade security, active threat monitoring, data backup strategies, and compliance readiness.",
       color: "#007bff"
@@ -55,8 +55,6 @@ const Features = () => {
                 </div>
               ))}
             </div>
-
-           
           </div>
 
           <div className="features-image" data-aos="fade-left">
@@ -64,7 +62,7 @@ const Features = () => {
               <img src={featureImage} alt="IT Professional Team" />
               <div className="floating-card top">
                 <div className="card-icon">
-                  <FontAwesomeIcon icon={faDesktop} />
+                  <FontAwesomeIcon icon={faCloud} />
                 </div>
                 <div className="card-content">
                   <span className="number">2.5K+</span>

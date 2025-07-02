@@ -102,8 +102,8 @@
 .icon-wrapper {
   background: linear-gradient(135deg, rgba(102, 161, 231, 0.1), rgba(242, 246, 252, 0.1));
   border-radius: 25px;
-  width: 90px;
-  height: 90px;
+  width: clamp(80px, 10vw, 90px);
+  height: clamp(80px, 10vw, 90px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,11 +126,24 @@
   transition: opacity 0.4s ease;
 }
 
-.icon-wrapper svg {
+.service-card:hover .icon-wrapper {
+  background: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.service-card:hover .icon-wrapper::before {
+  opacity: 1;
+}
+
+.service-card:hover .service-icon {
+  color: var(--color-white);
+  transform: scale(1.2) rotate(5deg);
+}
+
+.service-icon {
   color: var(--color-secondary);
-  width: 40px;
-  height: 40px;
-  transition: all 0.4s ease;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   z-index: 2;
 }
@@ -176,6 +189,18 @@
   transform: translateX(-100%) rotate(10deg);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: -1;
+}
+
+.service-btn:hover {
+  color: #ffffff;
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 86, 210, 0.3);
+}
+
+.service-btn:hover::before {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
 }
 
 @keyframes fadeInDown {
@@ -259,9 +284,8 @@
     height: 80px;
   }
 
-  .icon-wrapper svg {
-    width: 35px;
-    height: 35px;
+  .service-icon {
+    font-size: 2rem;
   }
 }
 
@@ -290,9 +314,8 @@
     height: 70px;
   }
 
-  .icon-wrapper svg {
-    width: 30px;
-    height: 30px;
+  .service-icon {
+    font-size: 1.8rem;
   }
 
   .services-section .service-card h3 {
@@ -319,9 +342,8 @@
     height: 60px;
   }
 
-  .icon-wrapper svg {
-    width: 25px;
-    height: 25px;
+  .service-icon {
+    font-size: 1.5rem;
   }
 
   .services-section .service-card h3 {

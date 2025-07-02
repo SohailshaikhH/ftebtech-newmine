@@ -25,8 +25,6 @@ import ServiceDescription from "../../components/Services/ServiceDescription";
 
 import useServicessScroll from "../../hooks/useServicessScroll";
 
-
-
 const services = [
   {
     icon: faServer,
@@ -83,21 +81,12 @@ const ITServices = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
- 
   return (
     <div className="it-services-page">
       <PageWrapper />
-{/* 
-      <div className="itservices-hero-bg">
-        <div className="itservices-hero-content">
-          <h1 className="itservices-title">Innovative IT Solutions</h1>
-        </div>
-        <div className="itservices-hero-pattern"></div>
-      </div> */}
 
-        <ServiceDescription />
+      <ServiceDescription />
       
-
       <div className="itservices-section">
         <div className="section-title">
           <span className="subtitle">OUR SERVICES</span>

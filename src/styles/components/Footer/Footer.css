@@ -86,23 +86,29 @@
 }
 
 .footer-widget .social-links a {
-  width: clamp(32px, 6vw, 35px);
-  height: clamp(32px, 6vw, 35px);
-  background-color: #f5f5f5;
+  width: clamp(40px, 6vw, 45px);
+  height: clamp(40px, 6vw, 45px);
+  background: rgba(102, 161, 231, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-muted);
+  color: var(--color-primary);
   transition: var(--transition);
   min-height: var(--touch-target-min);
   text-decoration: none;
+  border: 2px solid rgba(102, 161, 231, 0.2);
 }
 
 .footer-widget .social-links a:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 86, 210, 0.3);
+}
+
+.footer-widget .social-links a svg {
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
 }
 
 .footer-links {
@@ -202,11 +208,17 @@
 .newsletter-form button:hover {
   background-color: var(--color-secondary);
   border-color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 86, 210, 0.3);
 }
 
 .newsletter-form button:focus {
   outline: 2px solid rgba(102, 161, 231, 0.5);
   outline-offset: 2px;
+}
+
+.newsletter-form button svg {
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 /* Footer Bottom */

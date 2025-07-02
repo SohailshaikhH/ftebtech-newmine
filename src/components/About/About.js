@@ -1,7 +1,28 @@
 import "../../styles/components/About/About.css"
 import aboutImage from "../../assets/images/Screenshot 2025-05-12 185016.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle, faAward, faUsers, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
+  const features = [
+    {
+      icon: faCheckCircle,
+      title: "Proven Track Record"
+    },
+    {
+      icon: faAward,
+      title: "Industry Recognition"
+    },
+    {
+      icon: faUsers,
+      title: "Expert Team"
+    },
+    {
+      icon: faLightbulb,
+      title: "Innovative Solutions"
+    }
+  ]
+
   return (
     <section className="about section bg-light">
       <div className="container">
@@ -24,7 +45,18 @@ const About = () => {
               We are committed to providing our clients with exceptional service while offering our employees the best
               training and a working atmosphere that promotes self-development and teamwork.
             </p>
+
+            <div className="features-list">
+              {features.map((feature, index) => (
+                <div key={index} className="feature-item">
+                  <div className="feature-icon">
+                    <FontAwesomeIcon icon={feature.icon} />
+                  </div>
+                  <span>{feature.title}</span>
+                </div>
+              ))}
             </div>
+          </div>
         </div>
       </div>
     </section>

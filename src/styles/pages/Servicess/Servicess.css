@@ -151,12 +151,9 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
 .icon-container {
-  width: 60px;
-  height: 60px;
+  width: clamp(60px, 8vw, 70px);
+  height: clamp(60px, 8vw, 70px);
   background: rgba(0, 86, 210, 0.1);
   border-radius: 12px;
   display: flex;
@@ -164,6 +161,7 @@
   justify-content: center;
   margin-bottom: 1.5rem;
   transition: all 0.3s ease;
+  border: 2px solid rgba(102, 161, 231, 0.2);
 }
 
 .service-card:hover .icon-container {
@@ -172,7 +170,7 @@
 }
 
 .service-icon {
-  font-size: 24px;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
   color: var(--color-primary);
   transition: all 0.3s ease;
 }
@@ -212,6 +210,10 @@
 .service-card:hover .service-arrow {
   opacity: 1;
   transform: translateX(0);
+}
+
+.arrow-icon {
+  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 /* Contact Section */
@@ -284,8 +286,8 @@
 }
 
 .contact-icon {
-  width: 40px;
-  height: 40px;
+  width: clamp(40px, 6vw, 45px);
+  height: clamp(40px, 6vw, 45px);
   background: var(--color-primary);
   border-radius: 10px;
   display: flex;
@@ -293,6 +295,11 @@
   justify-content: center;
   color: var(--color-white);
   margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
 }
 
 .contact-text {

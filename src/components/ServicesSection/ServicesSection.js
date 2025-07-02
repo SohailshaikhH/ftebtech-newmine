@@ -144,13 +144,7 @@ const ServicesSection = () => {
               <div className={`icon-wrapper ${hoveredIndex === idx ? 'floating-icon' : ''}`}>
                 <FontAwesomeIcon
                   icon={service.icon}
-                  style={{
-                    width: 40,
-                    height: 40,
-                    color: '#007bff',
-                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                    transform: hoveredIndex === idx ? 'scale(1.2) rotate(5deg)' : 'scale(1) rotate(0deg)'
-                  }}
+                  className="service-icon"
                 />
               </div>
               <h3 className="title-highlight">{service.title}</h3>
