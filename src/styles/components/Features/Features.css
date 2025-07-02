@@ -4,7 +4,17 @@
   padding: 100px 0;
 }
 
+<<<<<<< HEAD
 
+=======
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 
 .features-wrapper {
   display: grid;

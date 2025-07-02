@@ -360,6 +360,15 @@
   box-shadow: 0 8px 25px rgba(102, 161, 231, 0.3);
 }
 
+<<<<<<< HEAD
+=======
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 
 /* Section Header */
 .section-header {
@@ -383,7 +392,15 @@
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 
+=======
+/* Services Grid Section */
+.services-grid-section {
+  padding: 80px 0;
+  background: var(--color-bg-light);
+}
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 
 .services-grid {
   display: grid;

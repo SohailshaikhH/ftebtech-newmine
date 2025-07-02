@@ -8,12 +8,20 @@
 
 /* Hero Section */
 .services-hero-section {
+<<<<<<< HEAD
 padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
     text-align: center;
     position: relative;
     background: linear-gradient(135deg, var(--color-primary) 0%, #0056d2 100%);
     color: white;
     padding-bottom: 10rem;
+=======
+  padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
+  text-align: center;
+  position: relative;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 }
 
 .services-hero-section::before {
@@ -108,6 +116,7 @@ padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
 
 /* Services Grid Section */
 .services-grid-section {
+<<<<<<< HEAD
   padding: clamp(40px, 8vh, 60px) 0;
   margin: 0 auto;
   padding-left: clamp(12px, 3vw, 20px);
@@ -116,11 +125,25 @@ padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
 }
 
 /* .services-grid {
+=======
+  padding: clamp(60px, 12vh, 100px) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: clamp(16px, 4vw, 32px);
+  padding-right: clamp(16px, 4vw, 32px);
+}
+
+.services-grid {
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(20px, 4vw, 30px);
   margin-top: clamp(30px, 6vw, 50px);
+<<<<<<< HEAD
 } */
+=======
+}
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 
 .service-card-modern {
   background: white;
@@ -134,8 +157,12 @@ padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
   color: var(--color-text);
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   min-height: auto;
   height: 100%;
+=======
+  min-height: 450px;
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 }
 
 .service-card-header {
@@ -148,8 +175,16 @@ padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
 
 .service-logo-wrapper {
   margin-bottom: 16px;
+<<<<<<< HEAD
   padding: 20px;
   width: 100%;
+=======
+  background: var(--color-bg-light);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 86, 210, 0.1);
+  width: 120px;
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   height: 120px;
   display: flex;
   align-items: center;
@@ -157,8 +192,13 @@ padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
 }
 
 .service-logo {
+<<<<<<< HEAD
   width: 260px;
   height: 90px;
+=======
+  width: 80px;
+  height: 80px;
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   object-fit: contain;
   object-position: center;
 }
@@ -191,10 +231,20 @@ padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
 }
 
 .feature-tag {
+<<<<<<< HEAD
   color: var(--color-primary);
   padding: 8px 14px;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
+=======
+  background: var(--color-bg-light);
+  color: var(--color-primary);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid rgba(0, 86, 210, 0.2);
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 }
 
 .service-card-footer {
@@ -362,6 +412,7 @@ padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
 }
 
 @media (max-width: 992px) {
+<<<<<<< HEAD
 
 
   .services-stats {
@@ -369,6 +420,17 @@ padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
     gap: clamp(20px, 4vw, 40px);
   }
 
+=======
+  .services-hero-section {
+    padding: clamp(50px, 10vh, 60px) 0 clamp(30px, 6vh, 40px);
+  }
+
+  .services-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 4vw, 40px);
+  }
+
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(16px, 3vw, 25px);
@@ -441,6 +503,7 @@ padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
 }
 
 @media (max-width: 576px) {
+<<<<<<< HEAD
  
   .service-card-modern {
     padding: 20px 15px;
@@ -461,6 +524,31 @@ padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
     padding: clamp(50px, 10vh, 60px) 0;
   }
 
+=======
+  .services-hero-section {
+    padding: clamp(40px, 8vh, 50px) 0 clamp(25px, 5vh, 30px);
+  }
+
+  .service-card-modern {
+    padding: 20px 15px;
+  }
+
+  .service-logo-wrapper {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+  }
+
+  .service-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .services-cta-section {
+    padding: clamp(50px, 10vh, 60px) 0;
+  }
+
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   .service-title-modern {
     font-size: var(--font-size-base);
   }

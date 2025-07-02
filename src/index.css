@@ -40,7 +40,16 @@ ul {
 }
 
 /* Layout Components */
+<<<<<<< HEAD
 
+=======
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 32px);
+}
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 
 .section {
   padding: clamp(60px, 12vh, 100px) 0;

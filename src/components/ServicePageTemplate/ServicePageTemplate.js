@@ -15,7 +15,11 @@ import {
   faChartBar,
   faComment
 } from '@fortawesome/free-solid-svg-icons';
+<<<<<<< HEAD
 import '../../styles/components/ServicePageTemplate/ServicePageTemplate.css';
+=======
+import './ServicePageTemplate.css';
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 
 const ServicePageTemplate = ({ data }) => {
   const navigate = useNavigate();
@@ -31,6 +35,7 @@ const ServicePageTemplate = ({ data }) => {
   const handleCallClick = () => {
     window.location.href = 'tel:+971588481295';
   };
+<<<<<<< HEAD
   const certificationsData = [
     {
       competency: "Cloud Platform and Infrastructure",
@@ -74,6 +79,8 @@ const ServicePageTemplate = ({ data }) => {
       ]
     }
   ];
+=======
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 
   return (
     <div className="service-page">
@@ -179,8 +186,42 @@ const ServicePageTemplate = ({ data }) => {
 
             <div className="content-right">
               <div className="sidebar">
+<<<<<<< HEAD
                 
                 {/* <div className="sidebar-section">
+=======
+                <div className="sidebar-section">
+                  <h3>Service Categories</h3>
+                  <ul className="service-list">
+                    <li>
+                      <a href="#compute">Compute Services</a>
+                    </li>
+                    <li>
+                      <a href="#storage">Storage Solutions</a>
+                    </li>
+                    <li>
+                      <a href="#networking">Networking</a>
+                    </li>
+                    <li>
+                      <a href="#databases">Databases</a>
+                    </li>
+                    <li>
+                      <a href="#ai-ml">AI & Machine Learning</a>
+                    </li>
+                    <li>
+                      <a href="#security">Security & Identity</a>
+                    </li>
+                    <li>
+                      <a href="#devops">DevOps Tools</a>
+                    </li>
+                    <li>
+                      <a href="#analytics">Analytics & BI</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="sidebar-section">
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
                   <div className="certification-card">
                     <h4>Certified Team</h4>
                     <p>
@@ -193,9 +234,24 @@ const ServicePageTemplate = ({ data }) => {
                       <div className="badge">DevOps Engineer</div>
                     </div>
                   </div>
+<<<<<<< HEAD
                 </div> */}
 
                
+=======
+                </div>
+
+                <div className="sidebar-section">
+                  <div className="contact-card">
+                    <h4>Free Assessment</h4>
+                    <p>Get a comprehensive analysis of your current infrastructure and migration roadmap.</p>
+                    <button className="btn-contact" onClick={handleContactClick}>
+                      <FontAwesomeIcon icon={faComment} />
+                      Schedule Assessment
+                    </button>
+                  </div>
+                </div>
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
               </div>
             </div>
           </div>
@@ -265,13 +321,20 @@ const ServicePageTemplate = ({ data }) => {
 
       {/* Process Section */}
       <section className="process-section">
+<<<<<<< HEAD
 
+=======
+        <div className="container">
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
           <div className="section-header">
             <h2>Our Implementation Process</h2>
             <p>A proven methodology for successful project delivery</p>
           </div>
           
+<<<<<<< HEAD
         <div className="container d-flex flex-row align-items-center">
+=======
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
           <div className="process-timeline">
             {data.process.map((step, index) => (
               <div key={index} className="process-step">
@@ -283,6 +346,7 @@ const ServicePageTemplate = ({ data }) => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
            <div className="sidebar-section">
                   <div className="contact-card">
                     <h4>Free Assessment</h4>
@@ -293,6 +357,8 @@ const ServicePageTemplate = ({ data }) => {
                     </button>
                   </div>
                 </div>
+=======
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
         </div>
       </section>
 
@@ -300,6 +366,7 @@ const ServicePageTemplate = ({ data }) => {
       <section className="technologies-section">
         <div className="container">
           <div className="section-header">
+<<<<<<< HEAD
             <h2>Certified Team</h2>
             <p>Our team holds multiple certifications including Solutions Architect, DevOps Engineer, and Security Engineer.</p>
           </div>
@@ -330,6 +397,19 @@ const ServicePageTemplate = ({ data }) => {
               </tbody>
             </table>
         </div>
+=======
+            <h2>Technologies We Use</h2>
+            <p>Cutting-edge tools and platforms for optimal results</p>
+          </div>
+          
+          <div className="technologies-grid">
+            {data.technologies.map((tech, index) => (
+              <div key={index} className="tech-item">
+                {tech}
+              </div>
+            ))}
+          </div>
+>>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
         </div>
       </section>
 
