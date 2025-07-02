@@ -265,6 +265,7 @@ const ServicePageTemplate = ({ data }) => {
 
       {/* Process Section */}
       <section className="process-section">
+
           <div className="section-header">
             <h2>Our Implementation Process</h2>
             <p>A proven methodology for successful project delivery</p>

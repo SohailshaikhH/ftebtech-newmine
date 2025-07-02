@@ -56,31 +56,6 @@ main {
     opacity: 1;
     transform: translateX(0);
   }
-<<<<<<< HEAD
-=======
-}
-
-.content .headingglogo {
-  font-family: var(--font-heading) !important;
-  font-size: clamp(3rem, 8vw, 4.5rem);
-  font-weight: var(--font-weight-black);
-  color: var(--white);
-  margin-bottom: 20px;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  position: relative;
-  letter-spacing: 2px;
-}
-
-.content .headingglogo::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0.5));
-  border-radius: 2px;
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 }
 
 .content .headingglogo {
@@ -99,27 +74,15 @@ main {
 .subtitle {
   font-family: var(--font-body) !important;
   display: inline-block;
-<<<<<<< HEAD
   background: rgba(23, 33, 165, 0);
   color: var(--white);
   padding: 12px 28px;
   border-radius: 17px;
-=======
-  background: rgba(242, 246, 252, 0.95);
-  color: var(--primary-blue);
-  padding: 12px 28px;
-  border-radius: 30px;
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   font-size: clamp(11px, 2vw, 13px);
   font-weight: var(--font-weight-bold);
   letter-spacing: 2px;
   text-transform: uppercase;
-<<<<<<< HEAD
   margin: 20px 0px ;
-=======
-  margin-bottom: 30px;
-  backdrop-filter: blur(10px);
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   border: 2px solid rgba(255, 255, 255, 0.2);
   animation: pulse 2s infinite;
 }
@@ -242,10 +205,6 @@ main {
   width: 280px;
   height: auto;
   border-radius: 15px;
-<<<<<<< HEAD
-=======
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 }
 
 .laptop {
@@ -264,7 +223,6 @@ main {
   max-width: 100%;
   height: auto;
   border-radius: 20px;
-<<<<<<< HEAD
   border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -285,30 +243,6 @@ main {
   border-radius: 10px;
 }
 
-=======
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  border: 3px solid rgba(255, 255, 255, 0.1);
-}
-
-.mouse {
-  top: -0%;
-  right: 1%;
-  --x-offset-1: 12px;
-  --y-offset-1: 15px;
-  --x-offset-2: -10px;
-  --y-offset-2: 8px;
-  --x-offset-3: 8px;
-  --y-offset-3: -10px;
-}
-
-.mouse img {
-  width: 120px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 .watch {
   bottom: -1%;
   left: 52%;
@@ -324,10 +258,6 @@ main {
   width: 220px;
   height: auto;
   border-radius: 15px;
-<<<<<<< HEAD
-=======
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 }
 
 .keyboard {
@@ -345,22 +275,12 @@ main {
   width: 380px;
   height: auto;
   border-radius: 15px;
-<<<<<<< HEAD
 }
 
 /* Responsive Design */
 @media (max-width: var(--breakpoint-xl)) {
   .laptop-image {
     width: clamp(400px, 50vw, 550px);
-=======
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .laptop-image {
-    width: 550px;
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   }
 
   .headphones {
@@ -368,7 +288,6 @@ main {
   }
 
   .headphones img {
-<<<<<<< HEAD
     width: clamp(200px, 20vw, 240px);
   }
 
@@ -392,31 +311,6 @@ main {
 
   .content h2 {
     font-size: var(--text-xl);
-=======
-    width: 240px;
-  }
-
-  .keyboard img {
-    width: 320px;
-  }
-
-  .content .headingglogo {
-    font-size: clamp(2.8rem, 7vw, 3.8rem);
-  }
-
-  .content h2 {
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-  }
-}
-
-@media (max-width: 1024px) {
-  .landing-page {
-    padding: 100px 3% 50px;
-  }
-
-  .content h2 {
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   }
 
   .laptop {
@@ -424,11 +318,7 @@ main {
   }
 
   .laptop-image {
-<<<<<<< HEAD
     width: clamp(350px, 45vw, 480px);
-=======
-    width: 480px;
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   }
 
   .mouse {
@@ -436,11 +326,7 @@ main {
   }
 
   .mouse img {
-<<<<<<< HEAD
     width: clamp(80px, 10vw, 100px);
-=======
-    width: 100px;
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   }
 
   .watch {
@@ -448,7 +334,6 @@ main {
   }
 
   .watch img {
-<<<<<<< HEAD
     width: clamp(180px, 20vw, 200px);
   }
 
@@ -464,23 +349,6 @@ main {
 @media (max-width: var(--breakpoint-md)) {
   .landing-page {
     padding: var(--spacing-lg) 4% var(--spacing-md);
-=======
-    width: 200px;
-  }
-
-  .keyboard img {
-    width: 280px;
-  }
-
-  .content .headingglogo {
-    font-size: clamp(2.5rem, 6vw, 3.2rem);
-  }
-}
-
-@media (max-width: 768px) {
-  .landing-page {
-    padding: 80px 4% 40px;
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   }
 
   main {
@@ -495,19 +363,11 @@ main {
   }
 
   .content .headingglogo {
-<<<<<<< HEAD
     font-size: var(--text-2xl);
   }
 
   .content h2 {
     font-size: var(--text-lg);
-=======
-    font-size: clamp(2.2rem, 6vw, 2.8rem);
-  }
-
-  .content h2 {
-    font-size: clamp(1.3rem, 4vw, 1.8rem);
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   }
 
   .images-container {
@@ -556,7 +416,6 @@ main {
   }
 
   .subtitle {
-<<<<<<< HEAD
     font-size: var(--text-xs);
     padding: var(--spacing-xs) var(--spacing-sm);
   }
@@ -570,21 +429,6 @@ main {
 @media (max-width: var(--breakpoint-sm)) {
   .landing-page {
     padding: var(--spacing-md) 3% var(--spacing-sm);
-=======
-    font-size: clamp(10px, 2vw, 12px);
-    padding: 10px 20px;
-  }
-
-  .browse-btn {
-    padding: 15px 30px;
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .landing-page {
-    padding: 70px 3% 30px;
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   }
 
   .content {
@@ -592,7 +436,6 @@ main {
   }
 
   .content .headingglogo {
-<<<<<<< HEAD
     font-size: var(--text-xl);
   }
 
@@ -603,18 +446,6 @@ main {
   .browse-btn {
     padding: var(--spacing-xs) var(--spacing-md);
     font-size: var(--text-xs);
-=======
-    font-size: clamp(1.8rem, 6vw, 2.2rem);
-  }
-
-  .content h2 {
-    font-size: clamp(1.2rem, 4vw, 1.5rem);
-  }
-
-  .browse-btn {
-    padding: 12px 25px;
-    font-size: 14px;
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   }
 
   .images-container {
@@ -627,11 +458,6 @@ main {
 
   .subtitle {
     font-size: var(--text-xs);
-    padding: 8px 16px;
-  }
-
-  .subtitle {
-    font-size: clamp(9px, 2vw, 11px);
     padding: 8px 16px;
   }
 }

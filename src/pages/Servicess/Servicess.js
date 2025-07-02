@@ -22,18 +22,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import ServiceDescription from "../../components/Services/ServiceDescription";
-<<<<<<< HEAD
-=======
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 
 import useServicessScroll from "../../hooks/useServicessScroll";
 
-<<<<<<< HEAD
 
 
 const services = [
@@ -48,18 +39,6 @@ const services = [
     title: "Cloud Strategy & Security",
     desc: "Align workloads with business goals while ensuring robust security measures and cost optimization.",
     link: "#strategy"
-=======
-const services = [
-  {
-    icon: faServer,
-    title: "End-to-End Implementation Excellence",
-    desc: `From planning to deployment and optimization—we own every phase.`,
-  },
-  {
-    icon: faShieldAlt,
-    title: "Proven Cloud Strategy",
-    desc: "We don't just move workloads to Azure—we align them with your business goals, cost models, and security posture.",
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
   },
   {
     icon: faChartLine,
@@ -111,60 +90,13 @@ const ITServices = () => {
 {/* 
       <div className="itservices-hero-bg">
         <div className="itservices-hero-content">
-<<<<<<< HEAD
           <h1 className="itservices-title">Innovative IT Solutions</h1>
-=======
-          <h1 className="itservices-title">Our Services</h1>
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
         </div>
         <div className="itservices-hero-pattern"></div>
       </div> */}
 
-<<<<<<< HEAD
         <ServiceDescription />
       
-=======
-      <section className="descriptions bg-light">
-        {/* Logo Marquee Slider */}
-        <Swiper
-          modules={[Autoplay]}
-          loop={true}
-          speed={1500}
-          spaceBetween={30}
-          slidesPerGroup={1}
-          allowTouchMove={true}
-          watchSlidesProgress={true}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          className="product-logos-swiper"
-          breakpoints={{
-            320: { slidesPerView: 2, spaceBetween: 15 },
-            480: { slidesPerView: 3, spaceBetween: 20 },
-            640: { slidesPerView: 3, spaceBetween: 25 },
-            768: { slidesPerView: 4, spaceBetween: 30 },
-            1024: { slidesPerView: 5, spaceBetween: 35 },
-            1200: { slidesPerView: 6, spaceBetween: 40 },
-          }}
-        >
-          {[...productLogos, ...productLogos, ...productLogos].map((logo, idx) => (
-            <SwiperSlide key={idx} className="logo-slide">
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className={`logo-img ${logo.class}`}
-                loading="lazy"
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        
-        {/* Service Description Component */}
-        <ServiceDescription />
-      </section>
->>>>>>> c63c4096249e1dabe04c2475552e2dc6a47175fe
 
       <div className="itservices-section">
         <div className="section-title">
