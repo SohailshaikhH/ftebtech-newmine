@@ -1,4 +1,4 @@
-import "../../styles/components/Features/Features.css"
+import "../../styles/components/Features/Features.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faCloud, 
@@ -30,7 +30,7 @@ const Features = () => {
   ]
 
   return (
-    <section className="features section bg-light">
+    <section className="features-section bg-light">
       <div className="container">
         <div className="features-wrapper">
           <div className="features-content" data-aos="fade-right">

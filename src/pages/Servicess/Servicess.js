@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../../styles/pages/Servicess/Servicess.css";
+import "../../styles/pages/Servicess/Servicess.scss";
 import PageWrapper from "../../components/PageWrapper/PageWrapper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import men from "../../assets/men.png";
@@ -22,7 +22,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import ServiceDescription from "../../components/Services/ServiceDescription";
-
 import useServicessScroll from "../../hooks/useServicessScroll";
 
 const services = [

@@ -1,4 +1,4 @@
-import "../../styles/components/About/About.css"
+import "../../styles/components/About/About.scss"
 import aboutImage from "../../assets/images/Screenshot 2025-05-12 185016.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faAward, faUsers, faLightbulb } from '@fortawesome/free-solid-svg-icons'
