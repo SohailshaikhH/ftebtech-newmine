@@ -43,6 +43,9 @@ const Header = ({ scrolled }) => {
                   <NavLink to={routes.servicess.path} onClick={() => setMobileMenuOpen(false)}>{routes.servicess.name}</NavLink>
                 </li>
                 
+                <li className="menu-item">
+                  <NavLink to={routes.contact.path} onClick={() => setMobileMenuOpen(false)}>{routes.contact.name}</NavLink>
+                </li>
                
                 <li className="menu-item">
                 <div className="get-quote-container">

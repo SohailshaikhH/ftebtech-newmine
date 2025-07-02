@@ -7,6 +7,7 @@ import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import Resolution from "./pages/Resolution/Resolution"
 import Servicess from "./pages/Servicess/Servicess"
+import Contact from "./pages/Contact/Contact"
 import AzureServices from "./pages/Services/AzureServices"
 import Microsoft365Services from "./pages/Services/Microsoft365Services"
 import Dynamics365Services from "./pages/Services/Dynamics365Services"
@@ -51,6 +52,7 @@ function App() {
         <Routes>
           <Route path={routes.home.path} element={<Resolution />} />
           <Route path={routes.servicess.path} element={<Servicess />} />
+          <Route path={routes.contact.path} element={<Contact />} />
           <Route path={routes.company.path} element={<Resolution />} />
           <Route path={routes.elements.path} element={<Resolution />} />
           <Route path={routes.caseStudies.path} element={<Resolution />} />
