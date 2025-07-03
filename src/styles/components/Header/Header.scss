@@ -22,8 +22,8 @@
       color: var(--color-text) !important;
     }
 
-    .mobile-menu-toggle span {
-      background: var(--color-text);
+    .mobile-menu-toggle {
+      color: var(--color-text);
     }
   }
 
@@ -82,7 +82,7 @@
 
         a {
           font-family: var(--font-body);
-          color: var(--color-white) ;
+          color: var(--color-white);
           text-decoration: none;
           font-weight: var(--font-weight-medium);
           font-size: var(--font-size-base);
@@ -92,6 +92,7 @@
           position: relative;
           display: flex;
           align-items: center;
+          gap: 8px;
           min-height: var(--touch-target-min);
 
           &:hover {
@@ -114,6 +115,10 @@
           &.active::after {
             transform: scaleX(1);
           }
+
+          .menu-icon {
+            flex-shrink: 0;
+          }
         }
       }
     }
@@ -132,6 +137,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       transition: all var(--transition-normal);
       min-height: var(--touch-target-min);
       font-size: var(--font-size-sm);
@@ -142,14 +148,16 @@
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
       }
+
+      .button-icon {
+        flex-shrink: 0;
+      }
     }
   }
 
   // Mobile Menu Toggle
   .mobile-menu-toggle {
     display: none;
-    flex-direction: column;
-    gap: 4px;
     cursor: pointer;
     padding: 8px;
     background: none;
@@ -160,31 +168,10 @@
     justify-content: center;
     border-radius: var(--border-radius-sm);
     transition: all var(--transition-normal);
+    color: var(--color-white);
 
     &:hover {
       background: rgba(255, 255, 255, 0.1);
-    }
-
-    span {
-      width: 24px;
-      height: 2px;
-      background: var(--color-white);
-      transition: all var(--transition-normal);
-      transform-origin: center;
-    }
-
-    &.active {
-      span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-
-      span:nth-child(2) {
-        opacity: 0;
-      }
-
-      span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-      }
     }
   }
 
@@ -242,6 +229,10 @@
               background: rgba(0, 86, 210, 0.1);
               transform: translateX(4px);
             }
+
+            .menu-icon {
+              margin-right: 12px;
+            }
           }
         }
       }
@@ -287,10 +278,6 @@
     .mobile-menu-toggle {
       width: 40px;
       height: 40px;
-
-      span {
-        width: 20px;
-      }
     }
 
     .main-nav .menu-item a {
@@ -346,7 +333,7 @@
     &,
     .main-nav,
     .menu-item a,
-    .mobile-menu-toggle span,
+    .mobile-menu-toggle,
     .get-quote-button {
       transition: none;
     }
