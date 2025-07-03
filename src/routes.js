@@ -64,6 +64,16 @@ export const routes = {
     path: '/services/security',
     name: 'Security',
     title: 'Cybersecurity Solutions'
+  },
+  turbo360: {
+    path: '/services/turbo360',
+    name: 'Turbo360',
+    title: 'Turbo360 Management Platform'
+  },
+  erosource: {
+    path: '/services/erosource',
+    name: 'Erosource',
+    title: 'Erosource Enterprise Solutions'
   }
 };
 

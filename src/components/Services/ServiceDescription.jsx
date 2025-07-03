@@ -76,6 +76,22 @@ const ServiceDescription = () => {
       logo: microsoftLogo,
       features: ['Security Assessment', 'Threat Protection', 'Compliance', '24/7 Monitoring'],
       path: '/services/security'
+    },
+    {
+      id: 'turbo360',
+      title: 'Turbo360 Management',
+      description: 'Comprehensive Azure and Office 365 management platform for monitoring, governance, and optimization of your cloud environment.',
+      logo: turbo360Logo,
+      features: ['Cloud Monitoring', 'Governance', 'Cost Management', 'Performance Analytics'],
+      path: '/services/turbo360'
+    },
+    {
+      id: 'erosource',
+      title: 'Erosource Solutions',
+      description: 'Advanced enterprise resource planning and business intelligence solutions to streamline operations and drive data-driven decisions.',
+      logo: erosourceLogo,
+      features: ['ERP Implementation', 'Business Intelligence', 'Data Analytics', 'Process Automation'],
+      path: '/services/erosource'
     }
   ];
  const productLogos = [
