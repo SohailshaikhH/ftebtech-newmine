@@ -342,6 +342,7 @@ const ServicePageTemplate = ({ data }) => {
             </div>
           </div>
         </div>
+      </div>
       
     </section>
   );
