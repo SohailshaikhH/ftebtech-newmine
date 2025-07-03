@@ -70,73 +70,16 @@
     }
   }
 
-  // Feature Box
   .feature-box {
     display: flex;
+    align-items: center;
     gap: 25px;
     padding: 30px;
     border-radius: 20px;
-    transition: all 0.4s ease;
     background: var(--color-white);
-    cursor: pointer;
-    border: 2px solid rgba(0, 86, 210, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 86, 210, 0.08);
+    cursor: default;
     position: relative;
-    overflow: hidden;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(135deg, var(--color-secondary), var(--color-bg-light));
-      transform: scaleY(0);
-      transition: transform 0.4s ease;
-    }
-
-    &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(0, 86, 210, 0.15);
-
-      &::before {
-        transform: scaleY(1);
-      }
-
-      .feature-icon {
-        background: var(--color-primary) !important;
-        transform: scale(1.1);
-
-        svg {
-          color: var(--color-white);
-        }
-      }
-    }
   }
-
-  .feature-icon {
-    width: clamp(70px, 8vw, 80px);
-    height: clamp(70px, 8vw, 80px);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid rgba(102, 161, 231, 0.2);
-
-    svg {
-      font-size: clamp(1.8rem, 3vw, 2rem);
-      color: var(--color-white);
-      position: relative;
-      z-index: 2;
-      transition: all 0.4s ease;
-    }
-  }
-
   .feature-text {
     h4 {
       font-family: var(--font-heading);
@@ -144,7 +87,6 @@
       font-weight: var(--font-weight-semibold);
       color: var(--color-primary);
       margin-bottom: 15px;
-      transition: color 0.3s ease;
     }
 
     p {
@@ -153,7 +95,6 @@
       line-height: 1.7;
       font-size: 16px;
       margin: 0;
-      transition: color 0.3s ease;
     }
   }
 
@@ -262,7 +203,8 @@
 
   // Animations
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {

@@ -13,7 +13,7 @@ import Microsoft365Services from "./pages/Services/Microsoft365Services"
 import Dynamics365Services from "./pages/Services/Dynamics365Services"
 import DevelopmentServices from "./pages/Services/DevelopmentServices"
 import InfrastructureServices from "./pages/Services/InfrastructureServices"
-import SecurityServices from "./pages/Services/SecurityServices.js"
+import SecurityServices from "./pages/Services/SecurityServices.jsx"
 import { routes } from './routes.js'
 
 function ScrollToTop() {

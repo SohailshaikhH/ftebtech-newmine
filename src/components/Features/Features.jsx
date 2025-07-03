@@ -30,60 +30,62 @@ const Features = () => {
   ]
 
   return (
-    <section className="features-section bg-light">
-      <div className="container">
-        <div className="features-wrapper">
-          <div className="features-content" data-aos="fade-right">
-            <h6>WHY CHOOSE US</h6>
-            <h2>We're Here To Help You Build a Smarter, Secure, and Cost-Efficient Cloud Ecosystem</h2>
+    <div className="features">
+      <section className="features-section bg-light">
+        <div className="container">
+          <div className="features-wrapper">
+            <div className="features-content" data-aos="fade-right">
+              <h6>WHY CHOOSE US</h6>
+              <h2>We're Here To Help You Build a Smarter, Secure, and Cost-Efficient Cloud Ecosystem</h2>
 
-            <div className="features-list">
-              {features.map((feature, index) => (
-                <div 
-                  key={index} 
-                  className="feature-box"
-                  data-aos="fade-up" 
-                  data-aos-delay={index * 100}
-                >
-                  <div className="feature-icon" style={{ backgroundColor: feature.color }}>
-                    <FontAwesomeIcon icon={feature.icon} />
+              <div className="features-list">
+                {features.map((feature, index) => (
+                  <div 
+                    key={index} 
+                    className="feature-box"
+                    data-aos="fade-up" 
+                    data-aos-delay={index * 100}
+                  >
+                    <div className="project-icon">
+                      <FontAwesomeIcon icon={feature.icon} />
+                    </div>
+                    <div className="feature-text">
+                      <h4>{feature.title}</h4>
+                      <p>{feature.description}</p>
+                    </div>
                   </div>
-                  <div className="feature-text">
-                    <h4>{feature.title}</h4>
-                    <p>{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="features-image" data-aos="fade-left">
-            <div className="image-container">
-              <img src={featureImage} alt="IT Professional Team" />
-              <div className="floating-card top">
-                <div className="card-icon">
-                  <FontAwesomeIcon icon={faCloud} />
-                </div>
-                <div className="card-content">
-                  <span className="number">2.5K+</span>
-                  <span className="text">Projects Done</span>
-                </div>
+                ))}
               </div>
-              <div className="floating-card bottom">
-                <div className="stat">
-                  <span className="number">98%</span>
-                  <span className="label">Client Satisfaction</span>
+            </div>
+
+            <div className="features-image" data-aos="fade-left">
+              <div className="image-container">
+                <img src={featureImage} alt="IT Professional Team" />
+                <div className="floating-card top">
+                  <div className="project-icon">
+                    <FontAwesomeIcon icon={faCloud} />
+                  </div>
+                  <div className="card-content">
+                    <span className="number">2.5K+</span>
+                    <span className="text">Projects Done</span>
+                  </div>
                 </div>
-                <div className="stat">
-                  <span className="number">10</span>
-                  <span className="label">Years Experience</span>
+                <div className="floating-card bottom">
+                  <div className="stat">
+                    <span className="number">98%</span>
+                    <span className="label">Client Satisfaction</span>
+                  </div>
+                  <div className="stat">
+                    <span className="number">10</span>
+                    <span className="label">Years Experience</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }
 

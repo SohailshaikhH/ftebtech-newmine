@@ -19,7 +19,7 @@
     }
 
     .menu-item a {
-      color: var(--color-text);
+      color: var(--color-text) !important;
     }
 
     .mobile-menu-toggle span {
@@ -82,7 +82,7 @@
 
         a {
           font-family: var(--font-body);
-          color: var(--color-white);
+          color: var(--color-white) ;
           text-decoration: none;
           font-weight: var(--font-weight-medium);
           font-size: var(--font-size-base);

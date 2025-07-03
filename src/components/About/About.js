@@ -1,5 +1,5 @@
 import "../../styles/components/About/About.scss"
-import aboutImage from "../../assets/images/Screenshot 2025-05-12 185016.png"
+import aboutImage from "../../assets/images/about-us.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faAward, faUsers, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 
@@ -46,16 +46,7 @@ const About = () => {
               training and a working atmosphere that promotes self-development and teamwork.
             </p>
 
-            <div className="features-list">
-              {features.map((feature, index) => (
-                <div key={index} className="feature-item">
-                  <div className="feature-icon">
-                    <FontAwesomeIcon icon={feature.icon} />
-                  </div>
-                  <span>{feature.title}</span>
-                </div>
-              ))}
-            </div>
+          
           </div>
         </div>
       </div>

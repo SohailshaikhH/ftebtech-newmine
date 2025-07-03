@@ -141,10 +141,9 @@ const ServicesSection = () => {
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className={`icon-wrapper ${hoveredIndex === idx ? 'floating-icon' : ''}`}>
+              <div className={`project-icon ${hoveredIndex === idx ? 'floating-icon' : ''}`}>
                 <FontAwesomeIcon
                   icon={service.icon}
-                  className="service-icon"
                 />
               </div>
               <h3 className="title-highlight">{service.title}</h3>
