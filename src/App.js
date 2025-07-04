@@ -32,28 +32,11 @@ function ScrollToTop() {
 }
 
 function App() {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-
   return (
     <Router>
       <ScrollToTop />
       <div className="app">
-        <Header scrolled={scrolled} />
+        <Header />
         <Routes>
           <Route path={routes.home.path} element={<Resolution />} />
           <Route path={routes.servicess.path} element={<Servicess />} />
