@@ -77,15 +77,15 @@
 
         &::after {
           content: "";
-          position: absolute;
-          bottom: 8px;
-          left: 0px;
-          right: 0px;
-          height: 3px;
-          background: #0645a2;
-          transform: scaleX(0);
-          transition: transform var(--transition-normal);
-          border-radius: 4px;
+        position: absolute;
+    bottom: 5px;
+    left: 19px;
+    right: 15px;
+    height: 3px;
+    background: #0645a2;
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+    border-radius: 4px;
         }
 
         &:hover::after,
@@ -685,12 +685,6 @@
 }
 
 // Accessibility enhancements
-.header-primary .main-nav .menu-item a:focus,
-.header-secondary .main-nav .menu-item a:focus {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 2px;
-  background: rgba(0, 86, 210, 0.1);
-}
 
 // Swiper wrapper alignment
 .swiper-wrapper {

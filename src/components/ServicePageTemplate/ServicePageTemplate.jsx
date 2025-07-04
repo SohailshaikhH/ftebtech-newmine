@@ -129,62 +129,17 @@ const ServicePageTemplate = ({ data }) => {
                 </p>
               </div>
 
-              <div className="service-benefits">
-                <h3>Key Advantages</h3>
-                <div className="benefits-grid">
-                  <div className="benefit-item">
-                    <Icon name="Analytics" size={24} className="benefit-icon icon-primary" />
-                    <div>
-                      <h4>High Performance</h4>
-                      <p>Lightning-fast processing with global CDN and edge computing</p>
-                    </div>
-                  </div>
-                  <div className="benefit-item">
-                    <Icon name="Shield" size={24} className="benefit-icon icon-primary" />
-                    <div>
-                      <h4>Enterprise Security</h4>
-                      <p>Multi-layered security with compliance certifications</p>
-                    </div>
-                  </div>
-                  <div className="benefit-item">
-                    <Icon name="Analytics" size={24} className="benefit-icon icon-primary" />
-                    <div>
-                      <h4>Cost Optimization</h4>
-                      <p>Pay-as-you-use model with intelligent cost management</p>
-                    </div>
-                  </div>
-                  <div className="benefit-item">
-                    <Icon name="Network" size={24} className="benefit-icon icon-primary" />
-                    <div>
-                      <h4>Global Reach</h4>
-                      <p>60+ regions worldwide for optimal performance</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            
             </div>
 
-            <div className="content-right">
-              <div className="sidebar">
-                <div className="sidebar-section">
-                  <div className="contact-card">
-                    <h4>Free Assessment</h4>
-                    <p>Get a comprehensive analysis of your current infrastructure and migration roadmap.</p>
-                    <button className="btn-contact" onClick={handleContactClick}>
-                      <Icon name="Phone" size={16} />
-                      Schedule Assessment
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="services-grid-section">
-        <div className="container">
+        <div className="container services-grid-container">
           <div className="section-header">
             <h2>Our {data.title} Offerings</h2>
             <p>Comprehensive solutions tailored to your business needs</p>

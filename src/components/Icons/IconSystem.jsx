@@ -68,6 +68,9 @@ const iconMap = {
 
   // Technology Icons
   Azure: faCloud,
+  AWS: faCloud,
+  GCP: faCloud,
+
 };
 
 // Icon wrapper component for consistent styling

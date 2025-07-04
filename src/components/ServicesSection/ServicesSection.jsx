@@ -79,7 +79,6 @@ const ServicesSection = () => {
           fadeEffect={{ crossFade: true } }
           centeredSlides={true}
           loop={true}
-          navigation={true}
           speed={350}
           pagination={{
             clickable: true,

@@ -9,7 +9,7 @@ const CaseStudies = () => {
       description: "Modernize your infrastructure with secure, scalable cloud architecture.From Azure deployments to hybrid and multi-cloud environments, we design, implement, and manage robust cloud platforms tailored to your business needs."
     },
     {
-      icon: "Microsoft",
+      icon: "Cloud",
       title: "Microsoft 365 Licensing & Support",
       description: "Official reseller and expert support for Microsoft 365 licenses.Get the right subscription plans with professional setup, email migration, SharePoint, Exchange configuration, and ongoing user support."
     },

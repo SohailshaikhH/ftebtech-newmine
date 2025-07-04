@@ -88,7 +88,6 @@ const ITServices = () => {
           modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
           effect="coverflow"
           loop={true}
-          navigation={true}
           pagination={{ clickable: true }}
           speed={500}
           autoplay={{
