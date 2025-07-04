@@ -67,27 +67,16 @@ const ServicesSection = () => {
 
   return (
     <section className="services-section">
-      <h2 style={{
-        textAlign: 'center',
-        fontWeight: 700,
-        fontSize: '2.5rem',
-        marginBottom: 40,
-        letterSpacing: 1,
-        opacity: isVisible ? 1 : 0,
-      }}>
+      <h2>
         Preparing for your success,<br />
-        we provide <span style={{ 
-          background: 'linear-gradient(135deg, #007bff, #00a0ff)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text'
-        }}>truly prominent IT solutions.</span>
+        we provide <span >truly prominent IT solutions.</span>
       </h2>
 
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={3}
+          fadeEffect={{ crossFade: true } }
           centeredSlides={true}
           loop={true}
           navigation={true}

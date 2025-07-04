@@ -3,6 +3,7 @@ import { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
 import { routes } from '../../routes.js'
 import { Icon } from '../Icons/IconSystem'
+import fteb from '../../assets/images/FTebtech-logo/FTEB logo.png'
 
 const Header = ({ scrolled }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -18,7 +19,7 @@ const Header = ({ scrolled }) => {
           <div className="main-header-inner">
             <div className="logo">
               <Link to={routes.home.path}>
-                <h1>FTEB </h1>
+                <img src={fteb} alt="FTEBTECH" />
               </Link>
             </div>
 
@@ -46,21 +47,13 @@ const Header = ({ scrolled }) => {
                   </NavLink>
                 </li>
                 
-                <li className="menu-item">
-                  <NavLink to={routes.contact.path} onClick={() => setMobileMenuOpen(false)}>
-                    <Icon name="Contact" size={20} className="menu-icon" />
+                <li className="get-quote-container ">
+                  <NavLink className={" get-quote-button"} to={routes.contact.path} onClick={() => setMobileMenuOpen(false)}>
+                    <Icon name="Contact" size={20} className="" />
                     {routes.contact.name}
                   </NavLink>
                 </li>
                
-                <li className="menu-item">
-                <div className="get-quote-container">
-                  <a href="mailto:Connect@ftebtech.com" className="get-quote-button">
-                    <Icon name="Email" size={18} className="button-icon" />
-                    Get Quote
-                  </a>
-                </div>
-                </li>
               </ul>
             </nav>
           </div>

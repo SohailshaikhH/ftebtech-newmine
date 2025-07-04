@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b1e4ee0.css",
+    "main.js": "/static/js/main.bf27912b.js",
+    "static/media/computer-scientists-data-center-managing-maintaining-databases (1).jpg": "/static/media/computer-scientists-data-center-managing-maintaining-databases (1).648ea0fcbf907d45d160.jpg",
+    "static/media/react-logo.png": "/static/media/react-logo.05afcac15ae123ebb383.png",
+    "static/media/about-us.jpg": "/static/media/about-us.26808f6e3039645a0016.jpg",
+    "static/media/men.png": "/static/media/men.e12c61f503d7628893dc.png",
+    "static/media/linux.png": "/static/media/linux.8018150e0e98743fdfd8.png",
+    "static/media/m365.png": "/static/media/m365.a0f5b9616353d8b022f7.png",
+    "static/media/Dynamics-365.png": "/static/media/Dynamics-365.d2d1294a09aa35d60fac.png",
+    "static/media/keyboard.png": "/static/media/keyboard.2927ffb81bce54579e80.png",
+    "static/media/Microsoft365.png": "/static/media/Microsoft365.8870621882ea92729e5c.png",
+    "static/media/headphone.png": "/static/media/headphone.dd0d9d4d5c8b5a276387.png",
+    "static/media/FTEB logo.png": "/static/media/FTEB logo.18bdf79232f0e736e1ed.png",
+    "static/media/Machine_Learning_Logo.png": "/static/media/Machine_Learning_Logo.6751d8e45c8e5c50fc3e.png",
+    "static/media/Development.png": "/static/media/Development.5d308e24d29c49725215.png",
+    "static/media/a-devops.png": "/static/media/a-devops.4f97d8a963976d914da5.png",
+    "static/media/watch.png": "/static/media/watch.3f24244efd512df9244e.png",
+    "static/media/aws.jpg": "/static/media/aws.c937eaefc039bb627821.jpg",
+    "static/media/azure.jpg": "/static/media/azure.a6e8b91aaad8d774be67.jpg",
+    "static/media/Turbo360.png": "/static/media/Turbo360.5c9a4bac4321b34ed1ce.png",
+    "static/media/googlecloud.jpg": "/static/media/googlecloud.de5c9889a54bcf80e0bb.jpg",
+    "static/media/mouse.png": "/static/media/mouse.57bc3c43293e17063eca.png",
+    "static/media/terraform.png": "/static/media/terraform.20faf29115b8dbad67bd.png",
+    "static/media/Python.png": "/static/media/Python.c038d6e950c57ddc3d03.png",
+    "index.html": "/index.html",
+    "main.2b1e4ee0.css.map": "/static/css/main.2b1e4ee0.css.map",
+    "main.bf27912b.js.map": "/static/js/main.bf27912b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b1e4ee0.css",
+    "static/js/main.bf27912b.js"
+  ]
+}
