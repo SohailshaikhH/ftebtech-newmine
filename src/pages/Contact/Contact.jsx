@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Form, Button, Alert, Card, ButtonGroup } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faMapMarkerAlt, 
@@ -10,8 +9,7 @@ import {
   faCheckCircle,
   faExclamationTriangle,
   faPaperPlane,
-  faDesktop,
-  faGoogleDrive
+  faDesktop
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faLinkedinIn,
@@ -288,9 +286,9 @@ ${formData.phone}`;
     <div className="contact-page">
       {/* Hero Section */}
       <section className="contact-hero">
-        <Container>
-          <Row className="justify-content-center text-center">
-            <Col lg={8}>
+        <div className="container">
+          <div className="flex justify-center text-center">
+            <div className="max-w-4xl">
               <div className="hero-content">
                 <span className="hero-subtitle">GET IN TOUCH</span>
                 <h1 className="hero-title">
@@ -302,286 +300,286 @@ ${formData.phone}`;
                   Our expert team is here to help you achieve your goals.
                 </p>
               </div>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Contact Info Cards */}
       <section className="contact-info-section">
-        <Container>
-          <Row className="g-4">
+        <div className="container">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
             {contactInfo.map((info, index) => (
-              <Col key={index} lg={3} md={6}>
-                <Card className="contact-info-card h-100">
-                  <Card.Body className="text-center">
-                    <div className="info-icon">
-                      <FontAwesomeIcon icon={info.icon} />
-                    </div>
-                    <h5 className="info-title">{info.title}</h5>
-                    <p className="info-content">{info.content}</p>
-                    <small className="info-subcontent">{info.subContent}</small>
-                  </Card.Body>
-                </Card>
-              </Col>
+              <div key={index} className="card contact-info-card h-full">
+                <div className="card-body text-center">
+                  <div className="info-icon">
+                    <FontAwesomeIcon icon={info.icon} />
+                  </div>
+                  <h5 className="info-title">{info.title}</h5>
+                  <p className="info-content">{info.content}</p>
+                  <small className="info-subcontent">{info.subContent}</small>
+                </div>
+              </div>
             ))}
-          </Row>
-        </Container>
+          </div>
+        </div>
       </section>
 
       {/* Main Contact Section */}
       <section className="main-contact-section">
-        <Container>
-          <Row className="g-5">
+        <div className="container">
+          <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Form */}
-            <Col lg={8}>
-              <Card className="contact-form-card">
-                <Card.Body>
+            <div className="lg:col-span-2">
+              <div className="card contact-form-card">
+                <div className="card-body">
                   <div className="form-header">
                     <h2>Send Us a Message</h2>
                     <p>Fill out the form below and we'll open your email client with the message pre-filled.</p>
                   </div>
 
                   {/* Email Client Selection */}
-                  <div className="email-client-selection mb-4">
+                  <div className="email-client-selection mb-6">
                     <h6 className="mb-3">Choose how to send your message:</h6>
-                    <ButtonGroup className="w-100">
-                      <Button
-                        variant={emailClientOption === 'default' ? 'primary' : 'outline-primary'}
+                    <div className="flex gap-2">
+                      <button
+                        type="button"
+                        className={`btn flex-1 ${emailClientOption === 'default' ? 'btn-primary' : 'btn-outline'}`}
                         onClick={() => setEmailClientOption('default')}
-                        className="d-flex align-items-center justify-content-center gap-2"
                       >
-                        <FontAwesomeIcon icon={faDesktop} />
-                        Default Email App
-                        <small className="d-block text-muted">(Outlook, Mail, etc.)</small>
-                      </Button>
-                      <Button
-                        variant={emailClientOption === 'gmail' ? 'primary' : 'outline-primary'}
+                        <FontAwesomeIcon icon={faDesktop} className="mr-2" />
+                        <div className="flex flex-col items-center">
+                          <span>Default Email App</span>
+                          <small className="text-xs opacity-75">(Outlook, Mail, etc.)</small>
+                        </div>
+                      </button>
+                      <button
+                        type="button"
+                        className={`btn flex-1 ${emailClientOption === 'gmail' ? 'btn-primary' : 'btn-outline'}`}
                         onClick={() => setEmailClientOption('gmail')}
-                        className="d-flex align-items-center justify-content-center gap-2"
                       >
-                        <FontAwesomeIcon icon={faGoogle} />
-                        Gmail in Browser
-                        <small className="d-block text-muted">(Opens in new tab)</small>
-                      </Button>
-                    </ButtonGroup>
+                        <FontAwesomeIcon icon={faGoogle} className="mr-2" />
+                        <div className="flex flex-col items-center">
+                          <span>Gmail in Browser</span>
+                          <small className="text-xs opacity-75">(Opens in new tab)</small>
+                        </div>
+                      </button>
+                    </div>
                   </div>
 
                   {submitStatus === 'success' && (
-                    <Alert variant="success" className="d-flex align-items-center">
-                      <FontAwesomeIcon icon={faCheckCircle} className="me-2" />
+                    <div className="alert alert-success flex items-center mb-6">
+                      <FontAwesomeIcon icon={faCheckCircle} className="mr-2" />
                       Your email client should have opened with the message pre-filled. If it didn't open automatically, please check your browser's popup settings.
-                    </Alert>
+                    </div>
                   )}
 
                   {submitStatus === 'error' && (
-                    <Alert variant="danger" className="d-flex align-items-center">
-                      <FontAwesomeIcon icon={faExclamationTriangle} className="me-2" />
+                    <div className="alert alert-error flex items-center mb-6">
+                      <FontAwesomeIcon icon={faExclamationTriangle} className="mr-2" />
                       Sorry, there was an error processing your request. Please try again or contact us directly.
-                    </Alert>
+                    </div>
                   )}
 
-                  <Form onSubmit={handleSubmit} noValidate>
-                    <Row className="g-3">
+                  <form onSubmit={handleSubmit} noValidate>
+                    <div className="grid md:grid-cols-2 gap-4">
                       {/* Name Fields */}
-                      <Col md={6}>
-                        <Form.Group>
-                          <Form.Label>First Name *</Form.Label>
-                          <Form.Control
-                            type="text"
-                            name="firstName"
-                            value={formData.firstName}
-                            onChange={handleInputChange}
-                            isInvalid={!!formErrors.firstName}
-                            placeholder="Enter your first name"
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {formErrors.firstName}
-                          </Form.Control.Feedback>
-                        </Form.Group>
-                      </Col>
-                      <Col md={6}>
-                        <Form.Group>
-                          <Form.Label>Last Name *</Form.Label>
-                          <Form.Control
-                            type="text"
-                            name="lastName"
-                            value={formData.lastName}
-                            onChange={handleInputChange}
-                            isInvalid={!!formErrors.lastName}
-                            placeholder="Enter your last name"
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {formErrors.lastName}
-                          </Form.Control.Feedback>
-                        </Form.Group>
-                      </Col>
+                      <div className="form-group">
+                        <label className="form-label" htmlFor="firstName">First Name *</label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          className={`form-control ${formErrors.firstName ? 'border-error' : ''}`}
+                          value={formData.firstName}
+                          onChange={handleInputChange}
+                          placeholder="Enter your first name"
+                        />
+                        {formErrors.firstName && (
+                          <div className="form-error">{formErrors.firstName}</div>
+                        )}
+                      </div>
+                      
+                      <div className="form-group">
+                        <label className="form-label" htmlFor="lastName">Last Name *</label>
+                        <input
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          className={`form-control ${formErrors.lastName ? 'border-error' : ''}`}
+                          value={formData.lastName}
+                          onChange={handleInputChange}
+                          placeholder="Enter your last name"
+                        />
+                        {formErrors.lastName && (
+                          <div className="form-error">{formErrors.lastName}</div>
+                        )}
+                      </div>
 
                       {/* Contact Fields */}
-                      <Col md={6}>
-                        <Form.Group>
-                          <Form.Label>Email Address *</Form.Label>
-                          <Form.Control
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            isInvalid={!!formErrors.email}
-                            placeholder="Enter your email"
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {formErrors.email}
-                          </Form.Control.Feedback>
-                        </Form.Group>
-                      </Col>
-                      <Col md={6}>
-                        <Form.Group>
-                          <Form.Label>Phone Number *</Form.Label>
-                          <Form.Control
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleInputChange}
-                            isInvalid={!!formErrors.phone}
-                            placeholder="Enter your phone number"
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {formErrors.phone}
-                          </Form.Control.Feedback>
-                        </Form.Group>
-                      </Col>
+                      <div className="form-group">
+                        <label className="form-label" htmlFor="email">Email Address *</label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          className={`form-control ${formErrors.email ? 'border-error' : ''}`}
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          placeholder="Enter your email"
+                        />
+                        {formErrors.email && (
+                          <div className="form-error">{formErrors.email}</div>
+                        )}
+                      </div>
+                      
+                      <div className="form-group">
+                        <label className="form-label" htmlFor="phone">Phone Number *</label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          className={`form-control ${formErrors.phone ? 'border-error' : ''}`}
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          placeholder="Enter your phone number"
+                        />
+                        {formErrors.phone && (
+                          <div className="form-error">{formErrors.phone}</div>
+                        )}
+                      </div>
 
                       {/* Company Field */}
-                      <Col md={12}>
-                        <Form.Group>
-                          <Form.Label>Company Name *</Form.Label>
-                          <Form.Control
-                            type="text"
-                            name="company"
-                            value={formData.company}
-                            onChange={handleInputChange}
-                            isInvalid={!!formErrors.company}
-                            placeholder="Enter your company name"
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {formErrors.company}
-                          </Form.Control.Feedback>
-                        </Form.Group>
-                      </Col>
+                      <div className="form-group md:col-span-2">
+                        <label className="form-label" htmlFor="company">Company Name *</label>
+                        <input
+                          type="text"
+                          id="company"
+                          name="company"
+                          className={`form-control ${formErrors.company ? 'border-error' : ''}`}
+                          value={formData.company}
+                          onChange={handleInputChange}
+                          placeholder="Enter your company name"
+                        />
+                        {formErrors.company && (
+                          <div className="form-error">{formErrors.company}</div>
+                        )}
+                      </div>
 
                       {/* Service and Budget */}
-                      <Col md={6}>
-                        <Form.Group>
-                          <Form.Label>Service Interested In *</Form.Label>
-                          <Form.Select
-                            name="service"
-                            value={formData.service}
-                            onChange={handleInputChange}
-                            isInvalid={!!formErrors.service}
-                          >
-                            <option value="">Select a service</option>
-                            {services.map((service, index) => (
-                              <option key={index} value={service}>{service}</option>
-                            ))}
-                          </Form.Select>
-                          <Form.Control.Feedback type="invalid">
-                            {formErrors.service}
-                          </Form.Control.Feedback>
-                        </Form.Group>
-                      </Col>
-                      <Col md={6}>
-                        <Form.Group>
-                          <Form.Label>Project Budget</Form.Label>
-                          <Form.Select
-                            name="budget"
-                            value={formData.budget}
-                            onChange={handleInputChange}
-                          >
-                            <option value="">Select budget range</option>
-                            {budgetRanges.map((range, index) => (
-                              <option key={index} value={range}>{range}</option>
-                            ))}
-                          </Form.Select>
-                        </Form.Group>
-                      </Col>
+                      <div className="form-group">
+                        <label className="form-label" htmlFor="service">Service Interested In *</label>
+                        <select
+                          id="service"
+                          name="service"
+                          className={`form-control form-select ${formErrors.service ? 'border-error' : ''}`}
+                          value={formData.service}
+                          onChange={handleInputChange}
+                        >
+                          <option value="">Select a service</option>
+                          {services.map((service, index) => (
+                            <option key={index} value={service}>{service}</option>
+                          ))}
+                        </select>
+                        {formErrors.service && (
+                          <div className="form-error">{formErrors.service}</div>
+                        )}
+                      </div>
+                      
+                      <div className="form-group">
+                        <label className="form-label" htmlFor="budget">Project Budget</label>
+                        <select
+                          id="budget"
+                          name="budget"
+                          className="form-control form-select"
+                          value={formData.budget}
+                          onChange={handleInputChange}
+                        >
+                          <option value="">Select budget range</option>
+                          {budgetRanges.map((range, index) => (
+                            <option key={index} value={range}>{range}</option>
+                          ))}
+                        </select>
+                      </div>
 
                       {/* Message */}
-                      <Col md={12}>
-                        <Form.Group>
-                          <Form.Label>Message *</Form.Label>
-                          <Form.Control
-                            as="textarea"
-                            rows={5}
-                            name="message"
-                            value={formData.message}
-                            onChange={handleInputChange}
-                            isInvalid={!!formErrors.message}
-                            placeholder="Tell us about your project requirements..."
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {formErrors.message}
-                          </Form.Control.Feedback>
-                        </Form.Group>
-                      </Col>
+                      <div className="form-group md:col-span-2">
+                        <label className="form-label" htmlFor="message">Message *</label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows={5}
+                          className={`form-control form-textarea ${formErrors.message ? 'border-error' : ''}`}
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          placeholder="Tell us about your project requirements..."
+                        />
+                        {formErrors.message && (
+                          <div className="form-error">{formErrors.message}</div>
+                        )}
+                      </div>
 
                       {/* Terms Checkbox */}
-                      <Col md={12}>
-                        <Form.Group>
-                          <Form.Check
+                      <div className="form-group md:col-span-2">
+                        <div className="flex items-start gap-3">
+                          <input
                             type="checkbox"
+                            id="agreeToTerms"
                             name="agreeToTerms"
+                            className="form-checkbox mt-1"
                             checked={formData.agreeToTerms}
                             onChange={handleInputChange}
-                            isInvalid={!!formErrors.agreeToTerms}
-                            label="I agree to the Terms of Service and Privacy Policy *"
                           />
-                          <Form.Control.Feedback type="invalid">
-                            {formErrors.agreeToTerms}
-                          </Form.Control.Feedback>
-                        </Form.Group>
-                      </Col>
+                          <label htmlFor="agreeToTerms" className="form-label text-sm">
+                            I agree to the Terms of Service and Privacy Policy *
+                          </label>
+                        </div>
+                        {formErrors.agreeToTerms && (
+                          <div className="form-error">{formErrors.agreeToTerms}</div>
+                        )}
+                      </div>
 
                       {/* Submit Button */}
-                      <Col md={12}>
-                        <Button
+                      <div className="form-group md:col-span-2">
+                        <button
                           type="submit"
-                          className="submit-btn"
+                          className="btn btn-primary btn-lg w-full"
                           disabled={!isFormValid || isSubmitting}
                         >
                           {isSubmitting ? (
                             <>
-                              <span className="spinner-border spinner-border-sm me-2" />
+                              <div className="spinner mr-2" />
                               Opening Email Client...
                             </>
                           ) : (
                             <>
-                              <FontAwesomeIcon icon={faPaperPlane} className="me-2" />
+                              <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
                               Open {emailClientOption === 'gmail' ? 'Gmail' : 'Email Client'}
                             </>
                           )}
-                        </Button>
+                        </button>
                         
                         <div className="mt-3">
-                          <small className="text-muted">
+                          <small className="text-muted text-center block">
                             {emailClientOption === 'gmail' 
                               ? 'This will open Gmail in a new browser tab with your message pre-filled.'
                               : 'This will open your default email application (like Outlook, Mail, etc.) with your message pre-filled.'
                             }
                           </small>
                         </div>
-                      </Col>
-                    </Row>
-                  </Form>
-                </Card.Body>
-              </Card>
-            </Col>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
 
             {/* Sidebar */}
-            <Col lg={4}>
+            <div>
               <div className="contact-sidebar">
                 {/* Quick Contact */}
-                <Card className="quick-contact-card mb-4">
-                  <Card.Body>
+                <div className="card quick-contact-card mb-6">
+                  <div className="card-body">
                     <h4>Quick Contact</h4>
                     <p>Need immediate assistance? Reach out to us directly.</p>
                     
@@ -595,12 +593,12 @@ ${formData.phone}`;
                         <span>Email Us</span>
                       </a>
                     </div>
-                  </Card.Body>
-                </Card>
+                  </div>
+                </div>
 
                 {/* Social Media */}
-                <Card className="social-media-card mb-4">
-                  <Card.Body>
+                <div className="card social-media-card mb-6">
+                  <div className="card-body">
                     <h4>Follow Us</h4>
                     <p>Stay connected with us on social media for updates and insights.</p>
                     
@@ -618,12 +616,12 @@ ${formData.phone}`;
                         </a>
                       ))}
                     </div>
-                  </Card.Body>
-                </Card>
+                  </div>
+                </div>
 
                 {/* Office Hours */}
-                <Card className="office-hours-card">
-                  <Card.Body>
+                <div className="card office-hours-card">
+                  <div className="card-body">
                     <h4>Office Hours</h4>
                     <div className="hours-list">
                       <div className="hours-item">
@@ -639,17 +637,17 @@ ${formData.phone}`;
                         <span>Closed</span>
                       </div>
                     </div>
-                  </Card.Body>
-                </Card>
+                  </div>
+                </div>
               </div>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Map Section */}
       <section className="map-section">
-        <Container fluid className="p-0">
+        <div className="container-fluid p-0">
           <div className="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.1234567890!2d55.2708!3d25.1972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDExJzUwLjAiTiA1NcKwMTYnMTUuMCJF!5e0!3m2!1sen!2sae!4v1234567890"
@@ -662,7 +660,7 @@ ${formData.phone}`;
               title="FTEB Technology Office Location"
             ></iframe>
           </div>
-        </Container>
+        </div>
       </section>
     </div>
   );

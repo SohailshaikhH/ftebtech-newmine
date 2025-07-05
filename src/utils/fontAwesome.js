@@ -27,11 +27,13 @@ import {
   faExclamationTriangle,
   faInfoCircle,
   faPaperPlane,
-  faDesktop,
-  faGoogleDrive
+  faDesktop
 } from '@fortawesome/free-solid-svg-icons';
 
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { 
+  faLinkedinIn,
+  faGoogle
+} from '@fortawesome/free-brands-svg-icons';
 
 // Add icons to the library
 library.add(
@@ -75,7 +77,7 @@ library.add(
   // Additional Icons
   faPaperPlane,
   faDesktop,
-  faGoogleDrive
+  faGoogle
 );
 
 // Configure Font Awesome
