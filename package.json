@@ -12,9 +12,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^13.2.1",
-    "bootstrap": "^5.3.6",
     "react": "^19.1.0",
-    "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
     "react-router-dom": "6.20.0",
     "react-scripts": "5.0.1",
@@ -26,8 +24,12 @@
     "start": "node ftebtech.js start",
     "dev": "node ftebtech.js start",
     "build": "node ftebtech.js build",
+    "build:analyze": "ANALYZE=true npm run build",
     "test": "node ftebtech.js test",
-    "eject": "node ftebtech.js eject"
+    "eject": "node ftebtech.js eject",
+    "optimize:images": "node scripts/optimize-images.js",
+    "purge:css": "purgecss --css build/static/css/*.css --content build/static/js/*.js build/index.html --output build/static/css/",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html"
   },
   "eslintConfig": {
     "extends": [
@@ -46,5 +48,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^4.10.1",
+    "purgecss": "^5.0.0",
+    "lighthouse": "^11.4.0",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2"
   }
 }
