@@ -77,8 +77,6 @@ library.add(
 
   // Additional Icons
   faPaperPlane,
-  faDesktop,
-  faGoogle
 );
 
 // Configure Font Awesome
