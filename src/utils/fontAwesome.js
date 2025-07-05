@@ -1,5 +1,6 @@
 // Optimized Font Awesome Configuration
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { config } from '@fortawesome/fontawesome-svg-core';
 
 // Import only the icons you actually use
 import {
@@ -81,5 +82,4 @@ library.add(
 );
 
 // Configure Font Awesome
-import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
