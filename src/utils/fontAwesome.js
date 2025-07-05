@@ -1,6 +1,5 @@
 // Optimized Font Awesome Configuration
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { config } from '@fortawesome/fontawesome-svg-core';
 
 // Import only the icons you actually use
 import {
@@ -28,13 +27,11 @@ import {
   faExclamationTriangle,
   faInfoCircle,
   faPaperPlane,
-  faDesktop
+  faDesktop,
+  faGoogleDrive
 } from '@fortawesome/free-solid-svg-icons';
 
-import { 
-  faLinkedinIn,
-  faGoogle
-} from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 // Add icons to the library
 library.add(
@@ -77,7 +74,10 @@ library.add(
 
   // Additional Icons
   faPaperPlane,
+  faDesktop,
+  faGoogleDrive
 );
 
 // Configure Font Awesome
+import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
