@@ -1,4 +1,4 @@
-import "../../styles/components/CaseStudies/CaseStudies.scss"
+import "../../styles/components/CaseStudies/_CaseStudies.scss"
 import { Icon } from '../Icons/IconSystem'
 
 const CaseStudies = () => {
