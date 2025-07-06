@@ -1,7 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../Icons/IconSystem';
-import '../../styles/components/ServicePageTemplate/ServicePageTemplate.css';
+import '../../styles/components/ServicePageTemplate/ServicePageTemplate.scss';
+import azureLogo from '../../assets/images/ProductLogos/azure.png';
+import awsLogo from '../../assets/images/ProductLogos/aws.png'; 
+import gcpLogo from '../../assets/images/ProductLogos/googlecloud.png'; // Updated to use the correct GCP logo
 
 const ServicePageTemplate = ({ data }) => {
   const navigate = useNavigate();
@@ -62,6 +65,9 @@ const ServicePageTemplate = ({ data }) => {
     }
   ];
 
+  // Check if this is the multi-cloud services page
+  const isMultiCloudPage = data.title === "Multi-Cloud Services";
+
   return (
     <div className="service-page">
       {/* Hero Section */}
@@ -89,8 +95,27 @@ const ServicePageTemplate = ({ data }) => {
               </div>
             </div>
             
-            <div className="hero-logo">
-              <img src={data.logo} alt={`${data.title} Logo`} />
+            <div className="hero-logo-section">
+              {isMultiCloudPage ? (
+                <div className="multi-cloud-logos">
+                  <div className="cloud-logo-item azure-logo">
+                    <img src={azureLogo} alt="Microsoft Azure" />
+                    <span className="logo-label">Azure</span>
+                  </div>
+                  <div className="cloud-logo-item aws-logo">
+                    <img src={awsLogo} alt="Amazon Web Services" />
+                    <span className="logo-label">AWS</span>
+                  </div>
+                  <div className="cloud-logo-item gcp-logo">
+                    <img src={gcpLogo} alt="Google Cloud Platform" />
+                    <span className="logo-label">GCP</span>
+                  </div>
+                </div>
+              ) : (
+                <div className="hero-logo">
+                  <img src={data.logo} alt={`${data.title} Logo`} />
+                </div>
+              )}
             </div>
           </div>
           

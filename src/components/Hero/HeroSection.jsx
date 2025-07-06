@@ -7,6 +7,9 @@ import laptop from "../../assets/images/Microsoft365.png";
 import mouse from "../../assets/images/mouse.png";
 import watch from "../../assets/images/watch.png";
 import keyboard from "../../assets/images/keyboard.png";
+import devopsImage from "../../assets/images/ProductLogos/dev.png";
+import azureImage from "../../assets/images/ProductLogos/azure.png";
+import awsImage from "../../assets/images/ProductLogos/aws.png";
 
 function App() {
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -31,6 +34,7 @@ function App() {
         </div>
 
         <div className="images-container">
+          {/* Original Images */}
           <div
             className={`image-wrapper headphones ${
               imagesLoaded ? "loaded" : ""
@@ -61,6 +65,25 @@ function App() {
             className={`image-wrapper keyboard ${imagesLoaded ? "loaded" : ""}`}
           >
             <img src={keyboard} alt="Keyboard" className="accessory-image" />
+          </div>
+
+          {/* New Images */}
+          <div
+            className={`image-wrapper devops ${imagesLoaded ? "loaded" : ""}`}
+          >
+            <img src={devopsImage} alt="DevOps Solutions" className="tech-image" />
+          </div>
+
+          <div
+            className={`image-wrapper azure ${imagesLoaded ? "loaded" : ""}`}
+          >
+            <img src={azureImage} alt="Azure Services" className="tech-image" />
+          </div>
+
+          <div
+            className={`image-wrapper aws ${imagesLoaded ? "loaded" : ""}`}
+          >
+            <img src={awsImage} alt="AWS Services" className="tech-image" />
           </div>
         </div>
       </main>

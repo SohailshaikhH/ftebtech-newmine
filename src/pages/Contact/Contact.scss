@@ -176,42 +176,6 @@
           }
         }
 
-        // Email Client Selection
-        .email-client-selection {
-          background: var(--color-bg-light);
-          padding: clamp(20px, 4vw, 25px);
-          border-radius: 12px;
-          border: 2px solid rgba(0, 86, 210, 0.1);
-
-          h6 {
-            font-family: var(--font-heading);
-            color: var(--color-primary);
-            font-weight: var(--font-weight-semibold);
-            margin-bottom: clamp(12px, 2vw, 16px);
-          }
-
-          .btn-group {
-            .btn {
-              font-family: var(--font-body);
-              padding: clamp(12px, 2.5vw, 16px) clamp(16px, 3vw, 20px);
-              border-radius: 8px;
-              font-weight: var(--font-weight-medium);
-              transition: all 0.3s ease;
-              min-height: var(--touch-target-comfortable);
-
-              small {
-                font-size: clamp(0.7rem, 1.5vw, 0.8rem);
-                opacity: 0.8;
-              }
-
-              &:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(0, 86, 210, 0.2);
-              }
-            }
-          }
-        }
-
         // Form Styles
         .form-group {
           margin-bottom: clamp(20px, 3vw, 25px);
@@ -448,6 +412,9 @@
     }
   }
 
+  // Email Client Modal Styles
+
+
   // Map Section
   .map-section {
     .map-container {
@@ -497,17 +464,11 @@
       }
     }
 
-    .email-client-selection {
-      .btn-group {
-        flex-direction: column;
-        
-        .btn {
-          border-radius: 8px !important;
-          margin-bottom: 8px;
-          
-          &:last-child {
-            margin-bottom: 0;
-          }
+    .email-client-modal {
+      .modal-body {
+        .email-clients-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
         }
       }
     }
@@ -533,6 +494,43 @@
         }
       }
     }
+
+    .email-client-modal {
+      .modal-header {
+        padding: 20px 20px 15px;
+
+        .modal-title {
+          font-size: 1.3rem;
+        }
+      }
+
+      .modal-body {
+        padding: 20px;
+
+        .email-clients-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .email-client-option {
+          flex-direction: row;
+          padding: 20px;
+          min-height: auto;
+          text-align: left;
+
+          .client-icon {
+            margin-bottom: 0;
+            margin-right: 15px;
+            width: 45px;
+            height: 45px;
+          }
+
+          .client-name {
+            text-align: left;
+          }
+        }
+      }
+    }
   }
 
   @media (max-width: 575.98px) {
@@ -553,6 +551,30 @@
         }
       }
     }
+
+    .email-client-modal {
+      .modal-body {
+        padding: 15px;
+
+        .email-client-option {
+          padding: 15px;
+
+          .client-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+
+            svg {
+              font-size: 1.3rem;
+            }
+          }
+
+          .client-name {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
   }
 
   // Touch Device Optimizations
@@ -568,6 +590,10 @@
     }
 
     .submit-btn:hover:not(:disabled) {
+      transform: none;
+    }
+
+    .email-client-option:hover {
       transform: none;
     }
   }
@@ -595,7 +621,8 @@
     }
 
     .submit-btn,
-    .contact-method-btn {
+    .contact-method-btn,
+    .email-client-option {
       border: 2px solid currentColor;
     }
   }
@@ -603,7 +630,8 @@
   // Print Styles
   @media print {
     .contact-hero,
-    .map-section {
+    .map-section,
+    .email-client-modal {
       display: none;
     }
 
