@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../Icons/IconSystem';
-import '../../styles/components/ServicePageTemplate/ServicePageTemplate.scss';
+import '../../styles/components/ServicePageTemplate/_ServicePageTemplate.scss';
 import azureLogo from '../../assets/images/ProductLogos/azure.png';
 import awsLogo from '../../assets/images/ProductLogos/aws.png'; 
 import gcpLogo from '../../assets/images/ProductLogos/googlecloud.png'; // Updated to use the correct GCP logo
