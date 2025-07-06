@@ -1,4 +1,4 @@
-import "../../styles/components/Features/Features.scss"
+import "../../styles/components/Features/-Features.scss"
 import { Icon } from '../Icons/IconSystem'
 import featureImage from "../../assets/images/computer-scientists-data-center-managing-maintaining-databases (1).jpg"
 
