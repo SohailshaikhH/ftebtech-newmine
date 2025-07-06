@@ -1,17 +1,18 @@
-// Services Page - SCSS with Nested Structure
+/* Services Page - SCSS with Nested Structure */
+
 .it-services-page {
   position: relative;
   padding-top: 0;
   min-height: 100vh;
-  background-color: var(--color-white);
+  background-color: $color-white;
 
   // Hero Section
   .itservices-hero-bg {
     position: relative;
-    background: linear-gradient(135deg, var(--color-primary) 0%, #003d99 100%);
+    background: linear-gradient(135deg, $color-primary 0%, #003d99 100%);
     padding: 160px 0 80px;
     overflow: hidden;
-    color: var(--color-white);
+    color: $color-white;
 
     .itservices-hero-pattern {
       position: absolute;
@@ -34,10 +35,10 @@
     }
 
     .itservices-title {
-      font-family: var(--font-heading);
+      font-family: $font-heading;
       font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-white);
+      font-weight: $font-weight-bold;
+      color: $color-white;
       margin-bottom: 1.5rem;
       line-height: 1.2;
       letter-spacing: -0.02em;
@@ -49,7 +50,7 @@
 
   // Logo Slider Section
   .product-logos-swiper {
-    background: var(--color-white);
+    background: $color-white;
     padding: 40px 0;
     margin: -87px auto 40px;
     max-width: 1400px;
@@ -78,7 +79,7 @@
   // Services Section
   .itservices-section {
     padding: 80px 0 60px;
-    background: linear-gradient(135deg, var(--color-bg-light) 0%, #ffffff 100%);
+    background: linear-gradient(135deg, $color-bg-light 0%, #ffffff 100%);
     position: relative;
     overflow: hidden;
 
@@ -89,11 +90,11 @@
       padding: 0 20px;
 
       .subtitle {
-        font-family: var(--font-body);
+        font-family: $font-body;
         display: inline-block;
-        color: var(--color-secondary);
+        color: $color-secondary;
         font-size: 0.875rem;
-        font-weight: var(--font-weight-bold);
+        font-weight: $font-weight-bold;
         text-transform: uppercase;
         letter-spacing: 0.1em;
         margin-bottom: 1rem;
@@ -103,12 +104,12 @@
       }
 
       h2 {
-        font-family: var(--font-heading);
+        font-family: $font-heading;
         font-size: clamp(2rem, 4vw, 2.5rem);
-        color: var(--color-primary);
+        color: $color-primary;
         line-height: 1.3;
         margin: 0;
-        font-weight: var(--font-weight-bold);
+        font-weight: $font-weight-bold;
       }
     }
 
@@ -132,11 +133,8 @@
     }
 
     .service-card {
-      background: var(--color-white);
+      @include card-base;
       padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-      transition: all 0.3s ease;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -144,17 +142,6 @@
       overflow: hidden;
 
       &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-
-        .icon-container {
-          transform: scale(1.1);
-
-          .service-icon {
-            color: var(--color-white);
-          }
-        }
-
         .service-arrow {
           opacity: 1;
           transform: translateX(0);
@@ -162,38 +149,19 @@
       }
     }
 
-    .icon-container {
-      width: clamp(60px, 8vw, 70px);
-      height: clamp(60px, 8vw, 70px);
-      background: rgba(0, 86, 210, 0.1);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      transition: all 0.3s ease;
-      border: 2px solid rgba(102, 161, 231, 0.2);
-    }
-
-    .service-icon {
-      font-size: clamp(1.5rem, 2.5vw, 1.8rem);
-      color: var(--color-primary);
-      transition: all 0.3s ease;
-    }
-
-    .service-card h3 {
-      font-family: var(--font-heading);
+    h3 {
+      font-family: $font-heading;
       font-size: 1.25rem;
-      font-weight: var(--font-weight-bold);
-      color: var(--color-primary);
+      font-weight: $font-weight-bold;
+      color: $color-primary;
       margin-bottom: 1rem;
       line-height: 1.4;
     }
 
-    .service-card p {
-      font-family: var(--font-body);
+    p {
+      font-family: $font-body;
       font-size: 1rem;
-      color: var(--color-text);
+      color: $color-text;
       line-height: 1.6;
       margin-bottom: 1.5rem;
       flex-grow: 1;
@@ -202,7 +170,7 @@
     .service-arrow {
       display: inline-flex;
       align-items: center;
-      color: var(--color-primary);
+      color: $color-primary;
       font-size: 1.125rem;
       opacity: 0;
       transform: translateX(-10px);
@@ -217,7 +185,7 @@
   // Contact Section
   .contact-info-section {
     padding: 80px 0;
-    background: var(--color-white);
+    background: $color-white;
     position: relative;
     overflow: hidden;
 
@@ -244,14 +212,14 @@
 
     .contact-info-content {
       padding: 2rem;
-      background: var(--color-white);
+      background: $color-white;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 
       .rating-value {
         font-size: 2.5rem;
-        font-weight: var(--font-weight-bold);
-        color: var(--color-primary);
+        font-weight: $font-weight-bold;
+        color: $color-primary;
         margin-bottom: 0.5rem;
       }
 
@@ -262,7 +230,7 @@
       }
 
       .rating-text {
-        color: var(--color-text);
+        color: $color-text;
         margin-bottom: 2rem;
       }
 
@@ -271,7 +239,7 @@
         align-items: center;
         margin-bottom: 1.5rem;
         padding: 1rem;
-        background: var(--color-bg-light);
+        background: $color-bg-light;
         border-radius: 12px;
         transition: all 0.3s ease;
         gap: 1rem;
@@ -281,36 +249,19 @@
           background: rgba(0, 86, 210, 0.1);
         }
 
-        .contact-icon {
-          width: clamp(40px, 6vw, 45px);
-          height: clamp(40px, 6vw, 45px);
-          background: var(--color-primary);
-          border-radius: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--color-white);
-          margin-right: 1rem;
-          flex-shrink: 0;
-
-          svg {
-            font-size: clamp(1.1rem, 2.2vw, 1.3rem);
-          }
-        }
-
         .contact-text {
           flex-grow: 1;
 
           .contact-label {
             font-size: 0.875rem;
-            color: var(--color-text);
+            color: $color-text;
             margin-bottom: 0.25rem;
           }
 
           .contact-value {
             font-size: 1.125rem;
-            font-weight: var(--font-weight-semibold);
-            color: var(--color-primary);
+            font-weight: $font-weight-semibold;
+            color: $color-primary;
             text-decoration: none;
           }
         }
@@ -336,7 +287,7 @@
   }
 
   // Responsive Design
-  @media (max-width: 992px) {
+  @include respond-to(lg) {
     .contact-info-section .contact-info-container {
       grid-template-columns: 1fr;
       gap: 40px;
@@ -347,7 +298,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @include respond-to(md) {
     .itservices-hero-bg {
       padding: 120px 0 60px;
     }
@@ -361,14 +312,9 @@
     }
   }
 
-  @media (max-width: 576px) {
+  @include respond-to(sm) {
     .itservices-section .service-card {
       padding: 1.5rem;
-    }
-    
-    .icon-container {
-      width: 50px;
-      height: 50px;
     }
     
     .contact-info-section .contact-info-content .rating-value {

@@ -1,13 +1,15 @@
+/* Services Component - SCSS with Nested Structure */
+
 .service-description-wrapper {
   width: 100%;
-  background: var(--color-white);
+  background: $color-white;
   position: relative;
   
   .services-hero-section {
     padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
     text-align: center;
     position: relative;
-    background: linear-gradient(135deg, var(--color-primary) 0%, #0056d2 100%);
+    background: linear-gradient(135deg, $color-primary 0%, #0056d2 100%);
     color: white;
     padding-bottom: 10rem;
 
@@ -23,7 +25,7 @@
     }
 
     .services-hero-content {
-      max-width: var(--container-xl);
+      max-width: $container-xl;
       margin: 0 auto;
       padding: 0 clamp(16px, 4vw, 32px);
       position: relative;
@@ -37,8 +39,8 @@
       padding: clamp(6px, 1.5vw, 8px) clamp(16px, 3vw, 20px);
       border-radius: 25px;
       font-size: clamp(0.75rem, 2vw, 0.875rem);
-      font-weight: var(--font-weight-semibold);
-      letter-spacing: var(--letter-spacing-widest);
+      font-weight: $font-weight-semibold;
+      letter-spacing: $letter-spacing-widest;
       text-transform: uppercase;
       margin-bottom: clamp(20px, 4vw, 30px);
       backdrop-filter: blur(10px);
@@ -46,11 +48,11 @@
 
     .services-main-title {
       font-size: clamp(2rem, 6vw, 4rem);
-      font-weight: var(--font-weight-bold);
-      line-height: var(--line-height-tight);
+      font-weight: $font-weight-bold;
+      line-height: $line-height-tight;
       margin-bottom: clamp(20px, 4vw, 30px);
       color: #ffffff;
-      letter-spacing: var(--letter-spacing-tight);
+      letter-spacing: $letter-spacing-tight;
     }
 
     .highlight-text {
@@ -63,11 +65,11 @@
 
     .services-hero-description {
       font-size: clamp(1rem, 2.5vw, 1.2rem);
-      line-height: var(--line-height-relaxed);
+      line-height: $line-height-relaxed;
       max-width: 800px;
       margin: 0 auto clamp(30px, 6vw, 50px);
       color: rgba(255, 255, 255, 0.9);
-      font-weight: var(--font-weight-normal);
+      font-weight: $font-weight-normal;
     }
 
     .services-stats {
@@ -87,9 +89,9 @@
     .stat-number {
       display: block;
       font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: var(--font-weight-bold);
+      font-weight: $font-weight-bold;
       color: #ffffff;
-      line-height: var(--line-height-tight);
+      line-height: $line-height-tight;
       margin-bottom: 8px;
     }
 
@@ -97,12 +99,12 @@
       font-size: clamp(0.75rem, 2vw, 0.9rem);
       color: rgba(255, 255, 255, 0.8);
       text-transform: uppercase;
-      letter-spacing: var(--letter-spacing-wide);
-      font-weight: var(--font-weight-medium);
+      letter-spacing: $letter-spacing-wide;
+      font-weight: $font-weight-medium;
     }
   }
 
-  /* Services Grid Section */
+  // Services Grid Section
   .services-grid-section {
     padding: clamp(40px, 8vh, 60px) 0;
     margin: 0 auto;
@@ -111,23 +113,14 @@
     padding-top: 0px;
   }
 
-  /* .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(20px, 4vw, 30px);
-    margin-top: clamp(30px, 6vw, 50px);
-  } */
-
   .service-card-modern {
-    background: white;
-    border-radius: 16px;
+    @include card-base;
     padding: 30px 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     cursor: pointer;
     position: relative;
     overflow: hidden;
     border: 1px solid #e5e7eb;
-    color: var(--color-text);
+    color: $color-text;
     display: flex;
     flex-direction: column;
     min-height: auto;
@@ -160,21 +153,21 @@
   }
 
   .service-title-modern {
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-primary);
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    color: $color-primary;
     margin: 0;
-    line-height: var(--line-height-snug);
-    letter-spacing: var(--letter-spacing-normal);
+    line-height: $line-height-snug;
+    letter-spacing: $letter-spacing-normal;
   }
 
   .service-description-modern {
-    color: var(--color-text);
-    line-height: var(--line-height-relaxed);
+    color: $color-text;
+    line-height: $line-height-relaxed;
     margin-bottom: 20px;
-    font-size: var(--font-size-base);
+    font-size: $font-size-base;
     text-align: center;
-    font-weight: var(--font-weight-normal);
+    font-weight: $font-weight-normal;
     flex-grow: 1;
   }
 
@@ -187,10 +180,10 @@
   }
 
   .feature-tag {
-    color: var(--color-primary);
+    color: $color-primary;
     padding: 8px 14px;
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
   }
 
   .service-card-footer {
@@ -198,22 +191,9 @@
     text-align: center;
   }
 
-  /* Service Button */
+  // Service Button
   .service-btn {
-    position: relative;
-    display: inline-block;
-    padding: 12px 28px;
-    background: transparent;
-    border: 2px solid var(--color-primary);
-    border-radius: 30px;
-    color: var(--color-primary);
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-sm);
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    z-index: 1;
-    text-decoration: none;
+    @include service-button;
     width: 100%;
     text-align: center;
     min-height: 44px;
@@ -221,46 +201,15 @@
     align-items: center;
     justify-content: center;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-      opacity: 0;
-      transform: translateX(-100%) rotate(10deg);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: -1;
-    }
-
-    &:hover {
-      color: #ffffff;
-      border-color: var(--color-primary);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0, 86, 210, 0.3);
-    }
-
-    &:hover::before {
-      opacity: 1;
-      transform: translateX(0) rotate(0deg);
-    }
-
-    &:active {
-      transform: translateY(0);
-      box-shadow: 0 2px 8px rgba(0, 86, 210, 0.3);
-    }
-
     &:focus {
       outline: 3px solid rgba(102, 161, 231, 0.5);
       outline-offset: 2px;
     }
   }
 
-  /* CTA Section */
+  // CTA Section
   .services-cta-section {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    background: linear-gradient(135deg, $color-primary 0%, $color-secondary 100%);
     color: #ffffff;
     padding: clamp(60px, 12vh, 80px) 0;
     text-align: center;
@@ -287,18 +236,18 @@
 
     h2 {
       font-size: clamp(2rem, 5vw, 2.5rem);
-      font-weight: var(--font-weight-bold);
+      font-weight: $font-weight-bold;
       margin-bottom: clamp(16px, 3vw, 20px);
       color: #ffffff;
-      line-height: var(--line-height-tight);
+      line-height: $line-height-tight;
     }
 
     p {
       font-size: clamp(1rem, 2.5vw, 1.2rem);
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: clamp(30px, 6vw, 40px);
-      line-height: var(--line-height-relaxed);
-      font-weight: var(--font-weight-normal);
+      line-height: $line-height-relaxed;
+      font-weight: $font-weight-normal;
     }
 
     .cta-buttons {
@@ -309,10 +258,10 @@
     }
   }
 
-  /* Primary CTA Button */
+  // Primary CTA Button
   .service-btn.primary-btn {
     background: #ffffff;
-    color: var(--color-secondary);
+    color: $color-secondary;
     border: 2px solid #ffffff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     min-width: clamp(180px, 40vw, 200px);
@@ -325,13 +274,13 @@
 
     &:hover {
       background: #f8f9fa;
-      color: var(--color-primary);
+      color: $color-primary;
       transform: translateY(-2px);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     }
   }
 
-  /* Secondary CTA Button */
+  // Secondary CTA Button
   .service-btn.secondary-btn {
     background: transparent;
     color: #ffffff;
@@ -353,7 +302,7 @@
     }
   }
 
-  /* Responsive Breakpoints */
+  // Responsive Breakpoints
   @media (max-width: 1200px) {
     .services-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -361,7 +310,7 @@
     }
   }
 
-  @media (max-width: 992px) {
+  @include respond-to(lg) {
     .services-stats {
       grid-template-columns: repeat(2, 1fr);
       gap: clamp(20px, 4vw, 40px);
@@ -389,7 +338,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @include respond-to(md) {
     .services-stats {
       grid-template-columns: 1fr;
       gap: clamp(16px, 3vw, 30px);
@@ -430,15 +379,15 @@
     }
 
     .service-title-modern {
-      font-size: var(--font-size-lg);
+      font-size: $font-size-lg;
     }
 
     .service-description-modern {
-      font-size: var(--font-size-sm);
+      font-size: $font-size-sm;
     }
   }
 
-  @media (max-width: 576px) {
+  @include respond-to(sm) {
     .service-card-modern {
       padding: 20px 15px;
     }
@@ -459,26 +408,15 @@
     }
 
     .service-title-modern {
-      font-size: var(--font-size-base);
+      font-size: $font-size-base;
     }
 
     .service-description-modern {
-      font-size: var(--font-size-xs);
+      font-size: $font-size-xs;
     }
   }
 
-  /* Landscape Mobile */
-  @media (max-height: 500px) and (orientation: landscape) {
-    .services-hero-section {
-      padding: 40px 0 30px;
-    }
-
-    .services-cta-section {
-      padding: 50px 0;
-    }
-  }
-
-  /* Touch Device Optimizations */
+  // Touch Device Optimizations
   @media (hover: none) and (pointer: coarse) {
     .service-btn:hover {
       transform: none;
@@ -489,7 +427,7 @@
     }
   }
 
-  /* Reduced Motion */
+  // Reduced Motion
   @media (prefers-reduced-motion: reduce) {
     .service-card-modern,
     .service-btn,
@@ -503,7 +441,7 @@
     }
   }
 
-  /* High Contrast Mode */
+  // High Contrast Mode
   @media (prefers-contrast: high) {
     .service-card-modern {
       border: 3px solid currentColor;
@@ -514,8 +452,8 @@
     }
   }
 
-  /* Print Styles */
-  @media (print) {
+  // Print Styles
+  @media print {
     .services-hero-section,
     .services-cta-section {
       background: white;

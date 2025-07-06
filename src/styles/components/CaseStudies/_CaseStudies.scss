@@ -1,4 +1,5 @@
-// Case Studies Component - SCSS with Nested Structure
+/* Case Studies Component - SCSS with Nested Structure */
+
 .container {
   position: relative;
   z-index: 2;
@@ -11,9 +12,9 @@
   position: relative;
 
   .headingser {
-    color: var(--color-secondary);
+    color: $color-secondary;
     font-size: 14px;
-    font-weight: var(--font-weight-bold);
+    font-weight: $font-weight-bold;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 25px;
@@ -25,8 +26,8 @@
   }
 
   .headstwo {
-    color: var(--color-primary);
-    font-weight: var(--font-weight-bold);
+    color: $color-primary;
+    font-weight: $font-weight-bold;
     font-size: clamp(2.2rem, 4vw, 2.8rem);
     margin-bottom: 25px;
     line-height: 1.3;
@@ -40,12 +41,10 @@
       transform: translateX(-50%);
       width: 80px;
       height: 4px;
-      background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+      background: linear-gradient(90deg, $color-secondary, $color-primary);
       border-radius: 2px;
     }
   }
-
- 
 }
 
 .servicess-grid {
@@ -62,19 +61,14 @@
     padding: 35px;
     transition: all 0.4s ease;
     border-radius: 20px;
-    background: var(--color-white);
-    color: var(--color-text);
+    background: $color-white;
+    color: $color-text;
     position: relative;
     overflow: hidden;
 
-  
     &:hover {
-      &::before {
-        transform: scaleX(1);
-      }
-
       .service-icons {
-        background: var(--color-primary);
+        background: $color-primary;
         transform: scale(1.1);
 
         &::before {
@@ -82,7 +76,7 @@
         }
 
         svg {
-          color: var(--color-white);
+          color: $color-white;
         }
       }
     }
@@ -109,14 +103,14 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, var(--color-secondary), var(--color-bg-light));
+      background: linear-gradient(135deg, $color-secondary, $color-bg-light);
       opacity: 0;
       transition: opacity 0.4s ease;
     }
 
     svg {
       font-size: 2rem;
-      color: var(--color-secondary);
+      color: $color-secondary;
       transition: all 0.4s ease;
       position: relative;
       z-index: 2;
@@ -132,7 +126,6 @@
 
     p {
       font-size: 16px;
- 
     }
   }
 }
@@ -146,7 +139,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include respond-to(lg) {
   .servicess-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -168,7 +161,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include respond-to(md) {
   .servicess-grid {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -198,7 +191,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@include respond-to(sm) {
   .servicess-grid {
     .service-item {
       flex-direction: column;

@@ -1,8 +1,10 @@
+/* Service Page Template - SCSS with Nested Structure */
+
 .service-page {
   min-height: 100vh;
   background: #f8f9fa;
 
-  /* Hero Section */
+  // Hero Section
   .service-hero {
     padding: 120px 0 80px;
     color: white;
@@ -22,7 +24,7 @@
       padding: 12px 24px;
       border-radius: 8px;
       cursor: pointer;
-      font-family: var(--font-body);
+      font-family: $font-body;
       font-size: 14px;
       margin-bottom: 40px;
       transition: all 0.3s ease;
@@ -48,7 +50,7 @@
     }
 
     &-title {
-      font-family: var(--font-heading);
+      font-family: $font-heading;
       font-size: 3.5rem;
       font-weight: 600;
       margin-bottom: 16px;
@@ -57,7 +59,7 @@
     }
 
     &-subtitle {
-      font-family: var(--font-heading);
+      font-family: $font-heading;
       font-size: 1.5rem;
       font-weight: 500;
       margin-bottom: 24px;
@@ -66,7 +68,7 @@
     }
 
     &-description {
-      font-family: var(--font-body);
+      font-family: $font-body;
       font-size: 1.1rem;
       line-height: 1.6;
       margin-bottom: 40px;
@@ -81,7 +83,7 @@
     }
 
     .cta-button {
-      font-family: var(--font-body);
+      font-family: $font-body;
       padding: 16px 32px;
       border-radius: 8px;
       font-size: 16px;
@@ -96,12 +98,12 @@
 
       &.primary {
         background: white;
-        color: var(--color-primary);
+        color: $color-primary;
 
         &:hover {
           transform: translateY(-2px);
           box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-          color: var(--color-primary);
+          color: $color-primary;
           text-decoration: none;
         }
       }
@@ -113,14 +115,14 @@
 
         &:hover {
           background: white;
-          color: var(--color-primary);
+          color: $color-primary;
           text-decoration: none;
         }
       }
     }
   }
 
-  /* Multi-Cloud Logos Section */
+  // Multi-Cloud Logos Section
   .hero-logo-section {
     display: flex;
     justify-content: center;
@@ -170,7 +172,7 @@
       }
 
       .logo-label {
-        font-family: var(--font-body);
+        font-family: $font-body;
         font-size: 14px;
         font-weight: 600;
         color: white;
@@ -178,7 +180,7 @@
         letter-spacing: 0.5px;
       }
 
-      /* Individual logo animations */
+      // Individual logo animations
       .azure-logo {
         animation-delay: 0s;
         animation: floatAzure 6s ease-in-out infinite;
@@ -207,7 +209,7 @@
       text-align: center;
 
       .stat-number {
-        font-family: var(--font-heading);
+        font-family: $font-heading;
         display: block;
         font-size: 2.5rem;
         font-weight: 600;
@@ -216,7 +218,7 @@
       }
 
       .stat-label {
-        font-family: var(--font-body);
+        font-family: $font-body;
         font-size: 1rem;
         opacity: 0.8;
         color: white;
@@ -224,7 +226,7 @@
     }
   }
 
-  /* Main Content Section */
+  // Main Content Section
   .main-content {
     padding: 80px 0;
     background: #ffffff;
@@ -240,69 +242,20 @@
 
       .descriptions {
         h2 {
-          font-family: var(--font-heading);
+          font-family: $font-heading;
           font-size: 2.5rem;
           font-weight: 600;
-          color: var(--color-primary);
+          color: $color-primary;
           margin-bottom: 30px;
           line-height: 1.3;
         }
 
         p {
-          font-family: var(--font-body);
+          font-family: $font-body;
           font-size: 1.1rem;
           line-height: 1.7;
-          color: var(--color-text);
+          color: $color-text;
           margin-bottom: 25px;
-        }
-      }
-
-      .service-benefits {
-        margin-top: 50px;
-
-        h3 {
-          font-family: var(--font-heading);
-          font-size: 2rem;
-          font-weight: 600;
-          color: var(--color-primary);
-          margin-bottom: 30px;
-        }
-
-        .benefits-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 25px;
-
-          .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 15px;
-            background: var(--color-bg-light);
-            border-radius: 12px;
-
-            .benefit-icon {
-              font-size: 1.8rem;
-              color: var(--color-secondary);
-              margin-top: 5px;
-              flex-shrink: 0;
-            }
-
-            h4 {
-              font-family: var(--font-heading);
-              font-size: 1.2rem;
-              font-weight: 600;
-              color: var(--color-primary);
-              margin-bottom: 8px;
-            }
-
-            p {
-              font-family: var(--font-body);
-              color: var(--color-text);
-              line-height: 1.5;
-              margin: 0;
-            }
-          }
         }
       }
     }
@@ -325,39 +278,11 @@
           height: 21rem;
 
           h3 {
-            font-family: var(--font-heading);
+            font-family: $font-heading;
             font-size: 1.4rem;
             font-weight: 600;
-            color: var(--color-primary);
+            color: $color-primary;
             margin-bottom: 20px;
-          }
-        }
-
-        .service-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-
-          li {
-            margin-bottom: 12px;
-
-            a {
-              font-family: var(--font-body);
-              display: block;
-              padding: 12px 16px;
-              color: var(--color-text);
-              text-decoration: none;
-              border-radius: 8px;
-              transition: all 0.3s ease;
-              border-left: 3px solid transparent;
-
-              &:hover {
-                background: var(--color-bg-light);
-                color: var(--color-secondary);
-                border-left-color: var(--color-secondary);
-                transform: translateX(5px);
-              }
-            }
           }
         }
       }
@@ -365,22 +290,22 @@
   }
 
   .badge {
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    background: linear-gradient(135deg, $color-secondary, $color-primary);
     color: white;
     padding: 6px 12px;
     border-radius: 20px;
-    font-family: var(--font-body);
+    font-family: $font-body;
     font-size: 0.85rem;
     font-weight: 500;
   }
 
   .btn-contact {
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    background: linear-gradient(135deg, $color-secondary, $color-primary);
     color: white;
     border: none;
     padding: 14px 24px;
     border-radius: 8px;
-    font-family: var(--font-body);
+    font-family: $font-body;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -395,7 +320,7 @@
     }
   }
 
-  /* Section Header */
+  // Section Header
   .services-grid-container {
     margin: 0 auto;
     padding: 70px 0;
@@ -407,17 +332,17 @@
     padding: 30px;
 
     h2 {
-      font-family: var(--font-heading);
+      font-family: $font-heading;
       font-size: 2.5rem;
       font-weight: 600;
-      color: var(--color-primary);
+      color: $color-primary;
       margin-bottom: 16px;
     }
 
     p {
-      font-family: var(--font-body);
+      font-family: $font-body;
       font-size: 1.1rem;
-      color: var(--color-text);
+      color: $color-text;
       max-width: 600px;
       margin: 0 auto;
     }
@@ -433,10 +358,8 @@
   }
 
   .service-card {
-    background: white;
-    border-radius: 16px;
+    @include card-base;
     padding: 30px 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     border: 1px solid #e5e7eb;
     position: relative;
     overflow: hidden;
@@ -451,24 +374,11 @@
       margin-bottom: 20px;
     }
 
-    .service-icon {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 24px;
-      flex-shrink: 0;
-    }
-
     h3 {
-      font-family: var(--font-heading);
+      font-family: $font-heading;
       font-size: 1.3rem;
       font-weight: 600;
-      color: var(--color-primary);
+      color: $color-primary;
       margin: 0;
       line-height: 1.3;
       flex: 1;
@@ -476,8 +386,8 @@
   }
 
   .service-description {
-    font-family: var(--font-body);
-    color: var(--color-text);
+    font-family: $font-body;
+    color: $color-text;
     line-height: 1.6;
     margin-bottom: 20px;
     font-size: 0.95rem;
@@ -490,23 +400,23 @@
     margin: 0 0 20px 0;
 
     li {
-      font-family: var(--font-body);
+      font-family: $font-body;
       display: flex;
       align-items: center;
       gap: 12px;
       padding: 6px 0;
-      color: var(--color-text);
+      color: $color-text;
       font-size: 0.9rem;
 
       svg {
         color: #28a745 !important;
-        font-size: 14px   !important;
+        font-size: 14px !important;
         flex-shrink: 0 !important;
       }
     }
   }
 
-  /* Benefits Section */
+  // Benefits Section
   .benefits-section {
     padding: 80px 0;
     background: #ffffff;
@@ -519,42 +429,39 @@
       padding: 0 20px;
 
       .benefit-card {
-        background: white;
-        border-radius: 12px;
+        @include card-base;
         padding: 30px 25px;
         text-align: center;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         border: 1px solid #e5e7eb;
 
         h3 {
-          font-family: var(--font-heading);
+          font-family: $font-heading;
           font-size: 1.3rem;
           font-weight: 600;
-          color: var(--color-primary);
+          color: $color-primary;
           margin-top: 16px;
           margin-bottom: 16px;
         }
 
         p {
-          font-family: var(--font-body);
-          color: var(--color-text);
+          font-family: $font-body;
+          color: $color-text;
           line-height: 1.6;
         }
       }
     }
   }
 
-  /* Process Section */
+  // Process Section
   .process-section {
     padding: 80px 0;
-    background: var(--color-bg-light);
+    background: $color-bg-light;
 
     .process-timeline {
       max-width: 800px;
       margin: 0 auto;
       padding: 0 20px;
-      
-  
+
       .process-step {
         display: flex;
         gap: 30px;
@@ -564,13 +471,13 @@
         .step-number {
           width: 60px;
           height: 60px;
-          background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+          background: linear-gradient(135deg, $color-secondary, $color-primary);
           color: white;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-family: var(--font-heading);
+          font-family: $font-heading;
           font-size: 1.2rem;
           font-weight: 600;
           flex-shrink: 0;
@@ -578,68 +485,103 @@
 
         .step-content {
           h3 {
-            font-family: var(--font-heading);
+            font-family: $font-heading;
             font-size: 1.3rem;
             font-weight: 600;
-            color: var(--color-primary);
+            color: $color-primary;
             margin-bottom: 12px;
           }
 
           p {
-            font-family: var(--font-body);
-            color: var(--color-text);
+            font-family: $font-body;
+            color: $color-text;
             line-height: 1.6;
           }
         }
       }
     }
-  }
-      .sidebar-section {
-        background: white;
-        border-radius: 12px;
-        padding: 30px;
-        margin-bottom: 30px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e5e7eb;
-      }
 
-  /* Technologies Section */
+    .sidebar-section {
+      @include card-base;
+      padding: 30px;
+      margin-bottom: 30px;
+      border: 1px solid #e5e7eb;
+    }
+  }
+
+  // Technologies Section
   .technologies-section {
     padding: 80px 0;
     background: #ffffff;
 
-    .technologies-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+    .certifications-table-wrapper {
+      margin-top: 2rem;
+      overflow-x: auto;
+    }
 
-      .tech-item {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        text-align: center;
-        font-family: var(--font-body);
-        font-weight: 600;
-        color: var(--color-text);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        border: 1px solid #e5e7eb;
+    .certifications-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+      font-size: 1rem;
+      min-width: 600px;
+      overflow: hidden;
+
+      th, td {
+        padding: 1rem 1.2rem;
+        text-align: left;
       }
+
+      th {
+        color: #f5f7fa;
+        background: #0056d2;
+        font-weight: 600;
+        border-bottom: 2px solid #e3e8ee;
+      }
+
+      tbody {
+        tr {
+          transition: background 0.2s;
+
+          &:nth-child(even) {
+            background: #f9fafb;
+          }
+
+          &:hover {
+            background: #eef3fa;
+          }
+        }
+      }
+    }
+
+    .competency-cell {
+      font-weight: 500;
+      background: #eaf1fb;
+      color: #1a237e;
+      border-right: 1px solid #e3e8ee;
+      vertical-align: middle;
+    }
+
+    .exam-code {
+      color: #607d8b;
+      font-size: 0.95em;
+      margin-left: 0.3em;
     }
   }
 
-  /* CTA Section */
+  // CTA Section
   .service-cta-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    background: linear-gradient(135deg, $color-secondary, $color-primary);
     color: white;
     text-align: center;
 
     .cta-content {
       h2 {
-        font-family: var(--font-heading);
+        font-family: $font-heading;
         font-size: 2.5rem;
         font-weight: 600;
         margin-bottom: 16px;
@@ -647,7 +589,7 @@
       }
 
       p {
-        font-family: var(--font-body);
+        font-family: $font-body;
         font-size: 1.1rem;
         margin-bottom: 40px;
         opacity: 0.9;
@@ -671,7 +613,7 @@
     }
 
     .contact-item {
-      font-family: var(--font-body);
+      font-family: $font-body;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -680,69 +622,8 @@
     }
   }
 
-  /* Certifications Table */
-  .certifications-table-wrapper {
-    margin-top: 2rem;
-    overflow-x: auto;
-  }
-
-  .certifications-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-    font-size: 1rem;
-    min-width: 600px;
-    overflow: hidden;
-
-    th,
-    td {
-      padding: 1rem 1.2rem;
-      text-align: left;
-    }
-
-    th {
-      color: #f5f7fa;
-      background:#0056d2;
-      font-weight: 600;
-      border-bottom: 2px solid #e3e8ee;
-    }
-
-    tbody {
-      tr {
-        transition: background 0.2s;
-
-        &:nth-child(even) {
-          background: #f9fafb;
-        }
-
-        &:hover {
-          background: #eef3fa;
-        }
-      }
-    }
-  }
-
-  .competency-cell {
-    font-weight: 500;
-    background: #eaf1fb;
-    color: #1a237e;
-    border-right: 1px solid #e3e8ee;
-    vertical-align: middle;
-  }
-
-  .exam-code {
-    color: #607d8b;
-    font-size: 0.95em;
-    margin-left: 0.3em;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .service-page {
+  // Responsive Design
+  @include respond-to(xl) {
     .content-grid {
       gap: 40px;
     }
@@ -762,17 +643,15 @@
     .cloud-logo-item {
       min-width: 120px;
       padding: 15px;
-    }
 
-    .cloud-logo-item img {
-      width: 70px;
-      height: 70px;
+      img {
+        width: 70px;
+        height: 70px;
+      }
     }
   }
-}
 
-@media (max-width: 992px) {
-  .service-page {
+  @include respond-to(lg) {
     .hero-main {
       grid-template-columns: 1fr;
       gap: 40px;
@@ -793,12 +672,8 @@
       gap: 50px;
     }
 
-    .content-left {
-      padding-right: 0;
-    }
-
-    .content-right {
-      padding-left: 0;
+    .content-left, .content-right {
+      padding: 0;
     }
 
     .sidebar {
@@ -813,18 +688,10 @@
       grid-template-columns: 1fr;
     }
 
-    .benefits-grid .benefit-item {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
     .process-step {
       flex-direction: column;
       text-align: center;
       gap: 20px;
-    }
-
-    .technologies-grid {
-      grid-template-columns: repeat(2, 1fr);
     }
 
     .cta-actions {
@@ -846,21 +713,19 @@
     .cloud-logo-item {
       min-width: 100px;
       padding: 12px;
-    }
 
-    .cloud-logo-item img {
-      width: 60px;
-      height: 60px;
+      img {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     .logo-label {
       font-size: 12px;
     }
   }
-}
 
-@media (max-width: 768px) {
-  .service-page {
+  @include respond-to(md) {
     .service-hero {
       padding: 100px 0 60px;
     }
@@ -877,35 +742,21 @@
       grid-template-columns: 1fr;
     }
 
-    .benefits-grid .benefit-item {
-      grid-template-columns: 1fr;
-    }
-
-    .technologies-grid {
-      grid-template-columns: 1fr;
-    }
-
     .main-content {
       padding: 60px 0;
     }
 
-    .descriptions {
-      h2 {
-        font-size: 2rem;
-      }
-    }
-
-    .benefits-grid {
-      grid-template-columns: 1fr;
+    .descriptions h2 {
+      font-size: 2rem;
     }
 
     .service-card {
       min-height: auto;
       padding: 25px 20px;
-    }
 
-    .service-card h3 {
-      font-size: 1.2rem;
+      h3 {
+        font-size: 1.2rem;
+      }
     }
 
     .service-description {
@@ -920,21 +771,19 @@
     .cloud-logo-item {
       min-width: 140px;
       padding: 15px;
-    }
 
-    .cloud-logo-item img {
-      width: 70px;
-      height: 70px;
+      img {
+        width: 70px;
+        height: 70px;
+      }
     }
 
     .logo-label {
       font-size: 13px;
     }
   }
-}
 
-@media (max-width: 480px) {
-  .service-page {
+  @include respond-to(sm) {
     .service-hero {
       padding: 80px 0 40px;
     }
@@ -951,18 +800,12 @@
       padding: 20px;
     }
 
-    .benefit-item {
-      flex-direction: column;
-      text-align: center;
-      gap: 15px;
-    }
-
     .service-card {
       padding: 20px 15px;
-    }
 
-    .service-card h3 {
-      font-size: 1.1rem;
+      h3 {
+        font-size: 1.1rem;
+      }
     }
 
     .service-description {
@@ -972,11 +815,11 @@
     .cloud-logo-item {
       min-width: 120px;
       padding: 12px;
-    }
 
-    .cloud-logo-item img {
-      width: 60px;
-      height: 60px;
+      img {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     .logo-label {
@@ -985,33 +828,7 @@
   }
 }
 
-/* Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-  .multi-cloud-logos,
-  .cloud-logo-item,
-  .azure-logo,
-  .aws-logo,
-  .gcp-logo {
-    animation: none;
-  }
-
-  .cloud-logo-item:hover {
-    transform: none;
-  }
-}
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-  .cloud-logo-item {
-    border: 2px solid white;
-  }
-
-  .cloud-logo-item img {
-    border: 1px solid black;
-  }
-}
-
-/* Floating animation for multi-cloud logos */
+// Floating animation for multi-cloud logos
 @keyframes floatLogos {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
@@ -1027,7 +844,7 @@
   }
 }
 
-/* Individual logo floating animations */
+// Individual logo floating animations
 @keyframes floatAzure {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   33% { transform: translateY(-8px) rotate(1deg); }
@@ -1043,4 +860,30 @@
 @keyframes floatGCP {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-10px) rotate(1.5deg); }
+}
+
+// Reduced Motion Support
+@media (prefers-reduced-motion: reduce) {
+  .multi-cloud-logos,
+  .cloud-logo-item,
+  .azure-logo,
+  .aws-logo,
+  .gcp-logo {
+    animation: none;
+  }
+
+  .cloud-logo-item:hover {
+    transform: none;
+  }
+}
+
+// High Contrast Mode
+@media (prefers-contrast: high) {
+  .cloud-logo-item {
+    border: 2px solid white;
+
+    img {
+      border: 1px solid black;
+    }
+  }
 }

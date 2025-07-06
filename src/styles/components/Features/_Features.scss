@@ -1,8 +1,9 @@
-// Features Component - SCSS with Nested Structure
+/* Features Component - SCSS with Nested Structure */
+
 .features {
   &-section {
     position: relative;
-    background: var(--color-white);
+    background: $color-white;
     padding: 100px 0;
   }
 
@@ -15,10 +16,10 @@
 
   &-content {
     h6 {
-      font-family: var(--font-body);
-      color: var(--color-secondary);
+      font-family: $font-body;
+      color: $color-secondary;
       font-size: 14px;
-      font-weight: var(--font-weight-bold);
+      font-weight: $font-weight-bold;
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 25px;
@@ -42,7 +43,7 @@
         left: 0;
         width: 80px;
         height: 4px;
-        background: linear-gradient(90deg, var(--color-bg-light), #f1f5fb);
+        background: linear-gradient(90deg, $color-bg-light, #f1f5fb);
         border-radius: 2px;
       }
     }
@@ -73,19 +74,20 @@
     gap: 25px;
     padding: 30px;
     border-radius: 20px;
-    background: var(--color-white);
+    background: $color-white;
     cursor: default;
     position: relative;
   }
+
   .feature-text {
     h4 {
       font-size: 22px;
-      color: var(--color-primary);
+      color: $color-primary;
       margin-bottom: 15px;
     }
 
     p {
-      color: var(--color-text);
+      color: $color-text;
       line-height: 1.7;
       font-size: 16px;
       margin: 0;
@@ -103,7 +105,7 @@
   // Floating Cards
   .floating-card {
     position: absolute;
-    background: var(--color-white);
+    background: $color-white;
     border-radius: 20px;
     box-shadow: 0 20px 50px rgba(0, 86, 210, 0.2);
     padding: 25px;
@@ -133,7 +135,7 @@
   .card-icon {
     width: clamp(50px, 6vw, 60px);
     height: clamp(50px, 6vw, 60px);
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    background: linear-gradient(135deg, $color-secondary, $color-primary);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -151,19 +153,19 @@
     flex-direction: column;
 
     .number {
-      font-family: var(--font-heading);
+      font-family: $font-heading;
       font-size: 28px;
-      font-weight: var(--font-weight-bold);
-      color: var(--color-primary);
+      font-weight: $font-weight-bold;
+      color: $color-primary;
       line-height: 1;
     }
 
     .text {
-      font-family: var(--font-body);
+      font-family: $font-body;
       font-size: 14px;
-      color: var(--color-text);
+      color: $color-text;
       margin-top: 8px;
-      font-weight: var(--font-weight-medium);
+      font-weight: $font-weight-medium;
     }
   }
 
@@ -171,25 +173,25 @@
     text-align: center;
 
     .number {
-      font-family: var(--font-heading);
+      font-family: $font-heading;
       display: block;
       font-size: 32px;
-      font-weight: var(--font-weight-bold);
-      color: var(--color-secondary);
+      font-weight: $font-weight-bold;
+      color: $color-secondary;
       line-height: 1;
-      background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+      background: linear-gradient(135deg, $color-secondary, $color-primary);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .label {
-      font-family: var(--font-body);
+      font-family: $font-body;
       display: block;
       font-size: 13px;
-      color: var(--color-text);
+      color: $color-text;
       margin-top: 10px;
-      font-weight: var(--font-weight-medium);
+      font-weight: $font-weight-medium;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -197,8 +199,7 @@
 
   // Animations
   @keyframes float {
-    0%,
-    100% {
+    0%, 100% {
       transform: translateY(0);
     }
     50% {
@@ -207,7 +208,7 @@
   }
 
   // Responsive Design
-  @media (max-width: 1024px) {
+  @include respond-to(xl) {
     &-wrapper {
       grid-template-columns: 1fr;
       gap: 60px;
@@ -228,7 +229,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @include respond-to(md) {
     &-section {
       padding: 80px 0;
     }
@@ -256,21 +257,12 @@
       height: 400px;
     }
 
-    .feature-icon {
-      width: 70px;
-      height: 70px;
-
-      svg {
-        font-size: 1.8rem;
-      }
-    }
-
     .feature-text h4 {
       font-size: 20px;
     }
   }
 
-  @media (max-width: 576px) {
+  @include respond-to(sm) {
     &-section {
       padding: 60px 0;
     }
@@ -281,15 +273,6 @@
 
     .feature-box {
       padding: 20px;
-    }
-
-    .feature-icon {
-      width: 60px;
-      height: 60px;
-
-      svg {
-        font-size: 1.5rem;
-      }
     }
 
     .feature-text h4 {
