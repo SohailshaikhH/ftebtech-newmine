@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "../../styles/components/Footer/Footer.scss"
+import "../../styles/components/Footer/_Footer.scss"
 import { Icon } from '../Icons/IconSystem'
 import DinoGame from '../DinoGame/DinoGame';
 
