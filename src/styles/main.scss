@@ -1,6 +1,5 @@
 /* Main SCSS Entry Point */
 
-// Import Global Styles
 @import 'globals/variables';
 @import 'globals/mixins';
 @import 'globals/base';
@@ -8,7 +7,6 @@
 @import 'globals/responsive';
 @import 'globals/icons';
 
-// Import Component Styles
 @import 'components/Header/Header';
 @import 'components/Hero/HeroSection';
 @import 'components/About/About';
@@ -21,16 +19,13 @@
 @import 'components/Footer/Footer';
 @import 'components/DinoGame/DinoGame';
 
-// Import Page Styles
 @import 'pages/Servicess/Servicess';
 
-// Bootstrap Override - Comprehensive Font Enforcement
 :root {
   --bs-font-sans-serif: #{$font-primary} !important;
   --bs-body-font-family: #{$font-primary} !important;
 }
 
-// Bootstrap Component Overrides
 .container,
 .container-fluid,
 .container-sm,
@@ -98,7 +93,6 @@
   font-family: $font-primary !important;
 }
 
-// Email Client Modal Styles
 .email-client-modal {
   .modal-content {
     border: none;
