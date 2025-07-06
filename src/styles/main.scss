@@ -1,0 +1,227 @@
+/* Main SCSS Entry Point */
+
+// Import Global Styles
+@import 'globals/variables';
+@import 'globals/mixins';
+@import 'globals/base';
+@import 'globals/utilities';
+@import 'globals/responsive';
+@import 'globals/icons';
+
+// Import Component Styles
+@import 'components/Header/Header';
+@import 'components/Hero/HeroSection';
+@import 'components/About/About';
+@import 'components/Features/Features';
+@import 'components/CaseStudies/CaseStudies';
+@import 'components/ServicesSection/ServicesSection';
+@import 'components/Services/Services';
+@import 'components/ServicePageTemplate/ServicePageTemplate';
+@import 'components/Contact/Contact';
+@import 'components/Footer/Footer';
+@import 'components/DinoGame/DinoGame';
+
+// Import Page Styles
+@import 'pages/Servicess/Servicess';
+
+// Bootstrap Override - Comprehensive Font Enforcement
+:root {
+  --bs-font-sans-serif: #{$font-primary} !important;
+  --bs-body-font-family: #{$font-primary} !important;
+}
+
+// Bootstrap Component Overrides
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl,
+.row,
+[class*="col-"],
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-light,
+.btn-dark,
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-danger,
+.btn-outline-warning,
+.btn-outline-info,
+.btn-outline-light,
+.btn-outline-dark,
+.form-control,
+.form-select,
+.form-check-input,
+.form-check-label,
+.form-label,
+.input-group-text,
+.navbar,
+.navbar-brand,
+.nav,
+.nav-link,
+.navbar-nav .nav-link,
+.card,
+.card-header,
+.card-body,
+.card-footer,
+.card-title,
+.card-subtitle,
+.card-text,
+.modal,
+.modal-header,
+.modal-body,
+.modal-footer,
+.modal-title,
+.table,
+.table th,
+.table td,
+.table-responsive,
+.list-group,
+.list-group-item,
+.alert,
+.badge,
+.breadcrumb,
+.breadcrumb-item,
+.dropdown,
+.dropdown-menu,
+.dropdown-item,
+.pagination,
+.page-link {
+  font-family: $font-primary !important;
+}
+
+// Email Client Modal Styles
+.email-client-modal {
+  .modal-content {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+    .modal-header {
+      border-bottom: 1px solid #e5e7eb;
+      background: linear-gradient(135deg, $color-primary, $color-secondary);
+      color: white;
+      border-radius: 20px 20px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .modal-title {
+        font-family: $font-heading;
+        font-size: 1.5rem;
+        font-weight: $font-weight-semibold;
+        margin: 0;
+      }
+
+      .btn-close-custom {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        padding: 8px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.2);
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .modal-body {
+      padding: 30px;
+
+      .modal-description {
+        font-family: $font-body;
+        color: $color-text;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        text-align: center;
+        line-height: 1.6;
+      }
+
+      .email-clients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        margin-bottom: 25px;
+      }
+
+      .email-client-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 15px;
+        background: white;
+        border: 2px solid #e5e7eb;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: $color-text;
+        min-height: 120px;
+        justify-content: center;
+
+        &:hover {
+          border-color: var(--client-color, $color-primary);
+          transform: translateY(-5px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+          .client-icon {
+            background: var(--client-color, $color-primary);
+            color: white;
+            transform: scale(1.1);
+          }
+        }
+
+        .client-icon {
+          width: 50px;
+          height: 50px;
+          background: rgba(0, 0, 0, 0.05);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 12px;
+          transition: all 0.3s ease;
+          color: var(--client-color, $color-primary);
+
+          svg {
+            font-size: 1.5rem;
+          }
+        }
+
+        .client-name {
+          font-family: $font-body;
+          font-weight: $font-weight-medium;
+          font-size: 0.9rem;
+          text-align: center;
+          line-height: 1.3;
+        }
+      }
+
+      .modal-note {
+        text-align: center;
+        padding: 20px;
+        background: $color-bg-light;
+        border-radius: 12px;
+
+        small {
+          font-family: $font-body;
+          color: $color-muted;
+          font-size: 0.85rem;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
