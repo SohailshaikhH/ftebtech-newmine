@@ -274,11 +274,6 @@ if (typeof window !== 'undefined') {
 
 
 
-  // Listen for popstate events (back/forward navigation)
-  window.addEventListener('popstate', () => {
-    setTimeout(() => defaultObserver?.refresh(), 100);
-  });
-
   // Refresh on window resize (for responsive changes)
   let resizeTimeout;
   window.addEventListener('resize', () => {
