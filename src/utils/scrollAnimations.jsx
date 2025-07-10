@@ -272,19 +272,7 @@ if (typeof window !== 'undefined') {
   // Make available globally for debugging
   window.scrollAnimationObserver = defaultObserver;
 
-  // Refresh animations when new content is added (for SPAs)
-  const originalPushState = history.pushState;
-  const originalReplaceState = history.replaceState;
-
-  history.pushState = function(...args) {
-    originalPushState.apply(history, args);
-    setTimeout(() => defaultObserver?.refresh(), 100);
-  };
-
-  history.replaceState = function(...args) {
-    originalReplaceState.apply(history, args);
-    setTimeout(() => defaultObserver?.refresh(), 100);
-  };
+;
 
   // Listen for popstate events (back/forward navigation)
   window.addEventListener('popstate', () => {
