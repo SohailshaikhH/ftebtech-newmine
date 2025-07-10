@@ -270,7 +270,8 @@ const ServicePageTemplate = ({ data }) => {
               <thead>
                 <tr>
                   <th>Competency</th>
-                  <th>Certification (Exam Code)</th>
+                  <th>Certification</th>
+                  <th>Code</th>
                   <th># of Certified Professionals</th>
                 </tr>
               </thead>
@@ -283,7 +284,8 @@ const ServicePageTemplate = ({ data }) => {
                           {group.competency}
                         </td>
                       )}
-                      <td>{cert.name} <span className="exam-code">({cert.code})</span></td>
+                      <td>{cert.name}</td>
+                      <td>{cert.code}</td>
                       <td>{cert.count}</td>
                     </tr>
                   ))
