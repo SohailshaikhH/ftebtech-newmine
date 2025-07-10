@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation Examples</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .section {
+            min-height: 100vh;
+            padding: 50px 20px;
+            margin-bottom: 50px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .debug-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    
+    <!-- Include the scroll animation CSS -->
+    <link rel="stylesheet" href="src/styles/animations/scroll-animations.scss">
+</head>
+<body>
+    <!-- Debug Toggle Button -->
+    <button class="debug-toggle" onclick="toggleDebug()">Toggle Debug Mode</button>
+
+    <!-- Hero Section -->
+    <section class="section hero">
+        <div class="container">
+            <h1 class="scroll-animate" data-animation="fade-in" data-duration="slow">
+                Scroll Animation Examples
+            </h1>
+            <p class="scroll-animate" data-animation="slide-up" data-delay="300">
+                Scroll down to see various animation effects in action
+            </p>
+        </div>
+    </section>
+
+    <!-- Basic Animations -->
+    <section class="section">
+        <div class="container">
+            <h2 class="scroll-animate" data-animation="slide-up">Basic Animations</h2>
+            
+            <div class="grid scroll-animate-container">
+                <div class="card scroll-animate" data-animation="fade-in">
+                    <h3>Fade In</h3>
+                    <p>Simple opacity transition from 0 to 1.</p>
+                    <code>data-animation="fade-in"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="slide-up">
+                    <h3>Slide Up</h3>
+                    <p>Slides up from bottom with fade effect.</p>
+                    <code>data-animation="slide-up"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="slide-left">
+                    <h3>Slide Left</h3>
+                    <p>Slides in from the right side.</p>
+                    <code>data-animation="slide-left"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="slide-right">
+                    <h3>Slide Right</h3>
+                    <p>Slides in from the left side.</p>
+                    <code>data-animation="slide-right"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="zoom-in">
+                    <h3>Zoom In</h3>
+                    <p>Scales up from smaller size.</p>
+                    <code>data-animation="zoom-in"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="rotate-in">
+                    <h3>Rotate In</h3>
+                    <p>Rotates and scales in simultaneously.</p>
+                    <code>data-animation="rotate-in"</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Animations -->
+    <section class="section">
+        <div class="container">
+            <h2 class="scroll-animate" data-animation="slide-up">Advanced Animations</h2>
+            
+            <div class="grid scroll-animate-container">
+                <div class="card scroll-animate" data-animation="bounce-in">
+                    <h3>Bounce In</h3>
+                    <p>Bouncy entrance effect with overshoot.</p>
+                    <code>data-animation="bounce-in"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="elastic-in">
+                    <h3>Elastic In</h3>
+                    <p>Elastic entrance with spring effect.</p>
+                    <code>data-animation="elastic-in"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="flip-x">
+                    <h3>Flip X</h3>
+                    <p>3D flip effect along X-axis.</p>
+                    <code>data-animation="flip-x"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="flip-y">
+                    <h3>Flip Y</h3>
+                    <p>3D flip effect along Y-axis.</p>
+                    <code>data-animation="flip-y"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="blur-in">
+                    <h3>Blur In</h3>
+                    <p>Transitions from blurred to sharp.</p>
+                    <code>data-animation="blur-in"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="zoom-out">
+                    <h3>Zoom Out</h3>
+                    <p>Scales down from larger size.</p>
+                    <code>data-animation="zoom-out"</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staggered Animations -->
+    <section class="section">
+        <div class="container">
+            <h2 class="scroll-animate" data-animation="slide-up">Staggered Animations</h2>
+            <p class="scroll-animate" data-animation="fade-in" data-delay="200">
+                These cards animate one after another with delays
+            </p>
+            
+            <div class="grid scroll-animate-container">
+                <div class="card scroll-animate" data-animation="slide-up" data-delay="100">
+                    <h3>Card 1</h3>
+                    <p>First card with 100ms delay</p>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="slide-up" data-delay="200">
+                    <h3>Card 2</h3>
+                    <p>Second card with 200ms delay</p>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="slide-up" data-delay="300">
+                    <h3>Card 3</h3>
+                    <p>Third card with 300ms delay</p>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="slide-up" data-delay="400">
+                    <h3>Card 4</h3>
+                    <p>Fourth card with 400ms delay</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Duration and Easing -->
+    <section class="section">
+        <div class="container">
+            <h2 class="scroll-animate" data-animation="slide-up">Custom Duration & Easing</h2>
+            
+            <div class="grid scroll-animate-container">
+                <div class="card scroll-animate" data-animation="slide-up" data-duration="fast">
+                    <h3>Fast Animation</h3>
+                    <p>Quick 0.4s duration</p>
+                    <code>data-duration="fast"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="slide-up" data-duration="slow">
+                    <h3>Slow Animation</h3>
+                    <p>Slower 1.2s duration</p>
+                    <code>data-duration="slow"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="slide-up" data-easing="bounce">
+                    <h3>Bounce Easing</h3>
+                    <p>Bouncy timing function</p>
+                    <code>data-easing="bounce"</code>
+                </div>
+                
+                <div class="card scroll-animate" data-animation="slide-up" data-distance="large">
+                    <h3>Large Distance</h3>
+                    <p>Slides from further away</p>
+                    <code>data-distance="large"</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include the scroll animation JavaScript -->
+    <script type="module" src="src/utils/scrollAnimations.js"></script>
+    
+    <script>
+        // Debug mode toggle
+        function toggleDebug() {
+            document.body.classList.toggle('debug-animations');
+        }
+        
+        // Example of programmatic control
+        document.addEventListener('DOMContentLoaded', () => {
+            // Listen for animation events
+            document.addEventListener('scroll-animate', (e) => {
+                console.log('Element animated:', e.detail);
+            });
+            
+            // Example of refreshing animations (useful for dynamic content)
+            // window.scrollAnimationObserver?.refresh();
+        });
+    </script>
+</body>
+</html>
