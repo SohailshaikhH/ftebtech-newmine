@@ -272,7 +272,7 @@ if (typeof window !== 'undefined') {
   // Make available globally for debugging
   window.scrollAnimationObserver = defaultObserver;
 
-;
+
 
   // Listen for popstate events (back/forward navigation)
   window.addEventListener('popstate', () => {
