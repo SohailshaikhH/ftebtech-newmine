@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../Icons/IconSystem';
-import '../../styles/components/ServicePageTemplate/_ServicePageTemplate.scss';
+import '../../styles/components/ServicePageTemplate/ServicePageTemplate.scss';
 import azureLogo from '../../assets/images/ProductLogos/azure.png';
 import awsLogo from '../../assets/images/ProductLogos/aws.png'; 
 import gcpLogo from '../../assets/images/ProductLogos/googlecloud.png'; // Updated to use the correct GCP logo
@@ -73,7 +73,7 @@ const ServicePageTemplate = ({ data }) => {
       {/* Hero Section */}
       <section className="service-hero" style={{ background: data.heroGradient }}>
         <div className="service-hero-content">
-          <button className="back-button" onClick={handleBackClick}>
+          <button className="btn" onClick={handleBackClick}>
             <Icon name="ArrowLeft" size={16} />
             Back to Services
           </button>
@@ -85,10 +85,10 @@ const ServicePageTemplate = ({ data }) => {
               <p className="service-hero-description">{data.description}</p>
               
               <div className="hero-actions">
-                <button className="cta-button primary" onClick={handleContactClick}>
+                <button className="btn primary" onClick={handleContactClick}>
                   Get Started
                 </button>
-                <button className="cta-button secondary" onClick={handleCallClick}>
+                <button className="btn secondary" onClick={handleCallClick}>
                   <Icon name="Phone" size={16} />
                   Call Us
                 </button>
@@ -112,8 +112,10 @@ const ServicePageTemplate = ({ data }) => {
                   </div>
                 </div>
               ) : (
-                <div className="hero-logo">
+                <div className="multi-cloud-logos">
+                <div className="cloud-logo-item">
                   <img src={data.logo} alt={`${data.title} Logo`} />
+                </div>
                 </div>
               )}
             </div>
@@ -134,7 +136,7 @@ const ServicePageTemplate = ({ data }) => {
       {/* Main Content Section */}
       <section className="main-content">
         <div className="container">
-          <div className="content-grid">
+          <div className="">
             <div className="content-left">
               <div className="descriptions">
                 <h2>Why Choose {data.title.split(' ')[1] || data.title} for Your Business?</h2>
@@ -244,9 +246,9 @@ const ServicePageTemplate = ({ data }) => {
           </div>
           <div className="sidebar-section">
             <div className="contact-card">
-              <h4>Free Assessment</h4>
+              <h4>Free Assessment worth <span style={{fontSize: '1.5rem',color: '#0ed277'}}>$1000/-</span></h4>
               <p>Get a comprehensive analysis of your current infrastructure and migration roadmap.</p>
-              <button className="btn-contact" onClick={handleContactClick}>
+              <button className="btn" onClick={handleContactClick}>
                 <Icon name="Phone" size={16} />
                 Schedule Assessment
               </button>
@@ -300,11 +302,11 @@ const ServicePageTemplate = ({ data }) => {
             <p>Let's discuss how our {data.title.toLowerCase()} can transform your business</p>
             
             <div className="cta-actions">
-              <button className="cta-button primary large" onClick={handleContactClick}>
+              <button className="btn primary large" onClick={handleContactClick}>
                 <Icon name="Email" size={16} />
                 Contact Us Today
               </button>
-              <button className="cta-button secondary large" onClick={handleCallClick}>
+              <button className="btn secondary large" onClick={handleCallClick}>
                 <Icon name="Phone" size={16} />
                 Schedule a Call
               </button>

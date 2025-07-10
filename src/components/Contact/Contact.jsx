@@ -1,14 +1,14 @@
 "use client"
 
 import { Icon } from '../Icons/IconSystem'
-import "./_Contact.scss"
+import "../../styles/components/Contact/Contact.scss"
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: "Location",
       title: "Visit Us",
-      content: "AG house, sala al din, dubai, UAE",
+      content: "AG house, sala al din deira, UAE",
     },
     {
       icon: "Phone",
@@ -63,7 +63,7 @@ const Contact = () => {
             </div>
 
              <div className="contact-button-wrapper">
-            <button className="service-btn" onClick={() => window.location.href = 'mailto:Connect@ftebtech.com'}>
+            <button className="btn" onClick={() => window.location.href = 'mailto:Connect@ftebtech.com'}>
               <Icon name="Email" size={18} className="button-icon" />
               Contact Us
             </button>

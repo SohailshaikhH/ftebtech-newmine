@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../styles/components/ServicesSection/_ServicesSection.scss";
+import "../../styles/components/ServicesSection/ServicesSection.scss";
 import { Icon } from '../Icons/IconSystem';
 
 // Import Swiper React components and styles

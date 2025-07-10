@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../../styles/pages/Servicess/_Servicess.scss";
+import "../../styles/pages/Servicess/Servicess.scss";
 import PageWrapper from "../../components/PageWrapper/PageWrapper";
 import { Icon } from '../../components/Icons/IconSystem';
 import men from "../../assets/men.png";

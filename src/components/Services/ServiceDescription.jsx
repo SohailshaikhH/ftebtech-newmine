@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../styles/components/Services/_Services.scss';
+import '../../styles/components/Services/Services.scss';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -38,6 +38,40 @@ const ServiceDescription = () => {
       path: '/services/cloud-services'
     },
         {
+      id: 'microsoft365',
+      title: 'Microsoft 365 Solutions',
+      description: 'Empower your workforce with comprehensive M365 implementation, security configuration, and ongoing support for maximum productivity.',
+      logo: m365Logo,
+      features: ['Email Migration', 'Teams Setup', 'Security Configuration', 'User Training'],
+      path: '/services/microsoft365'
+    },
+      {
+      id: 'dynamics365',
+      title: 'Dynamics 365 Implementation',
+      description: 'Transform your business operations with intelligent ERP and CRM solutions tailored to your specific industry needs and requirements.',
+      logo: dynamicsLogo,
+      features: ['Business Central', 'Sales & Marketing', 'Field Service', 'Custom Development'],
+      path: '/services/dynamics365'
+    },
+    
+     {
+      id: 'infrastructure',
+      title: 'ICT',
+      description: 'End-to-end infrastructure planning, implementation, and management for optimal performance, reliability, and business continuity.',
+      logo: microsoftLogo,
+      features: ['Network Setup', 'Server Management', 'Hardware Procurement', 'Monitoring'],
+      path: '/services/infrastructure'
+    },
+        {
+      id: 'security',
+      title: 'Cybersecurity Solutions',
+      description: 'Protect your business with comprehensive security strategies, advanced threat protection, and compliance management solutions.',
+      logo: microsoftLogo,
+      features: ['Security Assessment', 'Threat Protection', 'Compliance', '24/7 Monitoring'],
+      path: '/services/security'
+    },
+  
+        {
       id: 'turbo360',
       title: 'Turbo360 Management',
       description: 'Comprehensive Azure and Office 365 management platform for monitoring, governance, and optimization of your cloud environment.',
@@ -46,39 +80,12 @@ const ServiceDescription = () => {
       path: '/services/turbo360'
     },
     {
-      id: 'erosource',
-      title: 'Erosource Solutions',
+      id: 'eresource',
+      title: 'eresource Solutions',
       description: 'Advanced enterprise resource planning and business intelligence solutions to streamline operations and drive data-driven decisions.',
       logo: erosourceLogo,
       features: ['ERP Implementation', 'Business Intelligence', 'Data Analytics', 'Process Automation'],
-      path: '/services/erosource'
-    },
- 
-  
-    {
-      id: 'dynamics365',
-      title: 'Dynamics 365 Implementation',
-      description: 'Transform your business operations with intelligent ERP and CRM solutions tailored to your specific industry needs and requirements.',
-      logo: dynamicsLogo,
-      features: ['Business Central', 'Sales & Marketing', 'Field Service', 'Custom Development'],
-      path: '/services/dynamics365'
-    },
-      {
-      id: 'microsoft365',
-      title: 'Microsoft 365 Solutions',
-      description: 'Empower your workforce with comprehensive M365 implementation, security configuration, and ongoing support for maximum productivity.',
-      logo: m365Logo,
-      features: ['Email Migration', 'Teams Setup', 'Security Configuration', 'User Training'],
-      path: '/services/microsoft365'
-    },
-
-    {
-      id: 'infrastructure',
-      title: 'IT Infrastructure Services',
-      description: 'End-to-end infrastructure planning, implementation, and management for optimal performance, reliability, and business continuity.',
-      logo: microsoftLogo,
-      features: ['Network Setup', 'Server Management', 'Hardware Procurement', 'Monitoring'],
-      path: '/services/infrastructure'
+      path: '/services/eresource'
     },
         {
       id: 'development',
@@ -88,32 +95,25 @@ const ServiceDescription = () => {
       features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
       path: '/services/development'
     },
-    {
-      id: 'security',
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with comprehensive security strategies, advanced threat protection, and compliance management solutions.',
-      logo: microsoftLogo,
-      features: ['Security Assessment', 'Threat Protection', 'Compliance', '24/7 Monitoring'],
-      path: '/services/security'
-    },
+
 
   ];
  const productLogos = [
     { src: awsLogo, class: 'logo-aws', alt: 'AWS Logo' },
+    { src: reactLogo, class: 'logo-react', alt: 'React Logo' },
     { src: azureLogo, class: 'logo-azure', alt: 'Azure Logo' },
     { src: developmentLogo, class: 'logo-development', alt: 'Development Logo' },
-    { src: dynamicsLogo, class: 'logo-dynamics', alt: 'Dynamics 365 Logo' },
-    { src: erosourceLogo, class: 'logo-erosource', alt: 'Erosource Logo' },
+    { src: terraformLogo, class: 'logo-terraform', alt: 'Terraform Logo' },
     { src: googlecloudLogo, class: 'logo-googlecloud', alt: 'Google Cloud Logo' },
     { src: linuxLogo, class: 'logo-linux', alt: 'Linux Logo' },
     { src: m365Logo, class: 'logo-m365', alt: 'Microsoft 365 Logo' },
+    { src: erosourceLogo, class: 'logo-erosource', alt: 'Erosource Logo' },
     { src: mlLogo, class: 'logo-ml', alt: 'Machine Learning Logo' },
-    { src: microsoftLogo, class: 'logo-microsoft', alt: 'Microsoft Logo' },
+    { src: dynamicsLogo, class: 'logo-dynamics', alt: 'Dynamics 365 Logo' },
     { src: pythonLogo, class: 'logo-python', alt: 'Python Logo' },
-    { src: reactLogo, class: 'logo-react', alt: 'React Logo' },
-    { src: terraformLogo, class: 'logo-terraform', alt: 'Terraform Logo' },
     { src: turbo360Logo, class: 'logo-turbo360', alt: 'Turbo360 Logo' },
     { src: adevops, class: 'logo-adevops', alt: 'adevops' },
+    { src: microsoftLogo, class: 'logo-microsoft', alt: 'Microsoft Logo' },
   ];
 
   const handleServiceClick = (path) => {
@@ -158,6 +158,15 @@ const ServiceDescription = () => {
           slidesPerGroup={1}
           allowTouchMove={true}
           watchSlidesProgress={true}
+          centeredSlides={true}
+          grabCursor={true}
+          navigation={false}
+          keyboard={{
+            enabled: true,
+            onlyInViewport: false,
+
+          }}
+
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
@@ -179,7 +188,7 @@ const ServiceDescription = () => {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className={`logo-img ${logo.class}`}
+                className={logo.class}
                 loading="lazy"
               />
             </SwiperSlide>

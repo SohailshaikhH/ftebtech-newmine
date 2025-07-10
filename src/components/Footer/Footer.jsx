@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import "../../styles/components/Footer/_Footer.scss"
+import "../../styles/components/Footer/Footer.scss"
+import footerLogo from '../../assets/images/FTebtech-logo/FTEB-logo-white.png';
 import { Icon } from '../Icons/IconSystem'
 import DinoGame from '../DinoGame/DinoGame';
 
@@ -94,7 +95,7 @@ const Footer = () => {
               {/* Company Info */}
               <div className="footer-section company-section">
                 <div className="footer-logo">
-                  <h2>FTEB</h2>
+                 <img src={footerLogo} width={150} alt="ftechtech" />
                   <span className="logo-tagline">Technology Solutions</span>
                 </div>
                 <p className="company-description">
@@ -104,9 +105,9 @@ const Footer = () => {
                 
                 {/* Contact Info */}
                 <div className="contact-info">
-                  <div className="contact-item">
+                <div className="contact-item">
                     <Icon name="Location" size={16} />
-                    <span>AG House, Sala Al Din, Dubai, UAE</span>
+                    <span>AG house, sala al din deira, UAE</span>
                   </div>
                   <div className="contact-item">
                     <Icon name="Phone" size={16} />
