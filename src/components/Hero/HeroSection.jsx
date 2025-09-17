@@ -10,8 +10,11 @@ import devopsImage from "../../assets/images/ProductLogos/googlecloud.png";
 import azureImage from "../../assets/images/ProductLogos/azure.png";
 import Microsoft from "../../assets/images/ProductLogos/Microsoft-Logo-WHITE.png";
 import awsImage from "../../assets/images/ProductLogos/aws.png";
+import { useNavigate } from "react-router-dom";
+import { Icon } from '../Icons/IconSystem';
 
 function App() {
+  const navigate = useNavigate();
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
@@ -45,6 +48,23 @@ function App() {
             Your All-in-One IT Partner for Software, Cloud, Hardware, and
             Beyond.
           </h2>
+          
+          <div className="hero-cta-buttons">
+            <button 
+              className="btn primary"
+              onClick={() => navigate('/contact-us')}
+            >
+              <Icon name="ArrowRight" size={16} />
+              Get Started Today
+            </button>
+            <button 
+              className="btn secondary"
+              onClick={() => navigate('/servicess')}
+            >
+              <Icon name="Services" size={16} />
+              Explore Services
+            </button>
+          </div>
         </div>
 
         <div className="images-container">
