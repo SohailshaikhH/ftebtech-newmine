@@ -1,18 +1,14 @@
 "use client"
 
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
-import { useState, useEffect } from "react"
+import { BrowserRouter as Router, Routes, Route,  } from "react-router-dom"
 import "./App.css"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import CookieConsent from "./components/CookieConsent/CookieConsent"
 import Resolution from "./pages/Resolution/Resolution"
 import Servicess from "./pages/Servicess/Servicess"
-import Contact from "./pages/Contact/Contact"
+import Contact from "./pages/Contactpage/Contactpage.jsx"
 import CloudServices from "./pages/Services/CloudServices"
-import AzureServices from "./pages/Services/AzureServices"
-import AWSServices from "./pages/Services/AWSServices"
-import GCPServices from "./pages/Services/GCPServices"
 import Microsoft365Services from "./pages/Services/Microsoft365Services"
 import Dynamics365Services from "./pages/Services/Dynamics365Services"
 import DevelopmentServices from "./pages/Services/DevelopmentServices"
@@ -24,16 +20,7 @@ import PrivacyPolicy from "./pages/Legal/PrivacyPolicy"
 import TermsOfService from "./pages/Legal/TermsOfService"
 import CookiesPolicy from "./pages/Legal/CookiesPolicy"
 import { routes } from './routes.js'
-
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
+import ScrollToTop from './components/ScrollToTop.jsx'
 
 function App() {
   return (
@@ -52,9 +39,6 @@ function App() {
           
           {/* Cloud Services */}
           <Route path={routes.cloudServices.path} element={<CloudServices />} />
-          <Route path={routes.azure.path} element={<AzureServices />} />
-          <Route path={routes.aws.path} element={<AWSServices />} />
-          <Route path={routes.gcp.path} element={<GCPServices />} />
           
           {/* Other Individual Service Pages */}
           <Route path={routes.microsoft365.path} element={<Microsoft365Services />} />

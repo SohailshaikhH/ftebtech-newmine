@@ -7,7 +7,7 @@
     padding: clamp(60px, 12vh, 80px) 0 clamp(40px, 8vh, 60px);
     text-align: center;
     position: relative;
-    background: linear-gradient(135deg, var(--color-primary) 0%, #0056d2 100%);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 50%, var(--secondary-blue) 100%);
     color: white;
     padding-bottom: 10rem;
 
@@ -102,7 +102,6 @@
     }
   }
 
-  /* Services Grid Section */
   .services-grid-section {
     padding: clamp(40px, 8vh, 60px) 0;
     margin: 0 auto;
@@ -110,13 +109,6 @@
     padding-right: clamp(12px, 3vw, 20px);
     padding-top: 0px;
   }
-
-  /* .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(20px, 4vw, 30px);
-    margin-top: clamp(30px, 6vw, 50px);
-  } */
 
   .service-card-modern {
     background: white;
@@ -150,6 +142,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .cloud-logos-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+      
+      .cloud-service-logo {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+
+        &.logo-1 { // Azure
+          width: 85px;
+          height: 85px;
+        }
+
+        &.logo-2 { // AWS
+          width: 90px;
+          height: 90px;
+        }
+
+        &.logo-3 { // GCP
+          width: 85px;
+          height: 85px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 
   .service-logo {
@@ -198,7 +224,6 @@
     text-align: center;
   }
 
-  /* Service Button */
   .service-btn {
     position: relative;
     display: inline-block;
@@ -258,7 +283,6 @@
     }
   }
 
-  /* CTA Section */
   .services-cta-section {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
     color: #ffffff;
@@ -309,7 +333,6 @@
     }
   }
 
-  /* Primary CTA Button */
   .service-btn.primary-btn {
     background: #ffffff;
     color: var(--color-secondary);
@@ -331,7 +354,6 @@
     }
   }
 
-  /* Secondary CTA Button */
   .service-btn.secondary-btn {
     background: transparent;
     color: #ffffff;
@@ -363,7 +385,7 @@ width: 90px;
   }
   
   .logo-development{
-width: 200px;  
+width: 110px;  
   }
   
   .logo-dynamics{
@@ -410,7 +432,6 @@ width: 180px;
 
 
 
-  /* Responsive Breakpoints */
   @media (max-width: 1200px) {
     .services-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -511,6 +532,22 @@ width: 180px;
       height: 60px;
     }
 
+    .cloud-logos-container {
+      gap: 10px;
+      
+      .cloud-service-logo {
+        width: 60px !important;
+        height: 60px !important;
+
+        &.logo-1,
+        &.logo-2,
+        &.logo-3 {
+          width: 65px !important;
+          height: 65px !important;
+        }
+      }
+    }
+
     .services-cta-section {
       padding: clamp(50px, 10vh, 60px) 0;
     }
@@ -524,7 +561,6 @@ width: 180px;
     }
   }
 
-  /* Landscape Mobile */
   @media (max-height: 500px) and (orientation: landscape) {
     .services-hero-section {
       padding: 40px 0 30px;
@@ -535,7 +571,6 @@ width: 180px;
     }
   }
 
-  /* Touch Device Optimizations */
   @media (hover: none) and (pointer: coarse) {
     .service-btn:hover {
       transform: none;
@@ -546,7 +581,6 @@ width: 180px;
     }
   }
 
-  /* Reduced Motion */
   @media (prefers-reduced-motion: reduce) {
     .service-card-modern,
     .service-btn,
@@ -560,7 +594,6 @@ width: 180px;
     }
   }
 
-  /* High Contrast Mode */
   @media (prefers-contrast: high) {
     .service-card-modern {
       border: 3px solid currentColor;
@@ -570,8 +603,6 @@ width: 180px;
       border: 3px solid currentColor;
     }
   }
-
-  /* Print Styles */
   @media (print) {
     .services-hero-section,
     .services-cta-section {

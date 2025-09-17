@@ -1,4 +1,7 @@
-trigger: none
+trigger:
+  branches:
+    include:
+      - dev-01
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -33,8 +36,8 @@ steps:
 
   - task: AzureWebApp@1
     inputs:
-      azureSubscription: 'azure-devops2'
-      appName: 'fteb-website'
+      azureSubscription: 'fteb-devops'
+      appName: 'fteb-main-website'
       package: '$(Build.ArtifactStagingDirectory)/app.zip'
       appType: 'webAppLinux'
       startUpCommand: 'pm2 serve /home/site/wwwroot --no-daemon --spa'

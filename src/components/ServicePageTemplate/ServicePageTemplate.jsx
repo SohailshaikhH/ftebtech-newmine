@@ -14,12 +14,10 @@ const ServicePageTemplate = ({ data }) => {
   };
 
   const handleContactClick = () => {
-    window.location.href = 'mailto:Connect@ftebtech.com';
+    navigate('/contact-us');
   };
 
-  const handleCallClick = () => {
-    window.location.href = 'tel:+971588481295';
-  };
+ 
   
   const certificationsData = [
     {
@@ -71,31 +69,27 @@ const ServicePageTemplate = ({ data }) => {
   return (
     <div className="service-page">
       {/* Hero Section */}
-      <section className="service-hero" style={{ background: data.heroGradient }}>
+      <section className="service-hero "  style={{ background: data.heroGradient }}>
         <div className="service-hero-content">
-          <button className="btn" onClick={handleBackClick}>
+          <button className="btn " onClick={handleBackClick}>
             <Icon name="ArrowLeft" size={16} />
             Back to Services
           </button>
           
           <div className="hero-main">
-            <div className="hero-text">
+            <div className="hero-text " >
               <h1 className="service-hero-title">{data.title}</h1>
               <h2 className="service-hero-subtitle">{data.subtitle}</h2>
               <p className="service-hero-description">{data.description}</p>
               
-              <div className="hero-actions">
-                <button className="btn primary" onClick={handleContactClick}>
+              <div className="hero-actions "  >
+                <button className="btn primary large" onClick={handleContactClick}>
                   Get Started
-                </button>
-                <button className="btn secondary" onClick={handleCallClick}>
-                  <Icon name="Phone" size={16} />
-                  Call Us
                 </button>
               </div>
             </div>
             
-            <div className="hero-logo-section">
+            <div className="hero-logo-section "  >
               {isMultiCloudPage ? (
                 <div className="multi-cloud-logos">
                   <div className="cloud-logo-item azure-logo">
@@ -122,7 +116,7 @@ const ServicePageTemplate = ({ data }) => {
           </div>
           
           {/* Stats */}
-          <div className="hero-stats">
+          <div className="hero-stats "  >
             {data.stats.map((stat, index) => (
               <div key={index} className="stat-item">
                 <span className="stat-number">{stat.number}</span>
@@ -134,7 +128,7 @@ const ServicePageTemplate = ({ data }) => {
       </section>
 
       {/* Main Content Section */}
-      <section className="main-content">
+      <section className="main-content "  >
         <div className="container">
           <div className="">
             <div className="content-left">
@@ -165,7 +159,7 @@ const ServicePageTemplate = ({ data }) => {
       </section>
 
       {/* Services Grid */}
-      <section className="services-grid-section">
+      <section className="services-grid-section "  >
         <div className="container services-grid-container">
           <div className="section-header">
             <h2>Our {data.title} Offerings</h2>
@@ -174,7 +168,7 @@ const ServicePageTemplate = ({ data }) => {
           
           <div className="services-grid">
             {data.services.map((service, index) => (
-              <div key={index} className="service-card">
+              <div key={index} className="service-card "  >
                 <div className="service-card-header">
                   <div className="icon-container icon-container-md icon-container-primary">
                     <Icon name="Settings" size={24} />
@@ -183,15 +177,17 @@ const ServicePageTemplate = ({ data }) => {
                 </div>
                 
                 <p className="service-description">{service.description}</p>
-                
-                <ul className="service-features">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx}>
-                      <Icon name="Check" size={14} className="icon-success" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+
+                {service.features && service.features.length > 0 && (
+                  <ul className="service-features">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx}>
+                        <Icon name="Check" size={14} className="icon-success" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
@@ -199,7 +195,7 @@ const ServicePageTemplate = ({ data }) => {
       </section>
 
       {/* Benefits Section */}
-      <section className="benefits-section">
+      <section className="benefits-section "  >
         <div className="container">
           <div className="section-header">
             <h2>Why Choose Our {data.title}?</h2>
@@ -208,7 +204,7 @@ const ServicePageTemplate = ({ data }) => {
           
           <div className="benefits-grid">
             {data.benefits.map((benefit, index) => (
-              <div key={index} className="benefit-card">
+              <div key={index} className="benefit-card "  >
                 <div className="icon-container icon-container-xl icon-container-primary">
                   <Icon name={
                     index === 0 ? "Analytics" :
@@ -225,40 +221,39 @@ const ServicePageTemplate = ({ data }) => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="process-section">
-        <div className="section-header">
-          <h2>Our Implementation Process</h2>
-          <p>A proven methodology for successful project delivery</p>
-        </div>
-        
-        <div className="container d-flex flex-row align-items-center">
-          <div className="process-timeline">
-            {data.process.map((step, index) => (
-              <div key={index} className="process-step">
-                <div className="step-number">{step.step}</div>
-                <div className="step-content">
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
-                </div>
-              </div>
-            ))}
+        <section className="process-section "  >
+          <div className="section-header">
+            <h2>Our Implementation Process</h2>
+            <p>A proven methodology for successful project delivery</p>
           </div>
-          <div className="sidebar-section">
-            <div className="contact-card">
-              <h4>Free Assessment worth <span style={{fontSize: '1.5rem',color: '#0ed277'}}>$1000/-</span></h4>
-              <p>Get a comprehensive analysis of your current infrastructure and migration roadmap.</p>
-              <button className="btn" onClick={handleContactClick}>
-                <Icon name="Phone" size={16} />
-                Schedule Assessment
-              </button>
+          
+          <div className="container align-items-center">
+            <div className="process-timeline">
+          {data.process.map((step, index) => (
+            <div key={index} className="process-step "  >
+              <div className="step-number">{step.step}</div>
+              <div className="step-content">
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+              </div>
+            </div>
+          ))}
+            </div>
+            <div className="sidebar-section">
+          <div className="contact-card "  >
+            <h4>Free Assessment worth <span style={{fontSize: '1.5rem',color: '#0ed277'}}>$1000/-</span></h4>
+            <p>Get a comprehensive analysis of your current infrastructure and migration roadmap.</p>
+            <button className="btn primary" onClick={handleContactClick}>
+              <Icon name="Phone" size={16} />
+              Schedule Assessment
+            </button>
+          </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Technologies Section */}
-      <section className="technologies-section">
+        {/* Technologies Section */}
+      <section className="technologies-section "  >
         <div className="container">
           <div className="section-header">
             <h2>Certified Team</h2>
@@ -266,7 +261,7 @@ const ServicePageTemplate = ({ data }) => {
           </div>
           
           <div className="certifications-table-wrapper">
-            <table className="certifications-table">
+            <table className="certifications-table "  >
               <thead>
                 <tr>
                   <th>Competency</th>
@@ -280,13 +275,13 @@ const ServicePageTemplate = ({ data }) => {
                   group.certifications.map((cert, cidx) => (
                     <tr key={group.competency + cert.code}>
                       {cidx === 0 && (
-                        <td rowSpan={group.certifications.length} className="competency-cell">
+                        <td rowSpan={group.certifications.length} className="competency-cell " >
                           {group.competency}
                         </td>
                       )}
-                      <td>{cert.name}</td>
-                      <td>{cert.code}</td>
-                      <td>{cert.count}</td>
+                      <td className="" >{cert.name}</td>
+                      <td className="" >{cert.code}</td>
+                      <td className="" >{cert.count}</td>
                     </tr>
                   ))
                 )}
@@ -297,7 +292,7 @@ const ServicePageTemplate = ({ data }) => {
       </section>
 
       {/* CTA Section */}
-      <section className="service-cta-section">
+      <section className="service-cta-section "  >
         <div className="container">
           <div className="cta-content">
             <h2>Ready to Get Started?</h2>
@@ -308,18 +303,15 @@ const ServicePageTemplate = ({ data }) => {
                 <Icon name="Email" size={16} />
                 Contact Us Today
               </button>
-              <button className="btn secondary large" onClick={handleCallClick}>
-                <Icon name="Phone" size={16} />
-                Schedule a Call
-              </button>
+            
             </div>
             
             <div className="contact-info">
-              <div className="contact-item">
+              <div className="contact-item" onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>
                 <Icon name="Phone" size={16} />
                 <span>+971588481295</span>
               </div>
-              <div className="contact-item">
+              <div className="contact-item" onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>
                 <Icon name="Email" size={16} />
                 <span>Connect@ftebtech.com</span>
               </div>
