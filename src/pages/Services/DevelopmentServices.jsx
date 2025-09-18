@@ -20,51 +20,61 @@ const DevelopmentServices = () => {
       {
         title: "Web Application Development",
         description: "Modern, responsive web applications built with the latest technologies and frameworks.",
-        features: ["React/Angular/Vue.js", "Node.js/Python/.NET", "Progressive Web Apps", "API Development"]
+        features: ["React/Angular/Vue.js", "Node.js/Python/.NET", "Progressive Web Apps", "API Development"],
+        icon: "Code"
       },
       {
         title: "Mobile App Development",
         description: "Native and cross-platform mobile applications for iOS and Android platforms.",
-        features: ["React Native", "Flutter", "Native iOS/Android", "App Store Deployment"]
+        features: ["React Native", "Flutter", "Native iOS/Android", "App Store Deployment"],
+        icon: "Settings"
       },
       {
         title: "E-commerce Solutions",
         description: "Complete e-commerce platforms with payment integration and inventory management.",
-        features: ["Shopping Cart", "Payment Gateway", "Inventory Management", "Order Processing"]
+        features: ["Shopping Cart", "Payment Gateway", "Inventory Management", "Order Processing"],
+        icon: "Analytics"
       },
       {
         title: "Enterprise Applications",
         description: "Custom enterprise software solutions to streamline business processes and operations.",
-        features: ["ERP Systems", "CRM Solutions", "Workflow Automation", "Business Intelligence"]
+        features: ["ERP Systems", "CRM Solutions", "Workflow Automation", "Business Intelligence"],
+        icon: "Database"
       },
       {
         title: "API Development & Integration",
         description: "RESTful APIs and third-party integrations to connect your systems and services.",
-        features: ["REST/GraphQL APIs", "Third-party Integration", "Microservices", "API Security"]
+        features: ["REST/GraphQL APIs", "Third-party Integration", "Microservices", "API Security"],
+        icon: "Network"
       },
       {
         title: "Cloud-Native Development",
         description: "Scalable cloud applications designed for modern infrastructure and deployment.",
-        features: ["Containerization", "Serverless Architecture", "CI/CD Pipelines", "Auto-scaling"]
+        features: ["Containerization", "Serverless Architecture", "CI/CD Pipelines", "Auto-scaling"],
+        icon: "Cloud"
       }
     ],
 
     benefits: [
       {
         title: "Scalable Architecture",
-        description: "Build applications that grow with your business using modern, scalable architectures."
+        description: "Build applications that grow with your business using modern, scalable architectures.",
+        icon: "Server"
       },
       {
         title: "Latest Technologies",
-        description: "Leverage cutting-edge technologies and frameworks for optimal performance."
+        description: "Leverage cutting-edge technologies and frameworks for optimal performance.",
+        icon: "Settings"
       },
       {
         title: "Agile Development",
-        description: "Fast, iterative development process with regular feedback and updates."
+        description: "Fast, iterative development process with regular feedback and updates.",
+        icon: "Analytics"
       },
       {
         title: "Quality Assurance",
-        description: "Comprehensive testing and quality assurance to ensure reliable, bug-free applications."
+        description: "Comprehensive testing and quality assurance to ensure reliable, bug-free applications.",
+        icon: "Shield"
       }
     ],
 

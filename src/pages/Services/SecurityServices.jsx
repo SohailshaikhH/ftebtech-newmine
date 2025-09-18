@@ -20,51 +20,61 @@ const SecurityServices = () => {
       {
         title: "Security Assessment & Audit",
         description: "Comprehensive security assessments to identify vulnerabilities and compliance gaps.",
-        features: ["Vulnerability Assessment", "Penetration Testing", "Compliance Audit", "Risk Analysis"]
+        features: ["Vulnerability Assessment", "Penetration Testing", "Compliance Audit", "Risk Analysis"],
+        icon: "Analytics"
       },
       {
         title: "Endpoint Protection",
         description: "Advanced endpoint security solutions to protect devices and prevent malware attacks.",
-        features: ["Antivirus/Anti-malware", "Endpoint Detection", "Device Management", "Mobile Security"]
+        features: ["Antivirus/Anti-malware", "Endpoint Detection", "Device Management", "Mobile Security"],
+        icon: "Shield"
       },
       {
         title: "Network Security",
         description: "Multi-layered network security to protect against unauthorized access and threats.",
-        features: ["Firewall Management", "Intrusion Prevention", "Network Monitoring", "VPN Security"]
+        features: ["Firewall Management", "Intrusion Prevention", "Network Monitoring", "VPN Security"],
+        icon: "Network"
       },
       {
         title: "Identity & Access Management",
         description: "Secure identity management with multi-factor authentication and access controls.",
-        features: ["Single Sign-On", "Multi-factor Auth", "Privileged Access", "Identity Governance"]
+        features: ["Single Sign-On", "Multi-factor Auth", "Privileged Access", "Identity Governance"],
+        icon: "Users"
       },
       {
         title: "Security Monitoring & Response",
         description: "24/7 security monitoring with rapid incident response and threat mitigation.",
-        features: ["SIEM Solutions", "Threat Hunting", "Incident Response", "Forensic Analysis"]
+        features: ["SIEM Solutions", "Threat Hunting", "Incident Response", "Forensic Analysis"],
+        icon: "Settings"
       },
       {
         title: "Compliance Management",
         description: "Ensure regulatory compliance with industry standards and data protection regulations.",
-        features: ["GDPR Compliance", "ISO 27001", "SOC 2", "HIPAA Compliance"]
+        features: ["GDPR Compliance", "ISO 27001", "SOC 2", "HIPAA Compliance"],
+        icon: "Award"
       }
     ],
 
     benefits: [
       {
         title: "Proactive Protection",
-        description: "Stay ahead of threats with proactive monitoring and advanced threat detection."
+        description: "Stay ahead of threats with proactive monitoring and advanced threat detection.",
+        icon: "Shield"
       },
       {
         title: "Regulatory Compliance",
-        description: "Meet industry regulations and standards with comprehensive compliance management."
+        description: "Meet industry regulations and standards with comprehensive compliance management.",
+        icon: "Award"
       },
       {
         title: "Rapid Response",
-        description: "Quick incident response to minimize impact and prevent data breaches."
+        description: "Quick incident response to minimize impact and prevent data breaches.",
+        icon: "Settings"
       },
       {
         title: "Cost Effective",
-        description: "Reduce security costs while improving protection with managed security services."
+        description: "Reduce security costs while improving protection with managed security services.",
+        icon: "Analytics"
       }
     ],
 

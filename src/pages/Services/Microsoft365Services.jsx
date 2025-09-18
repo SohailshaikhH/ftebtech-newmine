@@ -20,51 +20,61 @@ const Microsoft365Services = () => {
       {
         title: "Email Migration & Setup",
         description: "Seamless migration from legacy email systems to Exchange Online with zero data loss.",
-        features: ["Exchange Online Setup", "Email Migration", "Mailbox Configuration", "Mobile Device Setup"]
+        features: ["Exchange Online Setup", "Email Migration", "Mailbox Configuration", "Mobile Device Setup"],
+        icon: "Email"
       },
       {
         title: "Microsoft Teams Implementation",
         description: "Complete Teams deployment with custom configurations for optimal collaboration.",
-        features: ["Teams Setup", "Channel Configuration", "Meeting Policies", "Phone System Integration"]
+        features: ["Teams Setup", "Channel Configuration", "Meeting Policies", "Phone System Integration"],
+        icon: "Users"
       },
       {
         title: "SharePoint & OneDrive",
         description: "Document management and collaboration platform setup with security and governance.",
-        features: ["SharePoint Sites", "Document Libraries", "OneDrive Sync", "Permission Management"]
+        features: ["SharePoint Sites", "Document Libraries", "OneDrive Sync", "Permission Management"],
+        icon: "Database"
       },
       {
         title: "Security & Compliance",
         description: "Advanced security features and compliance management to protect your organization.",
-        features: ["Azure AD Security", "Conditional Access", "DLP Policies", "Compliance Center"]
+        features: ["Azure AD Security", "Conditional Access", "DLP Policies", "Compliance Center"],
+        icon: "Shield"
       },
       {
         title: "Power Platform Integration",
         description: "Automate workflows and create custom solutions with Power Apps, Power Automate, and Power BI.",
-        features: ["Power Apps", "Power Automate", "Power BI", "Custom Connectors"]
+        features: ["Power Apps", "Power Automate", "Power BI", "Custom Connectors"],
+        icon: "Settings"
       },
       {
         title: "Training & Support",
         description: "Comprehensive user training and ongoing support to ensure successful adoption.",
-        features: ["User Training", "Admin Training", "Documentation", "24/7 Support"]
+        features: ["User Training", "Admin Training", "Documentation", "24/7 Support"],
+        icon: "Award"
       }
     ],
 
     benefits: [
       {
         title: "Enhanced Collaboration",
-        description: "Seamless collaboration with integrated tools for communication and file sharing."
+        description: "Seamless collaboration with integrated tools for communication and file sharing.",
+        icon: "Users"
       },
       {
         title: "Improved Security",
-        description: "Advanced security features including multi-factor authentication and threat protection."
+        description: "Advanced security features including multi-factor authentication and threat protection.",
+        icon: "Shield"
       },
       {
         title: "Increased Productivity",
-        description: "Streamlined workflows and automation to boost team productivity."
+        description: "Streamlined workflows and automation to boost team productivity.",
+        icon: "Analytics"
       },
       {
         title: "Cost Savings",
-        description: "Reduce IT costs with cloud-based solutions and simplified management."
+        description: "Reduce IT costs with cloud-based solutions and simplified management.",
+        icon: "Settings"
       }
     ],
 

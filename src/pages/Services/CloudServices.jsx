@@ -18,51 +18,61 @@ const CloudServices = () => {
       {
         title: "Microsoft Azure Services",
         description: "Complete Azure cloud infrastructure with virtual machines, storage, networking, and advanced services like AI/ML and IoT.",
-        features: ["Azure Virtual Machines", "Azure Storage", "Azure Networking", "Azure AI Services", "Azure DevOps", "Azure Security Center"]
+        features: ["Azure Virtual Machines", "Azure Storage", "Azure Networking", "Azure AI Services", "Azure DevOps", "Azure Security Center"],
+        icon: "Cloud"
       },
       {
         title: "Amazon Web Services (AWS)",
         description: "Comprehensive AWS solutions including EC2, S3, RDS, Lambda, and advanced analytics and machine learning services.",
-        features: ["EC2 Instances", "S3 Storage", "RDS Databases", "Lambda Functions", "CloudFormation", "AWS Security Hub"]
+        features: ["EC2 Instances", "S3 Storage", "RDS Databases", "Lambda Functions", "CloudFormation", "AWS Security Hub"],
+        icon: "Server"
       },
       {
         title: "Google Cloud Platform (GCP)",
         description: "Google Cloud services including Compute Engine, Cloud Storage, BigQuery, and cutting-edge AI/ML capabilities.",
-        features: ["Compute Engine", "Cloud Storage", "BigQuery", "Cloud Functions", "Kubernetes Engine", "Cloud Security"]
+        features: ["Compute Engine", "Cloud Storage", "BigQuery", "Cloud Functions", "Kubernetes Engine", "Cloud Security"],
+        icon: "Database"
       },
       {
         title: "Microsoft Azure Managed Services Partner",
         description: "As a trusted Managed Service Partner (MSP), we help businesses harness the full potential of Microsoft Azure with proactive management, optimization, and 24/7 support.",
-        features: ["Cloud Strategy & Planning", "Azure Infrastructure Management", "Security & Compliance", "Backup & Disaster Recovery", "Monthly report"]
+        features: ["Cloud Strategy & Planning", "Azure Infrastructure Management", "Security & Compliance", "Backup & Disaster Recovery", "Monthly report"],
+        icon: "Settings"
       },
       {
         title: "Cloud Migration Services",
         description: "Seamless migration from on-premises to cloud or between cloud providers with minimal downtime.",
-        features: ["Assessment & Planning", "Data Migration", "Application Migration", "Testing & Validation", "Go-Live Support", "Post-Migration Optimization"]
+        features: ["Assessment & Planning", "Data Migration", "Application Migration", "Testing & Validation", "Go-Live Support", "Post-Migration Optimization"],
+        icon: "Network"
       },
       {
         title: "DevOps & Automation",
         description: "Cloud-native DevOps practices with CI/CD pipelines, infrastructure as code, and automated deployment.",
-        features: ["CI/CD Pipelines", "Infrastructure as Code", "Container Orchestration", "Monitoring & Logging", "Automated Testing", "Release Management"]
+        features: ["CI/CD Pipelines", "Infrastructure as Code", "Container Orchestration", "Monitoring & Logging", "Automated Testing", "Release Management"],
+        icon: "Code"
       }
     ],
 
     benefits: [
       {
         title: "Multi-Cloud Flexibility",
-        description: "Avoid vendor lock-in with strategic multi-cloud architecture that leverages the best of each platform."
+        description: "Avoid vendor lock-in with strategic multi-cloud architecture that leverages the best of each platform.",
+        icon: "Network"
       },
       {
         title: "Cost Optimization",
-        description: "Intelligent cost management across multiple cloud providers with automated optimization and monitoring."
+        description: "Intelligent cost management across multiple cloud providers with automated optimization and monitoring.",
+        icon: "Analytics"
       },
       {
         title: "Enhanced Security",
-        description: "Enterprise-grade security with best practices across Azure, AWS, and GCP platforms."
+        description: "Enterprise-grade security with best practices across Azure, AWS, and GCP platforms.",
+        icon: "Shield"
       },
       {
         title: "Global Scalability",
-        description: "Scale globally with multiple cloud regions and availability zones for optimal performance."
+        description: "Scale globally with multiple cloud regions and availability zones for optimal performance.",
+        icon: "Server"
       }
     ],
 
