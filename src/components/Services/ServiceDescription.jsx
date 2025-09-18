@@ -206,20 +206,19 @@ const ServiceDescription = () => {
         <Swiper
           modules={[Autoplay, Navigation]}
           loop={true}
-          speed={3000}
+          speed={1000}
           spaceBetween={30}
           slidesPerGroup={1}
           allowTouchMove={true}
           watchSlidesProgress={true}
           centeredSlides={true}
           grabCursor={true}
-          navigation={true}
           keyboard={{
             enabled: true,
             onlyInViewport: false,
           }}
           autoplay={{
-            delay: 4000,
+            delay: 1000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
             reverseDirection: false
