@@ -171,7 +171,7 @@ const ServicePageTemplate = ({ data }) => {
               <div key={index} className="service-card "  >
                 <div className="service-card-header">
                   <div className="icon-container icon-container-md icon-container-primary">
-                    <Icon name="Settings" size={24} />
+                    <Icon name={service.icon || "Settings"} size={24} />
                   </div>
                   <h3>{service.title}</h3>
                 </div>
@@ -207,16 +207,142 @@ const ServicePageTemplate = ({ data }) => {
               <div key={index} className="benefit-card "  >
                 <div className="icon-container icon-container-xl icon-container-primary">
                   <Icon name={
-                    index === 0 ? "Analytics" :
-                    index === 1 ? "Shield" :
-                    index === 2 ? "Settings" :
-                    "Network"
+                    benefit.icon || (
+                      index === 0 ? "Analytics" :
+                      index === 1 ? "Shield" :
+                      index === 2 ? "Settings" :
+                      "Network"
+                    )
                   } size={32} />
                 </div>
                 <h3>{benefit.title}</h3>
                 <p>{benefit.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories Section */}
+      <section className="success-stories-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Success Stories</h2>
+            <p>Real results from real clients who transformed their business with our {data.title.toLowerCase()}</p>
+          </div>
+          
+          <div className="success-stories-grid">
+            <div className="story-card">
+              <div className="story-header">
+                <div className="story-avatar">
+                  <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2" alt="Client" />
+                </div>
+                <div className="story-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>CTO, TechCorp Solutions</p>
+                </div>
+              </div>
+              <div className="story-content">
+                <p>"The implementation was seamless and exceeded our expectations. We saw immediate improvements in performance and cost savings."</p>
+                <div className="story-results">
+                  <div className="result-item">
+                    <span className="result-number">40%</span>
+                    <span className="result-label">Cost Reduction</span>
+                  </div>
+                  <div className="result-item">
+                    <span className="result-number">99.9%</span>
+                    <span className="result-label">Uptime</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="story-card">
+              <div className="story-header">
+                <div className="story-avatar">
+                  <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2" alt="Client" />
+                </div>
+                <div className="story-info">
+                  <h4>Michael Chen</h4>
+                  <p>IT Director, Global Manufacturing</p>
+                </div>
+              </div>
+              <div className="story-content">
+                <p>"Outstanding support and expertise. The team handled everything professionally and delivered on time."</p>
+                <div className="story-results">
+                  <div className="result-item">
+                    <span className="result-number">50%</span>
+                    <span className="result-label">Productivity Boost</span>
+                  </div>
+                  <div className="result-item">
+                    <span className="result-number">500+</span>
+                    <span className="result-label">Users Migrated</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories Section */}
+      <section className="success-stories-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Success Stories</h2>
+            <p>Real results from real clients who transformed their business with our {data.title.toLowerCase()}</p>
+          </div>
+          
+          <div className="success-stories-grid">
+            <div className="story-card">
+              <div className="story-header">
+                <div className="story-avatar">
+                  <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2" alt="Client" />
+                </div>
+                <div className="story-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>CTO, TechCorp Solutions</p>
+                </div>
+              </div>
+              <div className="story-content">
+                <p>"The implementation was seamless and exceeded our expectations. We saw immediate improvements in performance and cost savings."</p>
+                <div className="story-results">
+                  <div className="result-item">
+                    <span className="result-number">40%</span>
+                    <span className="result-label">Cost Reduction</span>
+                  </div>
+                  <div className="result-item">
+                    <span className="result-number">99.9%</span>
+                    <span className="result-label">Uptime</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="story-card">
+              <div className="story-header">
+                <div className="story-avatar">
+                  <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2" alt="Client" />
+                </div>
+                <div className="story-info">
+                  <h4>Michael Chen</h4>
+                  <p>IT Director, Global Manufacturing</p>
+                </div>
+              </div>
+              <div className="story-content">
+                <p>"Outstanding support and expertise. The team handled everything professionally and delivered on time."</p>
+                <div className="story-results">
+                  <div className="result-item">
+                    <span className="result-number">50%</span>
+                    <span className="result-label">Productivity Boost</span>
+                  </div>
+                  <div className="result-item">
+                    <span className="result-number">500+</span>
+                    <span className="result-label">Users Migrated</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -247,6 +373,28 @@ const ServicePageTemplate = ({ data }) => {
               <Icon name="Phone" size={16} />
               Schedule Assessment
             </button>
+            
+            <div className="contact-info-quick">
+              <div className="contact-item">
+                <Icon name="Phone" size={16} />
+                <span>+971 58 848 1295</span>
+              </div>
+              <div className="contact-item">
+                <Icon name="Email" size={16} />
+                <span>Connect@ftebtech.com</span>
+              </div>
+            </div>
+            
+            <div className="contact-info-quick">
+              <div className="contact-item">
+                <Icon name="Phone" size={16} />
+                <span>+971 58 848 1295</span>
+              </div>
+              <div className="contact-item">
+                <Icon name="Email" size={16} />
+                <span>Connect@ftebtech.com</span>
+              </div>
+            </div>
           </div>
             </div>
           </div>
@@ -303,7 +451,14 @@ const ServicePageTemplate = ({ data }) => {
                 <Icon name="Email" size={16} />
                 Contact Us Today
               </button>
-            
+              <button className="btn secondary large" onClick={() => navigate('/servicess')}>
+                <Icon name="Services" size={16} />
+                View All Services
+              </button>
+              <button className="btn secondary large" onClick={() => navigate('/servicess')}>
+                <Icon name="Services" size={16} />
+                View All Services
+              </button>
             </div>
             
             <div className="contact-info">
@@ -314,6 +469,36 @@ const ServicePageTemplate = ({ data }) => {
               <div className="contact-item" onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>
                 <Icon name="Email" size={16} />
                 <span>Connect@ftebtech.com</span>
+              </div>
+            </div>
+            
+            <div className="trust-indicators">
+              <div className="trust-item">
+                <Icon name="Shield" size={20} />
+                <span>ISO 27001 Certified</span>
+              </div>
+              <div className="trust-item">
+                <Icon name="Award" size={20} />
+                <span>Microsoft Gold Partner</span>
+              </div>
+              <div className="trust-item">
+                <Icon name="Check" size={20} />
+                <span>99.9% SLA Guarantee</span>
+              </div>
+            </div>
+            
+            <div className="trust-indicators">
+              <div className="trust-item">
+                <Icon name="Shield" size={20} />
+                <span>ISO 27001 Certified</span>
+              </div>
+              <div className="trust-item">
+                <Icon name="Award" size={20} />
+                <span>Microsoft Gold Partner</span>
+              </div>
+              <div className="trust-item">
+                <Icon name="Check" size={20} />
+                <span>99.9% SLA Guarantee</span>
               </div>
             </div>
           </div>
